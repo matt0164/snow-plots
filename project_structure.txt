@@ -1,0 +1,15 @@
+pns_analysis_project/
+│
+├── basic_pns_statement_scrape.py  # Core scraping logic
+├── config.py                      # Configuration settings
+├── data/                          # Directory to store downloaded data
+│   ├── pns_reports.csv            # Saved reports
+│   ├── backup/                    # Backup data
+│
+├── modules/                       # Additional modules
+│   ├── plot_data.py               # Visualization logic
+│   ├── export_data.py             # Export functionality
+│   ├── front_end/                 # Web front end
+│       ├── app.py                 # Flask/Django app for front end
+│
+└── README.md                      # Project documentation
