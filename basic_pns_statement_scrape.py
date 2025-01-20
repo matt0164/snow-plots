@@ -2,23 +2,43 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from settings import Config
+import logging
 
 # Initialize configuration
 config = Config()
 
+# Configure logging
+logging.basicConfig(filename=config.log_file, level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+
 def scrape_pns_page(page_number=1):
     """Scrape a single page of PNS reports."""
+    # Include all required parameters for the request
     params = {
-        "page": page_number  # Pagination for multiple PNS pages
+        "site": "OKX",               # Specific site
+        "issuedby": "OKX",           # Issued by the OKX office
+        "product": "PNS",            # Public Information Statement
+        "format": "CI",              # Compact format
+        "version": page_number,      # Page/version number
+        "glossary": "0"              # No glossary
     }
-    response = requests.get(config.BASE_URL, params=params)
-    response.raise_for_status()  # Ensure the request was successful
-    soup = BeautifulSoup(response.text, 'html.parser')
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
 
-    # Extract PNS metadata (e.g., title, timestamp, and content)
+    try:
+        # Send the GET request with correct parameters
+        response = requests.get(config.BASE_URL, params=params, headers=headers)
+        response.raise_for_status()  # Raise an error for bad status codes
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error fetching page {page_number}: {e}")
+        print(f"Error fetching page {page_number}: {e}")
+        return []  # Return an empty list if there's an error
+
+    # Parse the response content
+    soup = BeautifulSoup(response.text, 'html.parser')
     reports = []
     for item in soup.find_all('pre'):  # Assuming PNS data is wrapped in <pre> tags
-        report_text = item.text
+        report_text = item.text.strip()
         reports.append({"report": report_text})
     return reports
 
@@ -37,7 +57,7 @@ def save_to_csv(data, filename):
     data.to_csv(filename, index=False)
     print(f"Data saved successfully to {filename}")
 
-def scrape_all_pns(max_pages=5):
+def scrape_all_pns(max_pages=config.MAX_PAGES):
     """Scrape multiple pages of PNS reports and preserve new data."""
     all_reports = []
     existing_data = load_existing_data()

@@ -1,0 +1,10 @@
+2025-01-20 12:08:55,038 - ERROR - Error fetching page 1: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?issuedby=OKX&product=PNS&page=1
+2025-01-20 12:08:55,672 - ERROR - Error fetching page 2: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?issuedby=OKX&product=PNS&page=2
+2025-01-20 12:08:56,217 - ERROR - Error fetching page 3: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?issuedby=OKX&product=PNS&page=3
+2025-01-20 12:08:57,525 - ERROR - Error fetching page 4: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?issuedby=OKX&product=PNS&page=4
+2025-01-20 12:08:58,119 - ERROR - Error fetching page 5: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?issuedby=OKX&product=PNS&page=5
+2025-01-20 12:11:05,601 - ERROR - Error fetching page 1: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=1
+2025-01-20 12:11:06,205 - ERROR - Error fetching page 2: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=2
+2025-01-20 12:11:08,050 - ERROR - Error fetching page 3: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=3
+2025-01-20 12:11:09,285 - ERROR - Error fetching page 4: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=4
+2025-01-20 12:11:10,088 - ERROR - Error fetching page 5: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=5
