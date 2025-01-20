@@ -1,7 +1,7 @@
 pns_analysis_project/
 │
 ├── basic_pns_statement_scrape.py  # Core scraping logic
-├── config.py                      # Configuration settings
+├── settings.py                    # Configuration settings
 ├── data/                          # Directory to store downloaded data
 │   ├── pns_reports.csv            # Saved reports
 │   ├── backup/                    # Backup data
