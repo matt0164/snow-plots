@@ -9,3 +9,4 @@
 2025-01-20 12:11:09,285 - ERROR - Error fetching page 4: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=4
 2025-01-20 12:11:10,088 - ERROR - Error fetching page 5: 500 Server Error: Internal Server Error for url: https://forecast.weather.gov/product.php?page=5
 2025-01-20 12:23:23,603 - ERROR - Error detecting total versions: invalid literal for int() with base 10: '2&glossary=0'
+2025-01-20 12:24:38,328 - ERROR - Error detecting total versions: name 're' is not defined

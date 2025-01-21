@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from pathlib import Path
 import logging
+import re
 
 # Configuration Class
 class Config:
@@ -51,12 +52,14 @@ def get_total_versions():
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Find the dropdown or links indicating the total number of versions
+        # Find all links with versions and extract the numeric part
         version_links = soup.find_all('a', href=True)
-        version_numbers = [
-            int(link['href'].split('version=')[-1])
-            for link in version_links if 'version=' in link['href']
-        ]
+        version_numbers = []
+        for link in version_links:
+            match = re.search(r'version=(\d+)', link['href'])
+            if match:
+                version_numbers.append(int(match.group(1)))
+
         if version_numbers:
             return max(version_numbers)
     except Exception as e:
