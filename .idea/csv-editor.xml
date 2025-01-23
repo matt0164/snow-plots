@@ -3,63 +3,21 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/data/parsed_reports/events/ PKGUST_observations.csv">
+        <entry key="/data/OKX/raw_metadata/pns_metadata.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/parsed_reports/events/ SNOW_24_observations.csv">
+        <entry key="/data/parsed_reports/pns_metadata.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/parsed_reports/events/ SNOW_observations.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/parsed_reports/metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/parsed_reports/observations.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/parsed_reports/regions/ CT_observations.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/parsed_reports/regions/ NJ_observations.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/parsed_reports/regions/ NY_observations.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/pns_reports.csv">
+        <entry key="/data/raw_metadata/pns_metadata.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

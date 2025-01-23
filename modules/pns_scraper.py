@@ -4,16 +4,6 @@ PNS Metadata Scraper
 This script fetches Public Information Statement (PNS) data from the National Weather Service (NWS) webpage,
 parses the HTML to extract relevant metadata and its header, and saves the data to a CSV file for analysis.
 It also saves logs into a dedicated directory and creates a backup of the fetched HTML.
-
-Key Features:
-1. Fetches the PNS webpage data using the `requests` library.
-2. Parses the HTML content to extract key data using `BeautifulSoup`.
-3. Saves extracted metadata to a CSV file in `/raw_metadata` directory.
-4. Saves a backup of the raw HTML to `/backup` directory.
-5. Logs all actions and errors into `/logs/pns_scraper.log`.
-
-Note:
-Run this script from the `modules/` directory to ensure relative paths are properly resolved.
 """
 
 import os
@@ -27,25 +17,28 @@ import logging
 # --------------------------------------------------------
 
 # Base URL for fetching PNS (Public Information Statement) data
-BASE_URL = "https://forecast.weather.gov/product.php?site=NWS&product=PNS&issuedby=OKX"
+BASE_URL = "https://forecast.weather.gov/product.php?site=NWS&product=PNS&issuedby={field_office}"  # NWS URL template
+DEFAULT_FIELD_OFFICE = "OKX"  # Default field office (New York City)
+FIELD_OFFICES = ["OKX", "ALY", "BOX", "BTV", "BUF", "CAR", "CXX", "GYX",
+                 "OKX"]  # Add full list of field offices as needed
 
 # Directories and file paths
 LOGS_DIR = "../logs/"  # Logs directory
-RAW_METADATA_DIR = "../data/raw_metadata/"  # New directory for raw metadata (CSV files)
-BACKUP_DIR = "../data/backup/"  # Directory for raw HTML backups
+DATA_DIR = "../data/"  # Base data directory
 
-LOG_FILE = os.path.join(LOGS_DIR, "pns_scraper.log")  # Log file path
-BACKUP_HTML = os.path.join(BACKUP_DIR, "pns_backup.html")  # Backup HTML file path
-DATA_FILE = os.path.join(RAW_METADATA_DIR, "pns_metadata.csv")  # Metadata CSV file path
+BACKUP_HTML_TEMPLATE = os.path.join(DATA_DIR, "{field_office}/backup/pns_backup.html")  # Backup HTML file template
+DATA_FILE_TEMPLATE = os.path.join(DATA_DIR,
+                                  "{field_office}/raw_metadata/pns_metadata.csv")  # Metadata CSV file template
 
 # Ensure all required directories exist
 os.makedirs(LOGS_DIR, exist_ok=True)
-os.makedirs(RAW_METADATA_DIR, exist_ok=True)  # Ensure /raw_metadata directory exists
-os.makedirs(BACKUP_DIR, exist_ok=True)
 
 # --------------------------------------------------------
 # Logging Setup
 # --------------------------------------------------------
+
+# Define the LOG_FILE variable for the log file path
+LOG_FILE = os.path.join(LOGS_DIR, "pns_scraper.log")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -58,29 +51,57 @@ logging.basicConfig(
 
 
 # --------------------------------------------------------
-# Functions
+# Helper Functions
 # --------------------------------------------------------
 
-def fetch_page(url):
+def get_user_configured_offices():
     """
-    Fetch the HTML content from the given URL.
+    Prompt the user for field office configuration and return the list of selected offices.
+    Allows hitting enter to select the default office.
+    Returns:
+        list: List of field office codes to scrape.
+    """
+    print(f"Default field office is '{DEFAULT_FIELD_OFFICE}'.")
+    user_input = input(
+        "Enter a field office code (or 'ALL' for all offices, or press Enter for default): ").strip().upper() or DEFAULT_FIELD_OFFICE
+    if user_input == "ALL":
+        print("Warning: Scraping all field offices may take a significant amount of time.")
+        return FIELD_OFFICES
+    if user_input not in FIELD_OFFICES:
+        print(f"Invalid field office code. Defaulting to '{DEFAULT_FIELD_OFFICE}'.")
+        return [DEFAULT_FIELD_OFFICE]
+    return [user_input]
+
+
+def fetch_page(url, field_office):
+    """
+    Fetch the HTML content from the given URL for the specified field office.
 
     Args:
-        url (str): The URL to fetch data from.
+        url (str): The URL template to fetch data from.
+        field_office (str): The field office code to replace in the URL.
 
     Returns:
         str: The raw HTML content of the page.
 
     Raises:
-        requests.exceptions.RequestException: If there's an issue with the HTTP request.
+        Exception: If the page cannot be fetched.
     """
+    formatted_url = url.format(field_office=field_office)
     try:
-        logging.info(f"Fetching page content from: {url}")
-        response = requests.get(url, timeout=10)
+        logging.info(f"Fetching page content from: {formatted_url}")
+        response = requests.get(formatted_url, timeout=10)
         response.raise_for_status()  # Raise an error for bad HTTP status codes (4xx/5xx)
         return response.text
+    except requests.exceptions.HTTPError as e:
+        if response.status_code == 404:
+            logging.error(
+                f"404 Error: The URL {formatted_url} was not found. Please verify the field office code and URL.")
+        else:
+            logging.error(f"HTTP Error occurred while fetching data: {e}")
+        raise
     except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to fetch page content: {e}")
+        logging.error(f"Failed to fetch page content for '{field_office}': {e}")
         raise
 
 
@@ -124,43 +145,37 @@ def parse_metadata(html):
     return header, metadata
 
 
-def save_metadata_to_csv(header, metadata, file_path):
+def save_metadata_to_csv(header, metadata, field_office):
     """
-    Save the extracted metadata and header into a CSV file.
+    Save the extracted metadata and header into a CSV file for the specified field office.
 
     Args:
         header (str): The metadata header (e.g., '**METADATA**').
         metadata (list): A list of metadata strings extracted from the page.
-        file_path (str): The path where the CSV file should be saved.
-
-    Returns:
-        None
+        field_office (str): The field office for the metadata directory.
     """
-    # Create a DataFrame by splitting metadata lines into fields
+    file_path = DATA_FILE_TEMPLATE.format(field_office=field_office)
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     data_rows = [row.split(",") for row in metadata]
     df = pd.DataFrame(data_rows)
-
-    # Auto-generate column headers based on the number of columns
     df.columns = [f"Column {i + 1}" for i in range(len(df.columns))]
 
-    # Save header and metadata rows to the CSV file
     with open(file_path, "w", encoding="utf-8") as f:
-        f.write(f"{header}\n")  # Write the header at the top of the file
-    df.to_csv(file_path, index=False, mode="a")  # Append metadata rows in CSV mode
+        f.write(f"{header}\n")
+    df.to_csv(file_path, index=False, mode="a")
     logging.info(f"Metadata saved to: {file_path}")
 
 
-def save_html_backup(html, file_path):
+def save_html_backup(html, field_office):
     """
-    Save a backup of the fetched HTML content to the specified file.
+    Save a backup of the fetched HTML content for the specified field office.
 
     Args:
         html (str): The raw HTML content.
-        file_path (str): The file path where the backup HTML should be saved.
-
-    Returns:
-        None
+        field_office (str): The field office for the backup directory.
     """
+    file_path = BACKUP_HTML_TEMPLATE.format(field_office=field_office)
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(html)
     logging.info(f"Backup HTML saved to: {file_path}")
@@ -172,28 +187,34 @@ def save_html_backup(html, file_path):
 
 def main():
     """
-    Main function to fetch, parse, and save PNS metadata.
+    Main function to fetch, parse, and save PNS metadata for user-specified field offices.
     """
-    try:
-        # Step 1: Fetch the PNS page HTML content
-        html = fetch_page(BASE_URL)
+    field_offices = get_user_configured_offices()
+    for field_office in field_offices:
+        try:
+            logging.info(f"Processing field office: {field_office}")
 
-        # Step 2: Save a backup of the raw HTML
-        save_html_backup(html, BACKUP_HTML)
+            # Step 1: Fetch the field office page HTML content
+            html = fetch_page(BASE_URL, field_office)
 
-        # Step 3: Parse the metadata and header from the HTML
-        header, metadata = parse_metadata(html)
+            # Step 2: Save the raw HTML backup for the field office
+            save_html_backup(html, field_office)
 
-        if not metadata:
-            logging.warning("No metadata found in the PNS report. Exiting...")
-            return
+            # Step 3: Parse metadata and the header from the HTML
+            header, metadata = parse_metadata(html)
 
-        # Step 4: Save the metadata to a CSV file in /raw_metadata
-        save_metadata_to_csv(header, metadata, DATA_FILE)
-        logging.info("Metadata extraction and saving completed successfully!")
+            if not metadata:
+                logging.warning(f"No metadata found for field office '{field_office}'. Skipping...")
+                continue
 
-    except Exception as e:
-        logging.error(f"An error occurred during the process: {e}")
+            # Step 4: Save metadata to a CSV file for the field office
+            save_metadata_to_csv(header, metadata, field_office)
+            logging.info(f"Completed processing for field office: {field_office}")
+
+        except Exception as e:
+            logging.error(f"An error occurred for field office '{field_office}': {e}")
+            logging.info(f"Skipping field office: {field_office}")
+            continue
 
 
 if __name__ == "__main__":
