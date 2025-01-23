@@ -1,3 +1,64 @@
+"""
+Script Name: parse_pns_data.py
+
+Description:
+    This script processes a raw `pns_reports.csv` file containing weather-related notification reports from the National Weather Service (NWS).
+    It extracts metadata, parses observations, and organizes the processed data into structured CSV files. The parsed information is
+    saved into directories based on regions, event types, and dates for better categorization and easy accessibility. It is run AFTER the
+    pns_statement_scraper.py script has been run.
+
+Key Features:
+    1. Metadata Extraction:
+        - Extracts key metadata fields such as issuance code, event type, region codes, timestamp, and location (state, county, city).
+    2. Observations Parsing:
+        - Reads observations data from the raw file.
+        - Each row contains details like observation date, time, state, county, event type, values, and description.
+    3. Data Organization:
+        - Saves metadata as `metadata.csv`.
+        - Saves all parsed observations as `observations.csv`.
+        - Creates region-based CSVs within `parsed_reports/regions/` directory (e.g., `NJ_observations.csv`).
+        - Creates event-type-based directories and places observation files in appropriate subdirectories (e.g., `parsed_reports/events/Wind/`).
+        - Creates date-based directories for observations grouped by date (e.g., `parsed_reports/events/Date/`).
+
+Output:
+    - All outputs are saved under a directory named `parsed_reports/` within the `data/` folder:
+        - `metadata.csv`: Contains extracted metadata.
+        - `observations.csv`: Contains all parsed observations.
+        - `regions/`: Contains CSVs grouped by state.
+        - `events/`: Groups observations into subdirectories for event categories (e.g., Wind, Winter) and dates.
+
+Usage:
+    This script must be run *first* as part of your data processing workflow. It processes the raw file and prepares structured outputs
+    for further analysis. Ensure that:
+        1. The raw file (`pns_reports.csv`) exists in the `data/` directory.
+        2. You have write permissions to create folders/files within `data/`.
+
+How to Run:
+    1. Place this script in your project directory.
+    2. Ensure the input CSV file (`pns_reports.csv`) is located in the `data/` directory.
+    3. Run this script using a Python interpreter:
+        ```bash
+        python parse_pns_data.py
+        ```
+    4. The outputs will be saved in `data/parsed_reports/`.
+
+Dependencies:
+    - Python >= 3.6
+    - pandas
+    - re (Regular Expressions)
+    - datetime
+    - pathlib
+    - os
+    - logging
+
+Errors and Logging:
+    - Detailed logs are saved in the `logs/parse_pns_data.log` file.
+    - Common errors:
+        - FileNotFoundError: Raised when the input file (`pns_reports.csv`) is not found.
+        - Malformed Line: Skips malformed or incomplete lines during observation parsing, with a warning in the log.
+
+"""
+
 import pandas as pd
 import re
 import csv

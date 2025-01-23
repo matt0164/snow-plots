@@ -1,5 +1,6 @@
 ├── snow-plots/
 │   ├── project_structure.txt
+│   ├── .gitignore
 │   ├── images/
 │   │   ├── data_source_images_snow_plots_tesseract/
 │   │   │   ├── mid.png
@@ -13,37 +14,22 @@
 │   │   │   ├── snowfall_westchester_and_ct.png
 │   ├── logs/
 │   │   ├── parse_pns_data.log
-│   │   ├── scraping.log
+│   │   ├── pns_scraper.log
 │   ├── modules/
 │   │   ├── parse_pns_data.py
 │   │   ├── create_project_structure.py
+│   │   ├── pns_scraper.py
 │   │   ├── settings.py
-│   │   ├── pns_statement_scrape.py
 │   │   ├── remove_dups.py
 │   │   ├── old_or_not_used/
 │   │   │   ├── snow-plots-hardcode.py
 │   │   │   ├── Old_parse_pns_data.py
 │   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
 │   ├── data/
-│   │   ├── pns_reports.csv
+│   │   ├── raw_metadata/
+│   │   │   ├── pns_metadata.csv
 │   │   ├── parsed_reports/
-│   │   │   ├── metadata.csv
-│   │   │   ├── metadata_description.txt
-│   │   │   ├── observations.csv
-│   │   │   ├── regions/
-│   │   │   │   ├──  NJ_observations.csv
-│   │   │   │   ├──  NY_observations.csv
-│   │   │   │   ├──  CT_observations.csv
-│   │   │   ├── events/
-│   │   │   │   ├── Date/
-│   │   │   │   ├── Other/
-│   │   │   │   ├── Wind/
-│   │   │   │   │   ├──  PKGUST_observations.csv
-│   │   │   │   ├── Winter/
-│   │   │   │   │   ├──  SNOW_observations.csv
-│   │   │   │   │   ├──  SNOW_24_observations.csv
-│   │   │   │   ├── Temps/
-│   │   │   │   ├── Flooding/
+│   │   │   ├── pns_metadata.csv
 │   │   ├── NWS_shapefiles/
 │   │   │   ├── z_18mr25.zip
 │   │   │   ├── z_18mr25.prj
@@ -54,4 +40,6 @@
 │   │   ├── zone_county_correlation/
 │   │   │   ├── bp18mr25.dbx
 │   │   ├── backup/
+│   │   │   ├── pns_debug.html
+│   │   │   ├── pns_backup.html
 │   │   │   ├── Archive.zip
