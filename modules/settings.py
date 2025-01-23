@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 class Config:
-    BASE_PROJECT_DIR = Path("/Users/mattalevy/PycharmProjects/snow-plots")
+    BASE_PROJECT_DIR = Path("/")
     CONFIG_FILE = BASE_PROJECT_DIR / "config.txt"
     BASE_URL = "https://forecast.weather.gov/product.php"
     MAX_PAGES = 5

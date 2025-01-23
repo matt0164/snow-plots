@@ -71,9 +71,9 @@ def merge_snowfall_data(low_path, mid_path, high_path):
 
 
 # Paths to your images
-low_image_path = "images/low.png"
-mid_image_path = "images/mid.png"
-high_image_path = "images/high.png"
+low_image_path = "../../images/data_source_images_snow_plots_tesseract/low.png"
+mid_image_path = "../../images/data_source_images_snow_plots_tesseract/mid.png"
+high_image_path = "../../images/data_source_images_snow_plots_tesseract/high.png"
 
 # Ensure the files exist
 for path in [low_image_path, mid_image_path, high_image_path]:
