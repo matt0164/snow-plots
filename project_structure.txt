@@ -1,70 +1,57 @@
-snow-plots/│
-├── basic_pns_statement_scrape.py   # Core scraping logic
-├── settings.py                     # Configuration settings
-├── data/                           # Directory to store data
-│   ├── pns_reports.csv             # Input file with PNS reports
-│   ├── parsed_reports/             # Parsed and structured data
-│       ├── metadata.csv            # Metadata extracted from reports
-│       ├── observations.csv        # All parsed observations
-│       ├── events/                 # Event-specific CSV files
-│           ├── event_HIGHEST_WIND_REPORTS.csv
-│           ├── event_SNOWFALL_REPORTS.csv
-│       ├── regions/                # Region-specific CSV files
-│           ├── region_CTZ005.csv
-│           ├── region_NJZ002.csv
-│   ├── backup/                     # Backup data
-│   ├── NWS_shapefiles/             # NWS shapefiles for location metadata
-│
-├── images/                         # Directory for source images
-│   ├── high.png
-│   ├── low.png
-│   ├── mid.png
-│
-├── modules/                        # Additional modules
-│   ├── parse_pns_data.py           # Parsing and organizing PNS data
-│   ├── plot_data.py                # Visualization logic (planned)
-│   ├── export_data.py              # Export functionality (planned)
-│   ├── front_end/                  # Web front end (planned)
-│       ├── app.py                  # Flask/Django app for front end (planned)
-│
-└── README.md                       # Project documentation
-└── project_structure.txt           # This file
-└── snow-plots-hardcode.py          # Older script for whisker plots
-└── snow-plots-with-tesseract-ocr-fail.py  # Experimental script for OCR
-
-snow-plots/
-│
-├── basic_pns_statement_scrape.py   # Core scraping logic
-├── settings.py                     # Configuration settings
-├── data/                           # Directory to store data
-│   ├── pns_reports.csv             # Saved reports
-│   ├── parsed_reports/             # Parsed and structured data
-│       ├── metadata.csv            # Metadata extracted from reports
-│       ├── observations.csv        # All parsed observations
-│       ├── events/                 # Event-specific CSV files
-│           ├── event_HIGHEST_WIND_REPORTS.csv
-│           ├── event_SNOWFALL_REPORTS.csv
-│       ├── regions/                # Region-specific CSV files
-│           ├── region_CTZ005.csv
-│           ├── region_NJZ002.csv
-│   ├── backup/                     # Backup data
-│   ├── NWS_shapefiles/             # NWS shapefiles for location metadata
-│
-├── images/                         # Directory for source images
-│   ├── high.png
-│   ├── low.png
-│   ├── mid.png
-│
-├── logs/                           # Directory for logs to save errors and output
-│   ├── scraping.log                # logs errors from basic_pns_statement_scrape.py
-├── modules/                        # Additional modules
-│   ├── parse_pns_data.py           # Parsing and organizing PNS data
-│   ├── plot_data.py                # Visualization logic (planned)
-│   ├── export_data.py              # Export functionality (planned)
-│   ├── front_end/                  # Web front end (planned)
-│       ├── app.py                  # Flask/Django app for front end (planned)
-│
-└── README.md                       # Project documentation
-└── project_structure.txt           # This file
-└── snow-plots-hardcode.py          # Older script for whisker plots
-└── snow-plots-with-tesseract-ocr-fail.py  # Experimental script for OCR
+├── snow-plots/
+│   ├── project_structure.txt
+│   ├── images/
+│   │   ├── data_source_images_snow_plots_tesseract/
+│   │   │   ├── mid.png
+│   │   │   ├── low.png
+│   │   │   ├── high.png
+│   │   ├── old_images/
+│   │   │   ├── snowfall_hudson_valley.png
+│   │   │   ├── snowfall_nyc_and_5_boroughs.png
+│   │   │   ├── snowfall_long_island_(li).png
+│   │   │   ├── snowfall_new_jersey_(nj).png
+│   │   │   ├── snowfall_westchester_and_ct.png
+│   ├── logs/
+│   │   ├── parse_pns_data.log
+│   │   ├── scraping.log
+│   ├── modules/
+│   │   ├── parse_pns_data.py
+│   │   ├── create_project_structure.py
+│   │   ├── settings.py
+│   │   ├── pns_statement_scrape.py
+│   │   ├── remove_dups.py
+│   │   ├── old_or_not_used/
+│   │   │   ├── snow-plots-hardcode.py
+│   │   │   ├── Old_parse_pns_data.py
+│   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
+│   ├── data/
+│   │   ├── pns_reports.csv
+│   │   ├── parsed_reports/
+│   │   │   ├── metadata.csv
+│   │   │   ├── metadata_description.txt
+│   │   │   ├── observations.csv
+│   │   │   ├── regions/
+│   │   │   │   ├──  NJ_observations.csv
+│   │   │   │   ├──  NY_observations.csv
+│   │   │   │   ├──  CT_observations.csv
+│   │   │   ├── events/
+│   │   │   │   ├── Date/
+│   │   │   │   ├── Other/
+│   │   │   │   ├── Wind/
+│   │   │   │   │   ├──  PKGUST_observations.csv
+│   │   │   │   ├── Winter/
+│   │   │   │   │   ├──  SNOW_observations.csv
+│   │   │   │   │   ├──  SNOW_24_observations.csv
+│   │   │   │   ├── Temps/
+│   │   │   │   ├── Flooding/
+│   │   ├── NWS_shapefiles/
+│   │   │   ├── z_18mr25.zip
+│   │   │   ├── z_18mr25.prj
+│   │   │   ├── geodataframe.py
+│   │   │   ├── z_18mr25.shp
+│   │   │   ├── z_18mr25.shx
+│   │   │   ├── z_18mr25.dbf
+│   │   ├── zone_county_correlation/
+│   │   │   ├── bp18mr25.dbx
+│   │   ├── backup/
+│   │   │   ├── Archive.zip

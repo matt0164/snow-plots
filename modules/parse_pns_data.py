@@ -142,27 +142,59 @@ def save_dataframes(metadata, observations, output_dir):
 
     # Save observations CSV
     df_observations = pd.DataFrame(observations)
-    if not df_observations.empty:
-        df_observations.to_csv(output_dir / "observations.csv", index=False)
-        logging.info(f"Saved observations to {output_dir / 'observations.csv'}")
-
-        # Save event-based and region-based CSVs
-        events_dir = output_dir / "events"
-        regions_dir = output_dir / "regions"
-        events_dir.mkdir(exist_ok=True)
-        regions_dir.mkdir(exist_ok=True)
-
-        for event, group in df_observations.groupby("type"):
-            event_file = events_dir / f"{event}_observations.csv"
-            group.drop_duplicates().to_csv(event_file, index=False)
-            logging.info(f"Saved event-based observations to {event_file}")
-
-        for region, group in df_observations.groupby("state"):
-            region_file = regions_dir / f"{region}_observations.csv"
-            group.drop_duplicates().to_csv(region_file, index=False)
-            logging.info(f"Saved region-based observations to {region_file}")
-    else:
+    if df_observations.empty:
         logging.warning("No observations to save.")
+        return
+
+    # Save the main observations file
+    df_observations.to_csv(output_dir / "observations.csv", index=False)
+    logging.info(f"Saved observations to {output_dir / 'observations.csv'}")
+
+    # Create directories for event-based files
+    events_dir = output_dir / "events"
+    regions_dir = output_dir / "regions"
+    events_dir.mkdir(exist_ok=True)
+    regions_dir.mkdir(exist_ok=True)
+
+    # Save region-based files
+    for region, group in df_observations.groupby("state"):
+        region_file = regions_dir / f"{region.replace(' ', '_').lower()}_observations.csv"
+        group.drop_duplicates().to_csv(region_file, index=False)
+        logging.info(f"Saved region-based observations to {region_file}")
+
+    # Process event-based files
+    event_categories = {
+        "Winter": ["SNOW", "SNOW_24"],
+        "Wind": ["PKGUST"],
+        "Flooding": ["FLOOD"],
+        "Temps": ["COLD", "HEAT", "TEMP"],
+        "Other": []  # Catch-all for undefined or unmatched event types
+    }
+
+    for event_type, group in df_observations.groupby("type"):
+        # Determine which category the event belongs to
+        category = next(
+            (key for key, values in event_categories.items() if event_type in values),
+            "Other"
+        )
+
+        # Create directory for the event category
+        event_dir = events_dir / category
+        event_dir.mkdir(exist_ok=True)
+
+        # Save file for the specific event type
+        event_file = event_dir / f"{event_type.replace(' ', '_').lower()}_observations.csv"
+        group.drop_duplicates().to_csv(event_file, index=False)
+        logging.info(f"Saved {event_type} observations to {event_file}")
+
+    # Save files by date inside events/Date/
+    date_dir = events_dir / "Date"
+    date_dir.mkdir(exist_ok=True)
+
+    for date, group in df_observations.groupby("date"):
+        date_file = date_dir / f"{date}_observations.csv"
+        group.drop_duplicates().to_csv(date_file, index=False)
+        logging.info(f"Saved date-based observations to {date_file}")
 
 def create_metadata_description(metadata, output_dir):
     description_file = output_dir / "metadata_description.txt"
