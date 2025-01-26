@@ -2,13 +2,12 @@ from pathlib import Path
 import pandas as pd
 import csv
 import logging
-import os
 
 
-# Setup centralized logging with both file and console outputs
+# Set up centralized logging
 def setup_logging():
-    log_file = Path("logs/parse_pns.log")
-    log_file.parent.mkdir(parents=True, exist_ok=True)  # Create logs directory if missing
+    log_file = Path("../logs/parse_pns.log")
+    log_file.parent.mkdir(parents=True, exist_ok=True)  # Ensure logs directory exists
     logging.basicConfig(
         level=logging.DEBUG,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -19,17 +18,14 @@ def setup_logging():
     )
 
 
+# Sanitize file/folder names
+def sanitize_path_component(component):
+    """Sanitize a string for use in a file path."""
+    return str(component).strip().replace("/", "_").replace("\\", "_")
+
+
 # Extract metadata
 def extract_metadata(lines):
-    """
-    Extract metadata fields from the raw PNS report.
-
-    Args:
-        lines (list): Lines of raw text from the input file.
-
-    Returns:
-        dict: Extracted metadata.
-    """
     metadata = {
         "issuance_code": None,
         "region_codes": None,
@@ -38,7 +34,6 @@ def extract_metadata(lines):
         "nws_office": None,
     }
 
-    # Process specific metadata lines (add logic as needed)
     for line in lines:
         if "Public Information Statement" in line:
             metadata["public_info"] = line.strip()
@@ -49,44 +44,27 @@ def extract_metadata(lines):
     return metadata
 
 
+# Extract observations
 def extract_observations(lines):
-    """
-    Extract observations from the raw PNS reports.
-
-    Args:
-        lines (list): Text lines from the input file.
-
-    Returns:
-        list: A list of dictionaries, where each dict represents a parsed observation.
-    """
     observations = []
     logging.info(f"Processing total input lines: {len(lines)}")
 
-    # Identify where to start parsing valid rows
     valid_start_index = 0
     for i, line in enumerate(lines):
         if line.startswith("DATA START") or "Column 1" in line:
             valid_start_index = i + 1
-            logging.debug(f"Identified data start at line {valid_start_index}")
             break
 
     for i, line in enumerate(lines[valid_start_index:], start=valid_start_index + 1):
         row = line.strip()
         try:
-            # Ignore empty, malformed, or header-like lines
             if not row or "Column" in row:
-                logging.debug(f"Skipping non-data row {i}: '{row}'")
                 continue
 
-            # Parse row assuming valid CSV-style data
             row_data = next(csv.reader([row]))
-
-            # Ensure row contains the required number of columns
             if len(row_data) < 14:
-                logging.warning(f"Skipping malformed row {i}: '{row}'")
                 continue
 
-            # Create observation dictionary
             observation = {
                 "date": row_data[0].strip(),
                 "time": row_data[1].strip(),
@@ -111,18 +89,10 @@ def extract_observations(lines):
     return observations
 
 
+# Save metadata and observations
 def save_dataframes(metadata, observations, output_dir):
-    """
-    Save extracted metadata and observations to structured CSV files.
-
-    Args:
-        metadata (dict): Dictionary of metadata fields.
-        observations (list[dict]): List of processed observations.
-        output_dir (Path): Directory path to save the data.
-    """
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save metadata if available
     metadata_path = output_dir / "metadata.csv"
     if metadata:
         pd.DataFrame([metadata]).to_csv(metadata_path, index=False)
@@ -130,54 +100,88 @@ def save_dataframes(metadata, observations, output_dir):
     else:
         logging.warning("No metadata available to save.")
 
-    # Save observations if available
     observations_path = output_dir / "observations.csv"
     if observations:
         pd.DataFrame(observations).to_csv(observations_path, index=False)
         logging.info(f"Observations saved to: {observations_path}")
     else:
-        logging.warning("No observations available to save. File will not be created.")
+        logging.warning("No observations available to save.")
 
 
+# Main function
 def main(field_office_code):
-    """
-    Main function for processing PNS data for a specific field office.
-
-    Args:
-        field_office_code (str): The field office (e.g., "OKX") for which to process data.
-    """
     base_dir = Path(__file__).resolve().parent.parent
     input_file = base_dir / f"data/{field_office_code}/raw_metadata/pns_metadata.csv"
-    output_dir = base_dir / f"data/{field_office_code}/parsed_reports"
+    parsed_reports_dir = base_dir / f"data/{field_office_code}/parsed_reports"
 
     logging.info(f"Processing field office: {field_office_code}")
-    logging.info(f"Input file: {input_file}")
-    logging.info(f"Output directory: {output_dir}")
 
-    # Ensure the input file exists
     if not input_file.is_file():
         logging.error(f"Input file not found: {input_file}")
         raise FileNotFoundError(f"Input file not found: {input_file}")
 
-    # Read raw file
     with input_file.open("r") as f:
         lines = f.readlines()
 
     if not lines:
-        logging.error("Input file is empty. Exiting.")
+        logging.error("Input file is empty.")
         raise ValueError("Input file is empty.")
 
-    # Process metadata and observations
     metadata = extract_metadata(lines)
     observations = extract_observations(lines)
 
-    # Save processed data
-    save_dataframes(metadata, observations, output_dir)
+    event_category_mapping = {
+        "SNOW": "Winter",
+        "SNOW_24": "Winter",
+        "TEMPERATURE": "Temperatures",
+        "WIND": "Wind",
+    }
+
+    for observation in observations:
+        event_type = observation["type"]
+        event_date = observation["date"]
+
+        # Map event category
+        event_category = sanitize_path_component(event_category_mapping.get(event_type.upper(), "Other"))
+        formatted_date = sanitize_path_component(event_date.replace("-", "_"))
+
+        # Construct path
+        date_dir = parsed_reports_dir / event_category / formatted_date
+
+        # Avoid redundant nesting
+        if not date_dir.exists():
+            try:
+                date_dir.mkdir(parents=True, exist_ok=True)
+                logging.info(f"Directory created: {date_dir}")
+            except Exception as e:
+                logging.error(f"Failed to create directory {date_dir}: {e}")
+
+        # Save observations by type
+        csv_file_path = date_dir / f"{event_type.lower()}_observations.csv"
+        try:
+            if csv_file_path.is_file():
+                pd.DataFrame([observation]).to_csv(csv_file_path, mode="a", header=False, index=False)
+            else:
+                pd.DataFrame([observation]).to_csv(csv_file_path, index=False)
+            logging.info(f"Saved observation to: {csv_file_path}")
+        except Exception as e:
+            logging.error(f"Failed to save observation to {csv_file_path}: {e}")
+
+    # Save metadata
+    metadata_file_path = parsed_reports_dir / "metadata.csv"
+    try:
+        if metadata:
+            pd.DataFrame([metadata]).to_csv(metadata_file_path, index=False)
+            logging.info(f"Saved metadata to: {metadata_file_path}")
+        else:
+            logging.warning("No metadata available to save.")
+    except Exception as e:
+        logging.error(f"Failed to save metadata file: {e}")
 
 
 if __name__ == "__main__":
     try:
         setup_logging()
-        main("OKX")  # Example field office
+        main("OKX")  # Replace with your field office code
     except Exception as e:
         logging.critical(f"Critical error during processing: {e}")
