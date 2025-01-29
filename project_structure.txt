@@ -24,6 +24,7 @@
 │   │   │   ├── snowfall_westchester_and_ct.png
 │   ├── reference_data_for_lookup/
 │   │   ├── event_codes.csv
+│   │   ├── field_offices.csv
 │   ├── logs/
 │   │   ├── parse_pns_data.log
 │   │   ├── pns_scraper.log
@@ -48,6 +49,7 @@
 │   │   │   ├── test_4_pns_scraper.py
 │   │   │   ├── test_5_pns_scraper.py
 │   │   │   ├── test_2_pns_scraper.py
+│   │   │   ├── test_6_pns_scraper.py
 │   │   │   ├── __init__.py
 │   │   │   ├── test_1_pns_scraper.py
 │   │   │   ├── test_event_type_extraction.py
@@ -75,6 +77,14 @@
 │   │   │   │   │   ├── General/
 │   │   │   │   │   │   ├── 2025-01-28/
 │   │   │   │   │   │   │   ├── pns_metadata.csv
+│   │   │   │   ├── Unknown/
+│   │   │   │   │   ├── 1/
+│   │   │   │   │   │   ├── 27/
+│   │   │   │   │   │   │   ├── 2025/
+│   │   │   │   │   │   │   │   ├── pns_metadata.csv
+│   │   │   │   │   │   ├── 28/
+│   │   │   │   │   │   │   ├── 2025/
+│   │   │   │   │   │   │   │   ├── pns_metadata.csv
 │   │   │   ├── backup/
 │   │   │   │   ├── pns_backup_page_204.html
 │   │   │   │   ├── pns_backup_page_195.html
