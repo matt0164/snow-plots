@@ -1,0 +1,19 @@
+EventCode,EventType,Description
+SNOW,Snow,Heavy Snowfall
+SNOW_24,Snow,24 Hour Snowfall
+PKGUST,Wind,Peak Wind Gust
+BZW,Blizzard,Blizzard Warning
+FLW,Flood,Flood Warning
+FFW,Flash_Flood,Flash Flood Warning
+HWW,Wind,High Wind Warning
+WSW,Winter_Storm,Winter Storm Warning
+AVW,Avalanche,Avalanche Warning
+DSW,Dust,Dust Storm Warning
+HUW,Hurricane,Hurricane Warning
+SMW,Marine,Special Marine Warning
+SQW,Snow,Snow Squall Warning
+SVR,Thunderstorm,Severe Thunderstorm Warning
+TOR,Tornado,Tornado Warning
+TSW,Tsunami,Tsunami Warning
+MWW,Marine,Marine Weather Warning
+ECW,Extreme_Cold,Extreme Cold Warning

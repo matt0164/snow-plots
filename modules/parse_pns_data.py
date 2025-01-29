@@ -1,187 +1,215 @@
-from pathlib import Path
+"""
+Script Name: parse_pns_data.py
+
+Description:
+    This script processes raw PNS (Public Notification Statement) reports for a specific NWS field office (e.g., OKX) from its `pns_metadata.csv` file.
+    It extracts metadata, parses observations, and organizes the processed data into structured CSV files.
+
+Project Structure:
+    Each station (e.g., OKX) has its own input and output file structure:
+    - Input File Location: `data/<field_office>/raw_metadata/pns_metadata.csv`
+    - Output Folder: `data/<field_office>/parsed_reports/`
+
+Key Features:
+    1. Metadata Extraction:
+        - Extracts key metadata fields from the station's raw PNS reports.
+    2. Observations Parsing:
+        - Parses relevant observation fields (date, time, region, type, values, etc.).
+    3. Data Organization:
+        - Metadata and observations are saved in station-specific folders (e.g., `OKX/parsed_reports/`).
+        - Observations are grouped by region, event category, and date.
+
+Output Structure:
+    - All outputs are saved under `data/<field_office>/parsed_reports/`:
+        - `metadata.csv`: Contains extracted metadata.
+        - `observations.csv`: Contains all observations.
+        - `regions/`: CSVs grouped by state.
+        - `events/`: Subdirectories for observation categories (e.g., Wind, Winter, Flooding).
+
+Dependencies:
+    - Python >= 3.6
+    - pandas, re, pathlib, logging, datetime, csv
+"""
+
 import pandas as pd
+import re
 import csv
+from datetime import datetime
+from pathlib import Path
 import logging
 
-
-# Set up centralized logging
-def setup_logging():
-    log_file = Path("../logs/parse_pns.log")
-    log_file.parent.mkdir(parents=True, exist_ok=True)  # Ensure logs directory exists
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format="%(asctime)s - %(levelname)s - %(message)s",
-        handlers=[
-            logging.FileHandler(log_file),  # Log to file
-            logging.StreamHandler(),  # Log to console
-        ],
-    )
+# Setup logging to dynamically create logs for better debugging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-# Sanitize file/folder names
-def sanitize_path_component(component):
-    """Sanitize a string for use in a file path."""
-    return str(component).strip().replace("/", "_").replace("\\", "_")
-
-
-# Extract metadata
 def extract_metadata(lines):
+    """
+    Extract metadata fields from the raw PNS report.
+
+    Args:
+        lines (list): Lines of raw text from the input file.
+
+    Returns:
+        dict: Extracted metadata, with fields such as issuance code, timestamp, and NWS office information.
+    """
     metadata = {
         "issuance_code": None,
         "region_codes": None,
         "timestamp": None,
         "public_info": None,
         "nws_office": None,
+        "nws_time": None
     }
 
-    for line in lines:
+    # Extract issuance code and region codes
+    match = re.search(r"^(NOUS\d{2}\s[A-Z]{4})", lines[0])
+    if match:
+        metadata["issuance_code"] = match.group(1)
+
+    match = re.search(r"(CTZ\d{3}>\d{3}-NJZ\d{3}>\d{3})", lines[0])
+    if match:
+        metadata["region_codes"] = match.group(1)
+
+    # Extract timestamp
+    match = re.search(r"(\d{6})", lines[0])
+    if match:
+        metadata["timestamp"] = datetime.strptime(match.group(1), "%y%m%d").strftime("%Y-%m-%d")
+
+    # Extract additional metadata
+    for i, line in enumerate(lines):
         if "Public Information Statement" in line:
             metadata["public_info"] = line.strip()
-        elif "National Weather Service" in line:
-            metadata["nws_office"] = line.strip()
+        if "National Weather Service" in line:
+            metadata["nws_office"] = lines[i + 1].strip()
+        if re.match(r"\d{3,4}\s[AP]M\s[A-Za-z]{3}\s[A-Za-z]{3}\s\d{2}\s\d{4}", line):
+            metadata["nws_time"] = line.strip()
 
-    logging.info(f"Extracted metadata: {metadata}")
     return metadata
 
 
-# Extract observations
 def extract_observations(lines):
+    """
+    Extract observations from the raw PNS report.
+
+    Args:
+        lines (list): Raw text lines from the metadata file.
+
+    Returns:
+        list: A list of dictionaries representing parsed observations.
+    """
     observations = []
-    logging.info(f"Processing total input lines: {len(lines)}")
 
-    valid_start_index = 0
     for i, line in enumerate(lines):
-        if line.startswith("DATA START") or "Column 1" in line:
-            valid_start_index = i + 1
-            break
-
-    for i, line in enumerate(lines[valid_start_index:], start=valid_start_index + 1):
-        row = line.strip()
         try:
-            if not row or "Column" in row:
+            row = next(csv.reader([line.strip()]))
+            if len(row) < 14:
+                logging.warning(f"Skipping malformed line {i}: '{line.strip()}'")
                 continue
 
-            row_data = next(csv.reader([row]))
-            if len(row_data) < 14:
-                continue
-
+            # Parse individual observation fields
             observation = {
-                "date": row_data[0].strip(),
-                "time": row_data[1].strip(),
-                "state": row_data[2].strip(),
-                "county": row_data[3].strip(),
-                "city": row_data[4].strip(),
-                "latitude": float(row_data[7]) if row_data[7].strip() else None,
-                "longitude": float(row_data[8]) if row_data[8].strip() else None,
-                "type": row_data[9].strip().upper() if row_data[9].strip() else "UNKNOWN",
-                "value": float(row_data[10]) if row_data[10].strip() else None,
-                "unit": row_data[11].strip() if row_data[11].strip() else None,
-                "source": row_data[12].strip() if row_data[12].strip() else "UNKNOWN",
-                "description": row_data[13].strip() if len(row_data) > 13 else "N/A",
+                "date": row[0],
+                "time": row[1],
+                "state": row[2],
+                "county": row[3],
+                "city": row[4],
+                "latitude": float(row[7]) if row[7] else None,
+                "longitude": float(row[8]) if row[8] else None,
+                "type": row[9].strip().upper() if row[9] else "UNKNOWN",
+                "value": float(row[10]) if row[10] else None,
+                "unit": row[11] if row[11] else "UNKNOWN",
+                "source": row[12] if row[12] else "UNKNOWN",
+                "description": row[13] if len(row) > 13 else "UNKNOWN"
             }
-
             observations.append(observation)
-
         except Exception as e:
-            logging.error(f"Error parsing line {i}: '{row}'. Exception: {e}")
+            logging.error(f"Error parsing line {i}: '{line.strip()}' - {e}")
 
-    logging.info(f"Total observations parsed: {len(observations)}")
-    return observations
+    # Remove duplicates
+    return pd.DataFrame(observations).drop_duplicates().to_dict(orient="records")
 
 
-# Save metadata and observations
 def save_dataframes(metadata, observations, output_dir):
+    """
+    Save parsed observations and metadata into the structured directory for the specified station.
+
+    Args:
+        metadata (dict): Extracted metadata dictionary.
+        observations (list[dict]): List of parsed observations.
+        output_dir (Path): Output directory for saving data.
+    """
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    metadata_path = output_dir / "metadata.csv"
-    if metadata:
-        pd.DataFrame([metadata]).to_csv(metadata_path, index=False)
-        logging.info(f"Metadata saved to: {metadata_path}")
-    else:
-        logging.warning("No metadata available to save.")
+    # Save metadata CSV
+    metadata_file = output_dir / "metadata.csv"
+    pd.DataFrame([metadata]).to_csv(metadata_file, index=False)
+    logging.info(f"Saved metadata to {metadata_file}")
 
-    observations_path = output_dir / "observations.csv"
-    if observations:
-        pd.DataFrame(observations).to_csv(observations_path, index=False)
-        logging.info(f"Observations saved to: {observations_path}")
-    else:
-        logging.warning("No observations available to save.")
+    # Save observations CSV
+    observations_file = output_dir / "observations.csv"
+    df = pd.DataFrame(observations)
+    df.to_csv(observations_file, index=False)
+    logging.info(f"Saved observations to {observations_file}")
+
+    # Organize observations by regions
+    regions_dir = output_dir / "regions"
+    regions_dir.mkdir(exist_ok=True)
+    for state, group in df.groupby("state"):
+        group_file = regions_dir / f"{state.lower()}_observations.csv"
+        group.to_csv(group_file, index=False)
+        logging.info(f"Saved regional observations to {group_file}")
+
+    # Organize observations by event type
+    event_categories = {"Winter": ["SNOW"], "Wind": ["PKGUST"], "Other": []}
+    events_dir = output_dir / "events"
+    events_dir.mkdir(exist_ok=True)
+    for event, group in df.groupby("type"):
+        category = next((key for key, values in event_categories.items() if event in values), "Other")
+        category_dir = events_dir / category
+        category_dir.mkdir(exist_ok=True)
+        group_file = category_dir / f"{event.lower()}_observations.csv"
+        group.to_csv(group_file, index=False)
+        logging.info(f"Saved {event} observations to {group_file}")
+
+    # Organize observations by date
+    date_dir = output_dir / "dates"
+    date_dir.mkdir(exist_ok=True)
+    for obs_date, group in df.groupby("date"):
+        date_file = date_dir / f"{obs_date}_observations.csv"
+        group.to_csv(date_file, index=False)
+        logging.info(f"Saved observations for {obs_date} to {date_file}")
 
 
-# Main function
 def main(field_office_code):
-    base_dir = Path(__file__).resolve().parent.parent
-    input_file = base_dir / f"data/{field_office_code}/raw_metadata/pns_metadata.csv"
-    parsed_reports_dir = base_dir / f"data/{field_office_code}/parsed_reports"
+    """
+    Main script execution.
 
-    logging.info(f"Processing field office: {field_office_code}")
+    Args:
+        field_office_code (str): The field office code for which the script will process data (e.g., "OKX").
+    """
+    # Define input paths and output paths based on field office
+    input_file = Path(f"data/{field_office_code}/raw_metadata/pns_metadata.csv")
+    output_dir = Path(f"data/{field_office_code}/parsed_reports")
 
+    # Ensure input file exists
     if not input_file.is_file():
-        logging.error(f"Input file not found: {input_file}")
-        raise FileNotFoundError(f"Input file not found: {input_file}")
+        logging.error(f"Input file not found at {input_file}")
+        raise FileNotFoundError(f"Input file '{input_file}' not found.")
 
+    # Process the file
     with input_file.open("r") as f:
         lines = f.readlines()
-
-    if not lines:
-        logging.error("Input file is empty.")
-        raise ValueError("Input file is empty.")
 
     metadata = extract_metadata(lines)
     observations = extract_observations(lines)
 
-    event_category_mapping = {
-        "SNOW": "Winter",
-        "SNOW_24": "Winter",
-        "TEMPERATURE": "Temperatures",
-        "WIND": "Wind",
-    }
-
-    for observation in observations:
-        event_type = observation["type"]
-        event_date = observation["date"]
-
-        # Map event category
-        event_category = sanitize_path_component(event_category_mapping.get(event_type.upper(), "Other"))
-        formatted_date = sanitize_path_component(event_date.replace("-", "_"))
-
-        # Construct path
-        date_dir = parsed_reports_dir / event_category / formatted_date
-
-        # Avoid redundant nesting
-        if not date_dir.exists():
-            try:
-                date_dir.mkdir(parents=True, exist_ok=True)
-                logging.info(f"Directory created: {date_dir}")
-            except Exception as e:
-                logging.error(f"Failed to create directory {date_dir}: {e}")
-
-        # Save observations by type
-        csv_file_path = date_dir / f"{event_type.lower()}_observations.csv"
-        try:
-            if csv_file_path.is_file():
-                pd.DataFrame([observation]).to_csv(csv_file_path, mode="a", header=False, index=False)
-            else:
-                pd.DataFrame([observation]).to_csv(csv_file_path, index=False)
-            logging.info(f"Saved observation to: {csv_file_path}")
-        except Exception as e:
-            logging.error(f"Failed to save observation to {csv_file_path}: {e}")
-
-    # Save metadata
-    metadata_file_path = parsed_reports_dir / "metadata.csv"
-    try:
-        if metadata:
-            pd.DataFrame([metadata]).to_csv(metadata_file_path, index=False)
-            logging.info(f"Saved metadata to: {metadata_file_path}")
-        else:
-            logging.warning("No metadata available to save.")
-    except Exception as e:
-        logging.error(f"Failed to save metadata file: {e}")
+    # Save parsed data
+    save_dataframes(metadata, observations, output_dir)
 
 
 if __name__ == "__main__":
-    try:
-        setup_logging()
-        main("OKX")  # Replace with your field office code
-    except Exception as e:
-        logging.critical(f"Critical error during processing: {e}")
+    # Replace "OKX" with the field office code for your use case
+    main("OKX")

@@ -1,6 +1,16 @@
 ├── snow-plots/
 │   ├── project_structure.txt
 │   ├── .gitignore
+│   ├── qodana.yaml
+│   ├── .pytest_cache/
+│   │   ├── CACHEDIR.TAG
+│   │   ├── README.md
+│   │   ├── .gitignore
+│   │   ├── v/
+│   │   │   ├── cache/
+│   │   │   │   ├── nodeids
+│   │   │   │   ├── lastfailed
+│   │   │   │   ├── stepwise
 │   ├── images/
 │   │   ├── data_source_images_snow_plots_tesseract/
 │   │   │   ├── mid.png
@@ -12,49 +22,265 @@
 │   │   │   ├── snowfall_long_island_(li).png
 │   │   │   ├── snowfall_new_jersey_(nj).png
 │   │   │   ├── snowfall_westchester_and_ct.png
+│   ├── reference_data_for_lookup/
+│   │   ├── event_codes.csv
 │   ├── logs/
-│   │   ├── parse_pns.log
 │   │   ├── parse_pns_data.log
 │   │   ├── pns_scraper.log
 │   ├── modules/
 │   │   ├── parse_pns_data.py
+│   │   ├── __init__.py
 │   │   ├── create_project_structure.py
 │   │   ├── pns_scraper.py
 │   │   ├── settings.py
 │   │   ├── remove_dups.py
-│   │   ├── ..logs/
-│   │   │   ├── parse_pns.log
+│   │   ├── .pytest_cache/
+│   │   │   ├── CACHEDIR.TAG
+│   │   │   ├── README.md
+│   │   │   ├── .gitignore
+│   │   │   ├── v/
+│   │   │   │   ├── cache/
+│   │   │   │   │   ├── nodeids
+│   │   │   │   │   ├── lastfailed
+│   │   │   │   │   ├── stepwise
+│   │   ├── unit_tests/
+│   │   │   ├── test_3_pns_scraper.py
+│   │   │   ├── test_4_pns_scraper.py
+│   │   │   ├── test_5_pns_scraper.py
+│   │   │   ├── test_2_pns_scraper.py
+│   │   │   ├── __init__.py
+│   │   │   ├── test_1_pns_scraper.py
+│   │   │   ├── test_event_type_extraction.py
+│   │   │   ├── .pytest_cache/
+│   │   │   │   ├── CACHEDIR.TAG
+│   │   │   │   ├── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── v/
+│   │   │   │   │   ├── cache/
+│   │   │   │   │   │   ├── nodeids
+│   │   │   │   │   │   ├── lastfailed
+│   │   │   │   │   │   ├── stepwise
 │   │   ├── old_or_not_used/
 │   │   │   ├── snow-plots-hardcode.py
 │   │   │   ├── Old_parse_pns_data.py
 │   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
+│   │   ├── logs/
+│   │   │   ├── pns_scraper.log
 │   ├── data/
 │   │   ├── OKX/
 │   │   │   ├── raw_metadata/
 │   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
+│   │   │   ├── Parsed Reports/
+│   │   │   │   ├── WIND/
+│   │   │   │   │   ├── General/
+│   │   │   │   │   │   ├── 2025-01-28/
+│   │   │   │   │   │   │   ├── pns_metadata.csv
 │   │   │   ├── backup/
+│   │   │   │   ├── pns_backup_page_204.html
+│   │   │   │   ├── pns_backup_page_195.html
+│   │   │   │   ├── pns_backup_page_183.html
 │   │   │   │   ├── pns_backup_page_9.html
+│   │   │   │   ├── pns_backup_page_37.html
+│   │   │   │   ├── pns_backup_page_140.html
+│   │   │   │   ├── pns_backup_page_60.html
+│   │   │   │   ├── pns_backup_page_117.html
+│   │   │   │   ├── pns_backup_page_99.html
+│   │   │   │   ├── pns_backup_page_76.html
+│   │   │   │   ├── pns_backup_page_101.html
+│   │   │   │   ├── pns_backup_page_21.html
+│   │   │   │   ├── pns_backup_page_156.html
+│   │   │   │   ├── pns_backup_page_121.html
+│   │   │   │   ├── pns_backup_page_56.html
+│   │   │   │   ├── pns_backup_page_176.html
+│   │   │   │   ├── pns_backup_page_199.html
+│   │   │   │   ├── pns_backup_page_160.html
 │   │   │   │   ├── pns_backup_page_17.html
+│   │   │   │   ├── pns_backup_page_137.html
 │   │   │   │   ├── pns_backup_page_5.html
+│   │   │   │   ├── pns_backup_page_40.html
+│   │   │   │   ├── pns_backup_page_83.html
+│   │   │   │   ├── pns_backup_page_95.html
+│   │   │   │   ├── pns_backup_page_94.html
+│   │   │   │   ├── pns_backup_page_82.html
 │   │   │   │   ├── pns_backup_page_4.html
+│   │   │   │   ├── pns_backup_page_41.html
+│   │   │   │   ├── pns_backup_page_136.html
 │   │   │   │   ├── pns_backup_page_16.html
+│   │   │   │   ├── pns_backup_page_161.html
+│   │   │   │   ├── pns_backup_page_177.html
+│   │   │   │   ├── pns_backup_page_198.html
+│   │   │   │   ├── pns_backup_page_57.html
+│   │   │   │   ├── pns_backup_page_120.html
+│   │   │   │   ├── pns_backup_page_157.html
+│   │   │   │   ├── pns_backup_page_20.html
+│   │   │   │   ├── pns_backup_page_100.html
+│   │   │   │   ├── pns_backup_page_98.html
+│   │   │   │   ├── pns_backup_page_77.html
+│   │   │   │   ├── pns_backup_page_116.html
+│   │   │   │   ├── pns_backup_page_61.html
+│   │   │   │   ├── pns_backup_page_141.html
+│   │   │   │   ├── pns_backup_page_36.html
 │   │   │   │   ├── pns_backup_page_8.html
+│   │   │   │   ├── pns_backup_page_182.html
+│   │   │   │   ├── pns_backup_page_194.html
 │   │   │   │   ├── pns_backup.html
+│   │   │   │   ├── pns_backup_page_127.html
+│   │   │   │   ├── pns_backup_page_50.html
+│   │   │   │   ├── pns_backup_page_170.html
+│   │   │   │   ├── pns_backup_page_166.html
+│   │   │   │   ├── pns_backup_page_189.html
 │   │   │   │   ├── pns_backup_page_11.html
+│   │   │   │   ├── pns_backup_page_131.html
+│   │   │   │   ├── pns_backup_page_46.html
 │   │   │   │   ├── pns_backup_page_3.html
+│   │   │   │   ├── pns_backup_page_85.html
+│   │   │   │   ├── pns_backup_page_93.html
+│   │   │   │   ├── pns_backup_page_202.html
+│   │   │   │   ├── pns_backup_page_193.html
+│   │   │   │   ├── pns_backup_page_185.html
+│   │   │   │   ├── pns_backup_page_31.html
+│   │   │   │   ├── pns_backup_page_146.html
+│   │   │   │   ├── pns_backup_page_89.html
+│   │   │   │   ├── pns_backup_page_66.html
+│   │   │   │   ├── pns_backup_page_111.html
+│   │   │   │   ├── pns_backup_page_70.html
+│   │   │   │   ├── pns_backup_page_107.html
+│   │   │   │   ├── pns_backup_page_27.html
+│   │   │   │   ├── pns_backup_page_150.html
+│   │   │   │   ├── pns_backup_page_151.html
+│   │   │   │   ├── pns_backup_page_26.html
+│   │   │   │   ├── pns_backup_page_106.html
+│   │   │   │   ├── pns_backup_page_71.html
+│   │   │   │   ├── pns_backup_page_110.html
+│   │   │   │   ├── pns_backup_page_88.html
+│   │   │   │   ├── pns_backup_page_67.html
+│   │   │   │   ├── pns_backup_page_147.html
+│   │   │   │   ├── pns_backup_page_30.html
+│   │   │   │   ├── pns_backup_page_184.html
+│   │   │   │   ├── pns_backup_page_192.html
+│   │   │   │   ├── pns_backup_page_203.html
+│   │   │   │   ├── pns_backup_page_92.html
+│   │   │   │   ├── pns_backup_page_84.html
+│   │   │   │   ├── pns_backup_page_47.html
 │   │   │   │   ├── pns_backup_page_2.html
+│   │   │   │   ├── pns_backup_page_130.html
 │   │   │   │   ├── pns_backup_page_10.html
+│   │   │   │   ├── pns_backup_page_167.html
+│   │   │   │   ├── pns_backup_page_188.html
+│   │   │   │   ├── pns_backup_page_171.html
+│   │   │   │   ├── pns_backup_page_51.html
+│   │   │   │   ├── pns_backup_page_126.html
+│   │   │   │   ├── pns_backup_page_29.html
+│   │   │   │   ├── pns_backup_page_91.html
+│   │   │   │   ├── pns_backup_page_109.html
+│   │   │   │   ├── pns_backup_page_68.html
+│   │   │   │   ├── pns_backup_page_87.html
+│   │   │   │   ├── pns_backup_page_148.html
 │   │   │   │   ├── pns_backup_page_1.html
+│   │   │   │   ├── pns_backup_page_44.html
+│   │   │   │   ├── pns_backup_page_133.html
 │   │   │   │   ├── pns_backup_page_13.html
+│   │   │   │   ├── pns_backup_page_164.html
+│   │   │   │   ├── pns_backup_page_172.html
+│   │   │   │   ├── pns_backup_page_52.html
+│   │   │   │   ├── pns_backup_page_125.html
+│   │   │   │   ├── pns_backup_page_152.html
+│   │   │   │   ├── pns_backup_page_25.html
+│   │   │   │   ├── pns_backup_page_105.html
+│   │   │   │   ├── pns_backup_page_72.html
+│   │   │   │   ├── pns_backup_page_113.html
+│   │   │   │   ├── pns_backup_page_64.html
+│   │   │   │   ├── pns_backup_page_144.html
+│   │   │   │   ├── pns_backup_page_33.html
+│   │   │   │   ├── pns_backup_page_48.html
+│   │   │   │   ├── pns_backup_page_187.html
+│   │   │   │   ├── pns_backup_page_168.html
+│   │   │   │   ├── pns_backup_page_191.html
+│   │   │   │   ├── pns_backup_page_129.html
+│   │   │   │   ├── pns_backup_page_200.html
+│   │   │   │   ├── pns_backup_page_201.html
+│   │   │   │   ├── pns_backup_page_128.html
+│   │   │   │   ├── pns_backup_page_190.html
+│   │   │   │   ├── pns_backup_page_186.html
+│   │   │   │   ├── pns_backup_page_169.html
+│   │   │   │   ├── pns_backup_page_49.html
+│   │   │   │   ├── pns_backup_page_32.html
+│   │   │   │   ├── pns_backup_page_145.html
+│   │   │   │   ├── pns_backup_page_65.html
+│   │   │   │   ├── pns_backup_page_112.html
+│   │   │   │   ├── pns_backup_page_73.html
+│   │   │   │   ├── pns_backup_page_104.html
+│   │   │   │   ├── pns_backup_page_24.html
+│   │   │   │   ├── pns_backup_page_153.html
+│   │   │   │   ├── pns_backup_page_124.html
+│   │   │   │   ├── pns_backup_page_53.html
+│   │   │   │   ├── pns_backup_page_173.html
+│   │   │   │   ├── pns_backup_page_165.html
 │   │   │   │   ├── pns_backup_page_12.html
+│   │   │   │   ├── pns_backup_page_132.html
+│   │   │   │   ├── pns_backup_page_45.html
+│   │   │   │   ├── pns_backup_page_149.html
+│   │   │   │   ├── pns_backup_page_69.html
+│   │   │   │   ├── pns_backup_page_86.html
+│   │   │   │   ├── pns_backup_page_108.html
+│   │   │   │   ├── pns_backup_page_90.html
+│   │   │   │   ├── pns_backup_page_28.html
+│   │   │   │   ├── pns_backup_page_154.html
+│   │   │   │   ├── pns_backup_page_23.html
+│   │   │   │   ├── pns_backup_page_103.html
+│   │   │   │   ├── pns_backup_page_74.html
+│   │   │   │   ├── pns_backup_page_115.html
+│   │   │   │   ├── pns_backup_page_62.html
+│   │   │   │   ├── pns_backup_page_142.html
+│   │   │   │   ├── pns_backup_page_35.html
+│   │   │   │   ├── pns_backup_page_139.html
+│   │   │   │   ├── pns_backup_page_181.html
+│   │   │   │   ├── pns_backup_page_19.html
+│   │   │   │   ├── pns_backup_page_197.html
+│   │   │   │   ├── pns_backup_page_178.html
+│   │   │   │   ├── pns_backup_page_58.html
+│   │   │   │   ├── pns_backup_page_158.html
+│   │   │   │   ├── pns_backup_page_78.html
+│   │   │   │   ├── pns_backup_page_97.html
+│   │   │   │   ├── pns_backup_page_81.html
+│   │   │   │   ├── pns_backup_page_119.html
+│   │   │   │   ├── pns_backup_page_39.html
+│   │   │   │   ├── pns_backup_page_42.html
 │   │   │   │   ├── pns_backup_page_7.html
+│   │   │   │   ├── pns_backup_page_135.html
 │   │   │   │   ├── pns_backup_page_15.html
+│   │   │   │   ├── pns_backup_page_162.html
+│   │   │   │   ├── pns_backup_page_174.html
+│   │   │   │   ├── pns_backup_page_54.html
+│   │   │   │   ├── pns_backup_page_123.html
+│   │   │   │   ├── pns_backup_page_122.html
+│   │   │   │   ├── pns_backup_page_55.html
+│   │   │   │   ├── pns_backup_page_175.html
+│   │   │   │   ├── pns_backup_page_163.html
 │   │   │   │   ├── pns_backup_page_14.html
+│   │   │   │   ├── pns_backup_page_134.html
+│   │   │   │   ├── pns_backup_page_43.html
 │   │   │   │   ├── pns_backup_page_6.html
+│   │   │   │   ├── pns_backup_page_38.html
+│   │   │   │   ├── pns_backup_page_118.html
+│   │   │   │   ├── pns_backup_page_80.html
+│   │   │   │   ├── pns_backup_page_79.html
+│   │   │   │   ├── pns_backup_page_96.html
+│   │   │   │   ├── pns_backup_page_159.html
+│   │   │   │   ├── pns_backup_page_59.html
+│   │   │   │   ├── pns_backup_page_196.html
+│   │   │   │   ├── pns_backup_page_179.html
 │   │   │   │   ├── pns_backup_page_18.html
+│   │   │   │   ├── pns_backup_page_180.html
+│   │   │   │   ├── pns_backup_page_138.html
+│   │   │   │   ├── pns_backup_page_34.html
+│   │   │   │   ├── pns_backup_page_143.html
+│   │   │   │   ├── pns_backup_page_63.html
+│   │   │   │   ├── pns_backup_page_114.html
+│   │   │   │   ├── pns_backup_page_75.html
+│   │   │   │   ├── pns_backup_page_102.html
+│   │   │   │   ├── pns_backup_page_22.html
+│   │   │   │   ├── pns_backup_page_155.html
 │   │   ├── raw_metadata/
 │   │   │   ├── pns_metadata.csv
 │   │   ├── parsed_reports/
