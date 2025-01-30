@@ -3,6 +3,27 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/AIAssistantSnippet.">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/Parsed Reports/Unknown/1/27/2025/pns_metadata.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/Parsed Reports/Unknown/1/28/2025/pns_metadata.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/OKX/Parsed Reports/WIND/General/2025-01-28/pns_metadata.csv">
           <value>
             <Attribute>
@@ -31,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/modules/unit_tests/detected_field_offices.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/reference_data_for_lookup/event_codes.csv">
           <value>
             <Attribute>
@@ -39,6 +67,13 @@
           </value>
         </entry>
         <entry key="/reference_data_for_lookup/field_offices.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/reference_data_for_lookup/field_offices_html_format.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -2,7 +2,7 @@ import geopandas as gpd
 import os
 
 # Path to the shapefile directory
-SHAPEFILE_DIR = '/Users/mattalevy/PycharmProjects/snow-plots/data/NWS_shapefiles'  # Replace with the actual path
+SHAPEFILE_DIR = '/reference_data_for_lookup/NWS_shapefiles'  # Replace with the actual path
 SHAPEFILE_NAME = 'z_18mr25.shp'  # Replace with the actual shapefile name
 SHAPEFILE_PATH = os.path.join(SHAPEFILE_DIR, SHAPEFILE_NAME)
 
