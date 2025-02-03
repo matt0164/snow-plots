@@ -1,4 +1,4 @@
-WFO Identifier,Location,PNS Link
+WFO Identifier,Location,ST,URL
 ABQ,Albuquerque, NM,https://forecast.weather.gov/product.php?site=ABQ&issuedby=ABQ&product=PNS
 ABR,Aberdeen, SD,https://forecast.weather.gov/product.php?site=ABR&issuedby=ABR&product=PNS
 AFC,Anchorage, AK,https://forecast.weather.gov/product.php?site=AFC&issuedby=AFC&product=PNS

@@ -25,6 +25,7 @@
 │   ├── reference_data_for_lookup/
 │   │   ├── event_codes.csv
 │   │   ├── field_offices.csv
+│   │   ├── field_offices_html.csv
 │   │   ├── old/
 │   │   │   ├── NWS_shapefiles/
 │   │   │   │   ├── z_18mr25.zip
@@ -43,6 +44,7 @@
 │   │   ├── __init__.py
 │   │   ├── create_project_structure.py
 │   │   ├── pns_scraper.py
+│   │   ├── pns_scraper_refactored.py
 │   │   ├── settings.py
 │   │   ├── remove_dups.py
 │   │   ├── .pytest_cache/
