@@ -305,10 +305,10 @@ def process_station(station):
 
 def main():
     """
-    Prompt the user for station(s) to process (comma-separated or 'ALL') and process each one.
+    Prompt the user for station(s) to process (comma-separated or 'ALL_STATIONS') and process each one.
     """
-    stations_input = input("Enter station(s) to parse (comma-separated or 'ALL' for all available): ").strip()
-    if stations_input.upper() == "ALL":
+    stations_input = input("Enter station(s) to parse (comma-separated or 'ALL_STATIONS' for all available): ").strip()
+    if stations_input.upper() == "ALL_STATIONS":
         data_dir = BASE_DIR / "data"
         station_list = [
             p.name for p in data_dir.iterdir()
