@@ -41,6 +41,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 import logging
+import shutil
 
 # Setup logging for debugging
 logging.basicConfig(
@@ -262,17 +263,15 @@ def save_dataframes(metadata, observations, output_dir):
         logging.debug("No 'date' column found for date grouping.")
 
 def save_debug_html(station):
-    """
-    If a debug HTML file exists in the data folder for the station,
-    copy it to the logs/debug folder.
-    """
+    """ Moves debug HTML file to logs/debug/ and deletes original. """
     source = BASE_DIR / "data" / f"{station}_debug.html"
     debug_dir = BASE_DIR / "logs" / "debug"
     debug_dir.mkdir(parents=True, exist_ok=True)
+
     if source.is_file():
         destination = debug_dir / f"{station}_debug.html"
-        shutil.copyfile(source, destination)
-        logging.info(f"Copied debug HTML file for station {station} to {destination}")
+        shutil.move(source, destination)
+        logging.info(f"Moved debug HTML file for station {station} to {destination}")
     else:
         logging.info(f"No debug HTML file found for station {station}")
 
