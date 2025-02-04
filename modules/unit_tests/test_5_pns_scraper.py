@@ -1,12 +1,10 @@
 import pytest
-from pns_scraper import parse_metadata
 import sys
 import os
 
 # Add 'modules' to the system path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from modules.pns_scraper import parse_metadata
 
 @pytest.mark.parametrize(
     "mock_metadata, expected_event_type",

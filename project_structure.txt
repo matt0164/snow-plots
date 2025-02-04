@@ -23,9 +23,11 @@
 │   │   │   ├── snowfall_new_jersey_(nj).png
 │   │   │   ├── snowfall_westchester_and_ct.png
 │   ├── reference_data_for_lookup/
+│   │   ├── full_wfo_list.csv
 │   │   ├── event_codes.csv
 │   │   ├── field_offices.csv
 │   │   ├── field_offices_html.csv
+│   │   ├── stations_pns.csv
 │   │   ├── old/
 │   │   │   ├── NWS_shapefiles/
 │   │   │   │   ├── z_18mr25.zip
@@ -44,8 +46,9 @@
 │   │   ├── __init__.py
 │   │   ├── create_project_structure.py
 │   │   ├── pns_scraper.py
-│   │   ├── pns_scraper_refactored.py
+│   │   ├── plot_snow_from_pns.py
 │   │   ├── settings.py
+│   │   ├── webpage_to_csv.py
 │   │   ├── remove_dups.py
 │   │   ├── .pytest_cache/
 │   │   │   ├── CACHEDIR.TAG
@@ -78,6 +81,51 @@
 │   │   │   │   │   │   ├── stepwise
 │   │   ├── old_or_not_used/
 │   │   │   ├── snow-plots-hardcode.py
+│   │   │   ├── __init__.py
 │   │   │   ├── Old_parse_pns_data.py
 │   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
+│   │   │   ├── pns_scraper.py
+│   │   │   ├── pns_scraper_refactored.py
+│   │   │   ├── pns_scraper_refactored_updated.py
 │   ├── data/
+│   │   ├── CAE_debug.html
+│   │   ├── BUF_debug.html
+│   │   ├── ABR_debug.html
+│   │   ├── ARX_debug.html
+│   │   ├── BOX_debug.html
+│   │   ├── BOU_debug.html
+│   │   ├── ALY_debug.html
+│   │   ├── BGM_debug.html
+│   │   ├── BTV_debug.html
+│   │   ├── BRO_debug.html
+│   │   ├── BOI_debug.html
+│   │   ├── BYZ_debug.html
+│   │   ├── CAR_debug.html
+│   │   ├── BIS_debug.html
+│   │   ├── AFC_debug.html
+│   │   ├── OKX_debug.html
+│   │   ├── BMX_debug.html
+│   │   ├── AKQ_debug.html
+│   │   ├── APX_debug.html
+│   │   ├── ABQ_debug.html
+│   │   ├── ABQ/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── OKX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── AKQ/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── BOX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── BUF/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── ALY/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   ├── BGM/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
