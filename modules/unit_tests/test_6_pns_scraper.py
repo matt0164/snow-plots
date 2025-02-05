@@ -1,7 +1,7 @@
 import os
 import unittest
 from unittest.mock import patch, mock_open, MagicMock
-from modules.old_or_not_used.pns_scraper import (
+from modules import (
     load_event_codes,
     classify_event,
     load_field_offices,

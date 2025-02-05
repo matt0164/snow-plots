@@ -13,7 +13,7 @@ def test_event_type_extraction(mock_metadata, expected_event_type):
     """Test that the correct event type is extracted from metadata."""
     header, extracted_metadata = "METADATA", mock_metadata
 
-    # Mimic the logic used in `pns_scraper.py`
+    # Mimic the logic used in `1_scraper.py`
     event_type = "Unknown"
     for line in extracted_metadata:
         if "SNOW" in line.upper():

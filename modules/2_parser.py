@@ -1,5 +1,5 @@
 """
-Script Name: parse_pns_data.py
+Script Name: 2_parser.py
 
 Description:
     This script processes raw PNS (Public Notification Statement) reports for one or more NWS field offices

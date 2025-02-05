@@ -4,7 +4,7 @@ import pytest
 from unittest.mock import patch, mock_open
 from pathlib import Path
 
-# Add the project root to sys.path so pytest can find pns_scraper.py
+# Add the project root to sys.path so pytest can find 1_scraper.py
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from pns_scraper import save_metadata_to_csv

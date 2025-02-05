@@ -1,3 +1,6 @@
+# simple app to walk through the directory structure and create a text file in root directory showing
+# where al files are
+
 import os
 
 # List of files and directories to be ignored

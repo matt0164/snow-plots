@@ -1,5 +1,5 @@
 import pytest
-from modules.old_or_not_used.pns_scraper import classify_event, load_event_codes
+from modules import classify_event, load_event_codes
 
 # Define a mock event codes mapping for testing
 event_mapping_mock = {

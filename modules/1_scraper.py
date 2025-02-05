@@ -127,10 +127,10 @@ def save_metadata_to_csv(header, metadata, station):
 
 def main():
     """Main function to fetch PNS metadata for user-selected stations."""
-    user_input = input("Enter station(s) to scrape (comma-separated or 'ALL_STATIONS' for all): ")
+    user_input = input("Enter station(s) to scrape (comma-separated or 'ALL' for all stations): ")
     selected_stations = [station.strip().upper() for station in user_input.split(',')]
 
-    if 'ALL_STATIONS' in selected_stations:
+    if 'ALL' in selected_stations:
         selected_stations = list(stations.keys())
 
     for station in selected_stations:

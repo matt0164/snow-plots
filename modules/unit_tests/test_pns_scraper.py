@@ -1,5 +1,5 @@
 import requests
-from modules.old_or_not_used.pns_scraper import fetch_page
+from modules import fetch_page
 from unittest.mock import patch, Mock
 
 
