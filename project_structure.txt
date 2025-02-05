@@ -1,0 +1,459 @@
+├── snow-plots/
+│   ├── project_structure.txt
+│   ├── .gitignore
+│   ├── qodana.yaml
+│   ├── .pytest_cache/
+│   │   ├── CACHEDIR.TAG
+│   │   ├── README.md
+│   │   ├── .gitignore
+│   │   ├── v/
+│   │   │   ├── cache/
+│   │   │   │   ├── nodeids
+│   │   │   │   ├── lastfailed
+│   │   │   │   ├── stepwise
+│   ├── images/
+│   │   ├── snowfall_heatmap.html
+│   │   ├── snowfall_heatmap_actual_values.html
+│   │   ├── data_source_images_snow_plots_tesseract/
+│   │   │   ├── mid.png
+│   │   │   ├── low.png
+│   │   │   ├── high.png
+│   │   ├── old_images/
+│   │   │   ├── snowfall_hudson_valley.png
+│   │   │   ├── snowfall_nyc_and_5_boroughs.png
+│   │   │   ├── snowfall_long_island_(li).png
+│   │   │   ├── snowfall_new_jersey_(nj).png
+│   │   │   ├── snowfall_westchester_and_ct.png
+│   ├── reference_data_for_lookup/
+│   │   ├── full_wfo_list.csv
+│   │   ├── event_codes.csv
+│   │   ├── field_offices.csv
+│   │   ├── field_offices_html.csv
+│   │   ├── stations_pns.csv
+│   │   ├── old/
+│   │   │   ├── NWS_shapefiles/
+│   │   │   │   ├── z_18mr25.zip
+│   │   │   │   ├── z_18mr25.prj
+│   │   │   │   ├── geodataframe.py
+│   │   │   │   ├── z_18mr25.shp
+│   │   │   │   ├── z_18mr25.shx
+│   │   │   │   ├── z_18mr25.dbf
+│   │   │   ├── zone_county_correlation/
+│   │   │   │   ├── bp18mr25.dbx
+│   ├── logs/
+│   │   ├── parse_pns_data.log
+│   │   ├── pns_scraper.log
+│   │   ├── debug/
+│   │   │   ├── RNK_debug.html
+│   │   │   ├── BUF_debug.html
+│   │   │   ├── MOB_debug.html
+│   │   │   ├── BOX_debug.html
+│   │   │   ├── ALY_debug.html
+│   │   │   ├── CHS_debug.html
+│   │   │   ├── BGM_debug.html
+│   │   │   ├── OUN_debug.html
+│   │   │   ├── FWD_debug.html
+│   │   │   ├── MLB_debug.html
+│   │   │   ├── BTV_debug.html
+│   │   │   ├── EPZ_debug.html
+│   │   │   ├── LWX_debug.html
+│   │   │   ├── CAR_debug.html
+│   │   │   ├── TAE_debug.html
+│   │   │   ├── CLE_debug.html
+│   │   │   ├── CTP_debug.html
+│   │   │   ├── MQT_debug.html
+│   │   │   ├── FFC_debug.html
+│   │   │   ├── ILM_debug.html
+│   │   │   ├── RLX_debug.html
+│   │   │   ├── OKX_debug.html
+│   │   │   ├── GYX_debug.html
+│   │   │   ├── AKQ_debug.html
+│   │   │   ├── PHI_debug.html
+│   │   │   ├── LZK_debug.html
+│   │   │   ├── ABQ_debug.html
+│   │   │   ├── HGX_debug.html
+│   ├── modules/
+│   │   ├── 2_parser.py
+│   │   ├── __init__.py
+│   │   ├── 3_combine_stations.py
+│   │   ├── project_structure.py
+│   │   ├── snow_heat_map.py
+│   │   ├── 1_scraper.py
+│   │   ├── plot_snow_from_pns.py
+│   │   ├── settings.py
+│   │   ├── webpage_to_csv.py
+│   │   ├── 4_combine_dates.py
+│   │   ├── .pytest_cache/
+│   │   │   ├── CACHEDIR.TAG
+│   │   │   ├── README.md
+│   │   │   ├── .gitignore
+│   │   │   ├── v/
+│   │   │   │   ├── cache/
+│   │   │   │   │   ├── nodeids
+│   │   │   │   │   ├── lastfailed
+│   │   │   │   │   ├── stepwise
+│   │   ├── unit_tests/
+│   │   │   ├── test_3_pns_scraper.py
+│   │   │   ├── test_4_pns_scraper.py
+│   │   │   ├── test_html_formats_of_station_pns.py
+│   │   │   ├── test_5_pns_scraper.py
+│   │   │   ├── test_2_pns_scraper.py
+│   │   │   ├── test_6_pns_scraper.py
+│   │   │   ├── __init__.py
+│   │   │   ├── test_1_pns_scraper.py
+│   │   │   ├── test_event_type_extraction.py
+│   │   │   ├── test_pns_scraper.py
+│   │   │   ├── .pytest_cache/
+│   │   │   │   ├── CACHEDIR.TAG
+│   │   │   │   ├── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── v/
+│   │   │   │   │   ├── cache/
+│   │   │   │   │   │   ├── nodeids
+│   │   │   │   │   │   ├── lastfailed
+│   │   │   │   │   │   ├── stepwise
+│   │   ├── old_or_not_used/
+│   │   │   ├── snow-plots-hardcode.py
+│   │   │   ├── __init__.py
+│   │   │   ├── Old_parse_pns_data.py
+│   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
+│   │   │   ├── pns_scraper.py
+│   │   │   ├── pns_scraper_refactored.py
+│   │   │   ├── remove_dups.py
+│   │   │   ├── pns_scraper_refactored_updated.py
+│   ├── data/
+│   │   ├── LBF_debug.html
+│   │   ├── VEF_debug.html
+│   │   ├── FGZ_debug.html
+│   │   ├── ILX_debug.html
+│   │   ├── CAE_debug.html
+│   │   ├── ABR_debug.html
+│   │   ├── LOT_debug.html
+│   │   ├── ILN_debug.html
+│   │   ├── ARX_debug.html
+│   │   ├── SGX_debug.html
+│   │   ├── LKN_debug.html
+│   │   ├── LUB_debug.html
+│   │   ├── BOU_debug.html
+│   │   ├── MKX_debug.html
+│   │   ├── REV_debug.html
+│   │   ├── LCH_debug.html
+│   │   ├── TBW_debug.html
+│   │   ├── TWC_debug.html
+│   │   ├── GJT_debug.html
+│   │   ├── MSO_debug.html
+│   │   ├── MHX_debug.html
+│   │   ├── HUN_debug.html
+│   │   ├── FGF_debug.html
+│   │   ├── LMK_debug.html
+│   │   ├── JKL_debug.html
+│   │   ├── PSR_debug.html
+│   │   ├── MTR_debug.html
+│   │   ├── JAX_debug.html
+│   │   ├── KEY_debug.html
+│   │   ├── PAH_debug.html
+│   │   ├── BRO_debug.html
+│   │   ├── DVN_debug.html
+│   │   ├── GRR_debug.html
+│   │   ├── BOI_debug.html
+│   │   ├── BYZ_debug.html
+│   │   ├── JAN_debug.html
+│   │   ├── MRX_debug.html
+│   │   ├── UNR_debug.html
+│   │   ├── MEG_debug.html
+│   │   ├── TSA_debug.html
+│   │   ├── DLH_debug.html
+│   │   ├── IND_debug.html
+│   │   ├── DTX_debug.html
+│   │   ├── STO_debug.html
+│   │   ├── SHV_debug.html
+│   │   ├── IWX_debug.html
+│   │   ├── PQR_debug.html
+│   │   ├── GRB_debug.html
+│   │   ├── LOX_debug.html
+│   │   ├── TFX_debug.html
+│   │   ├── GSP_debug.html
+│   │   ├── PBZ_debug.html
+│   │   ├── BIS_debug.html
+│   │   ├── TOP_debug.html
+│   │   ├── OHX_debug.html
+│   │   ├── MPX_debug.html
+│   │   ├── SEW_debug.html
+│   │   ├── RAH_debug.html
+│   │   ├── RIW_debug.html
+│   │   ├── OAX_debug.html
+│   │   ├── MFR_debug.html
+│   │   ├── AFC_debug.html
+│   │   ├── SLC_debug.html
+│   │   ├── HFO_debug.html
+│   │   ├── EAX_debug.html
+│   │   ├── WSH_debug.html
+│   │   ├── MFL_debug.html
+│   │   ├── GID_debug.html
+│   │   ├── CYS_debug.html
+│   │   ├── FSD_debug.html
+│   │   ├── EKA_debug.html
+│   │   ├── LIX_debug.html
+│   │   ├── OTX_debug.html
+│   │   ├── EWX_debug.html
+│   │   ├── BMX_debug.html
+│   │   ├── ICT_debug.html
+│   │   ├── CRP_debug.html
+│   │   ├── APX_debug.html
+│   │   ├── HNX_debug.html
+│   │   ├── PUB_debug.html
+│   │   ├── GLD_debug.html
+│   │   ├── ABQ/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── OKX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── FWD/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── BTV/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── LWX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── ALL_STATIONS/
+│   │   │   ├── all_stations_pns_data_2025-02-04-21-42.csv
+│   │   ├── CAR/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── AKQ/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── CHS/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── OUN/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── BOX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── FFC/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── BUF/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── ALY/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── RNK/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── TAE/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── LZK/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── RLX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── GYX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── EPZ/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── MQT/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── BGM/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── HGX/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── CTP/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── MOB/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── CLE/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── PHI/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── MLB/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/
+│   │   ├── ILM/
+│   │   │   ├── raw_metadata/
+│   │   │   │   ├── pns_metadata.csv
+│   │   │   ├── parsed_reports/
+│   │   │   │   ├── metadata.csv
+│   │   │   │   ├── observations.csv
+│   │   │   │   ├── regions/
+│   │   │   │   ├── dates/
+│   │   │   │   ├── events/

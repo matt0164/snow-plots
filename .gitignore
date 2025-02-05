@@ -1,0 +1,15 @@
+# Ignore event data directories
+data/parsed_reports/events/*
+
+# Ignore the old or not used modules folder
+modules/old_or_not_used/
+
+# Optional: Ignore backup files
+data/backup/
+
+images
+
+logs
+
+modules/old_or_not_used
+
