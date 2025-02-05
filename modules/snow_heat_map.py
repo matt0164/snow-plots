@@ -1,3 +1,7 @@
+"""This script processes metadata files, filters and validates
+    geospatial and temporal data, creates an interactive heatmap visualization, and saves
+    the output as an HTML file. """
+
 import os
 import pandas as pd
 import folium
@@ -8,8 +12,20 @@ import webbrowser
 
 def find_metadata_files(base_path="data"):
     """
-    Traverse the data directory to locate all pns_metadata.csv files.
-    Returns a dictionary mapping station names to their file paths.
+    Find metadata files in the given base directory.
+
+    This function searches recursively for ``pns_metadata.csv`` files within
+    the ``raw_metadata`` subdirectories of each station folder. If a
+    metadata file is found, the station name (inferred from the parent
+    folder name of the ``raw_metadata`` directory) and the corresponding
+    CSV file path are added to the returned dictionary.
+
+    :param base_path: The base directory to begin the search. Defaults to
+        "data".
+    :type base_path: str
+    :return: A dictionary where the keys are station names and the values
+        are the paths to the corresponding ``pns_metadata.csv`` files.
+    :rtype: dict
     """
     metadata_files = {}
     base_dir = Path(base_path)
@@ -26,7 +42,19 @@ def find_metadata_files(base_path="data"):
 
 def load_metadata(selected_stations, metadata_files):
     """
-    Load metadata for selected stations or all stations if selected_stations is None.
+    Loads metadata by reading specified files and optionally filtering by selected stations.
+    Combines all metadata files into a single DataFrame with an additional column
+    indicating the station name.
+
+    :param selected_stations: List of station names to filter the metadata. If empty or
+        None, all stations will be included.
+    :type selected_stations: list[str] | None
+    :param metadata_files: Dictionary mapping station names to their corresponding
+        file paths containing metadata.
+    :type metadata_files: dict[str, str]
+    :return: Combined pandas DataFrame of metadata from the specified stations. If no
+        matching station metadata is available, returns None.
+    :rtype: pandas.DataFrame | None
     """
     data_frames = []
 
@@ -44,7 +72,14 @@ def load_metadata(selected_stations, metadata_files):
 
 def select_stations(metadata_files):
     """
-    Prompt the user to select specific stations or all stations for processing.
+    Interactive function to select specific weather stations from a given metadata file dictionary. The function lists
+    all available stations and captures user input for their selection. Users can select a single station, opt to use
+    data from all stations, or re-input if an invalid choice is made.
+
+    :param metadata_files: A dictionary containing metadata of weather stations, where keys represent station names.
+    :type metadata_files: dict
+    :return: A list containing the name of the selected station(s) or None if all stations are selected.
+    :rtype: list or None
     """
     print("\nAvailable Stations:")
     for i, station in enumerate(metadata_files.keys(), start=1):
@@ -66,6 +101,14 @@ def select_stations(metadata_files):
 
 
 def main():
+    """
+    Execute the main function to perform a series of data processing tasks for generating a
+    snowfall intensity heatmap. This script processes metadata files, filters and validates
+    geospatial and temporal data, creates an interactive heatmap visualization, and saves
+    the output as an HTML file.
+
+    :return: None
+    """
     # Find all metadata files in the data directory
     base_path = "../data"  # Adjusted for relative path from /modules
     metadata_files = find_metadata_files(base_path=base_path)

@@ -1,47 +1,26 @@
+#!/usr/bin/env python
 """
-Script Name: 2_parser.py
+2_parser.py
 
 Description:
-    This script processes raw PNS (Public Notification Statement) reports for one or more NWS field offices
-    from their respective `pns_metadata.csv` files. It extracts metadata, parses observations, and organizes
-    the processed data into structured CSV files.
+    This script processes raw PNS (Public Notification Statement) reports for one or more NWS field offices.
+    It extracts metadata, observations, and header metadata from each station’s raw data file and writes
+    three CSV files into data/{station}/:
+        - observations_<date>_<time>.csv
+        - metadata_<date>_<time>.csv
+        - header_metadata_<date>_<time>.csv
 
-Project Structure:
-    Each station (e.g., OKX) has its own input and output file structure:
-        - Input File Location: `data/<station>/raw_metadata/pns_metadata.csv`
-        - Output Folder: `data/<station>/parsed_reports/`
-    Debug HTML files (if present) are saved to: `logs/debug/`
-
-Key Features:
-    1. Metadata Extraction:
-        - Extracts key metadata fields from the station's raw PNS reports.
-    2. Observations Parsing:
-        - Parses relevant observation fields (date, time, region, type, values, etc.).
-    3. Data Organization:
-        - Metadata and observations are saved in station-specific folders (e.g., `OKX/parsed_reports/`).
-        - Observations are grouped by region, event category, and date.
-
-Output Structure:
-    - All outputs are saved under `data/<station>/parsed_reports/`:
-        - `metadata.csv`: Contains extracted metadata.
-        - `observations.csv`: Contains all observations.
-        - `regions/`: CSVs grouped by state.
-        - `events/`: Subdirectories for observation categories (e.g., Wind, Winter, Flooding).
-        - `dates/`: CSVs grouped by date.
-
-Dependencies:
-    - Python >= 3.6
-    - pandas, re, pathlib, logging, datetime, csv, shutil
+The date and time are extracted from the report content rather than the system run time.
+If output files for a station with the same issuance date and time already exist, processing for that station is skipped.
 """
 
+from typing import List, Tuple, Dict, Any
+from pathlib import Path
 import pandas as pd
 import re
 import csv
-import shutil
-from datetime import datetime
-from pathlib import Path
 import logging
-import shutil
+from datetime import datetime
 
 # Setup logging for debugging
 logging.basicConfig(
@@ -50,14 +29,60 @@ logging.basicConfig(
 )
 
 # Define the project root.
-# Assuming this script is in "snow-plots/modules/", the project root is one level up.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Assuming this script is in "modules/", the project root is one level up.
+BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
-def extract_metadata(lines):
+# Compile regex patterns for efficiency
+ISSUANCE_PATTERN = re.compile(
+    r'(\d{1,4}\s?[AP]M).*?(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(\d{4})'
+)
+NOUS_PATTERN = re.compile(r"^(NOUS\d{2}\s[A-Z]{3,4})")
+CTZ_PATTERN = re.compile(r"(CTZ\d{3}>\d{3}.*)")
+SIX_DIGIT_PATTERN = re.compile(r"(\d{6})")
+
+
+def extract_issuance_timestamp(lines: List[str]) -> Tuple[str, str]:
     """
-    Extract metadata fields from the raw PNS report when a **METADATA header is present.
+    Scan the report lines for a line that appears to contain the issuance time and date.
+    Expected sample format: "831 AM EST Mon Feb 3 2025"
+    Returns a tuple: (formatted_date, formatted_time)
+      e.g., ("2025-02-03", "831AM")
     """
-    metadata = {
+    for line in lines:
+        match = ISSUANCE_PATTERN.search(line)
+        if match:
+            time_part = match.group(1).strip().replace(" ", "")  # e.g., "831AM"
+            month = match.group(2)
+            day = match.group(3)
+            year = match.group(4)
+            date_str = f"{month} {day} {year}"
+            try:
+                parsed_date = datetime.strptime(date_str, "%b %d %Y").strftime("%Y-%m-%d")
+            except Exception as e:
+                logging.error(f"Error parsing date from '{date_str}': {e}")
+                parsed_date = "unknown_date"
+            return parsed_date, time_part
+    return "unknown_date", "unknown_time"
+
+
+def extract_header_metadata(lines: List[str]) -> List[str]:
+    """
+    Extract the header metadata from the report.
+    This is assumed to be all lines before the "Public Information Statement" line.
+    """
+    header_lines: List[str] = []
+    for line in lines:
+        if "Public Information Statement" in line:
+            break
+        header_lines.append(line.strip())
+    return header_lines
+
+
+def extract_metadata(lines: List[str]) -> Dict[str, Any]:
+    """
+    Extract metadata fields from the report when a **METADATA header is present.
+    """
+    metadata: Dict[str, Any] = {
         "issuance_code": None,
         "region_codes": None,
         "timestamp": None,
@@ -65,41 +90,35 @@ def extract_metadata(lines):
         "nws_office": None,
         "nws_time": None
     }
-
-    # Extract issuance code and region codes from the first line (if available)
-    match = re.search(r"^(NOUS\d{2}\s[A-Z]{4})", lines[0])
-    if match:
-        metadata["issuance_code"] = match.group(1)
-
-    match = re.search(r"(CTZ\d{3}>\d{3}-NJZ\d{3}>\d{3})", lines[0])
-    if match:
-        metadata["region_codes"] = match.group(1)
-
-    # Extract timestamp from the first line (assuming a 6-digit date code is present)
-    match = re.search(r"(\d{6})", lines[0])
-    if match:
-        try:
-            metadata["timestamp"] = datetime.strptime(match.group(1), "%y%m%d").strftime("%Y-%m-%d")
-        except Exception as e:
-            logging.error(f"Error parsing timestamp: {e}")
-
-    # Extract additional metadata details
+    if lines:
+        match = NOUS_PATTERN.search(lines[0])
+        if match:
+            metadata["issuance_code"] = match.group(1)
+        match = CTZ_PATTERN.search(lines[0])
+        if match:
+            metadata["region_codes"] = match.group(1)
+        match = SIX_DIGIT_PATTERN.search(lines[0])
+        if match:
+            try:
+                metadata["timestamp"] = datetime.strptime(match.group(1), "%y%m%d").strftime("%Y-%m-%d")
+            except Exception as e:
+                logging.error(f"Error parsing timestamp: {e}")
     for i, line in enumerate(lines):
         if "Public Information Statement" in line:
             metadata["public_info"] = line.strip()
         if "National Weather Service" in line:
             metadata["nws_office"] = lines[i + 1].strip() if (i + 1) < len(lines) else None
-        if re.match(r"\d{3,4}\s[AP]M\s[A-Za-z]{3}\s[A-Za-z]{3}\s\d{2}\s\d{4}", line):
+        if re.match(r"\d{3,4}\s[AP]M\s", line):
             metadata["nws_time"] = line.strip()
-
     return metadata
 
-def extract_observations(lines):
+
+def extract_observations(lines: List[str]) -> List[Dict[str, Any]]:
     """
-    Extract observations from the raw PNS report when **METADATA is present.
-    This function expects CSV-like rows with at least 14 columns.
+    Extract observations from the report when **METADATA is present.
+    Expects CSV-like rows with at least 14 columns.
     """
-    observations = []
+    observations: List[Dict[str, Any]] = []
     for i, line in enumerate(lines):
         try:
             row = next(csv.reader([line.strip()]))
@@ -124,29 +143,23 @@ def extract_observations(lines):
             observations.append(observation)
         except Exception as e:
             logging.error(f"Error parsing line {i}: '{line.strip()}' - {e}")
+    return observations
 
-    # Remove duplicates and return as list of dictionaries.
-    return pd.DataFrame(observations).drop_duplicates().to_dict(orient="records")
 
-def extract_alternative_metadata(lines):
+def extract_alternative_metadata(lines: List[str]) -> Dict[str, Any]:
     """
     Extract metadata from the alternative report format (when no **METADATA header exists).
-
-    This function looks for key lines such as one starting with "NOUS" and the
-    "National Weather Service" line with the following timestamp.
     """
-    metadata = {
+    metadata: Dict[str, Any] = {
         "issuance_code": None,
         "nws_office": None,
         "nws_time": None,
-        "product": None  # e.g., "PNSDLH", "PNSGRB", etc.
+        "product": None
     }
-    # Look for a line starting with "NOUS" (e.g., "NOUS43 KDLH 211941")
     for line in lines:
         if line.startswith("NOUS"):
             metadata["issuance_code"] = line.strip()
             break
-
     try:
         idx = next(i for i, line in enumerate(lines) if line.startswith("NOUS"))
         if (idx + 1) < len(lines):
@@ -163,18 +176,16 @@ def extract_alternative_metadata(lines):
             if j < len(lines):
                 metadata["nws_time"] = lines[j].strip()
             break
-
     return metadata
 
-def extract_alternative_observations(lines):
+
+def extract_alternative_observations(lines: List[str]) -> List[Dict[str, Any]]:
     """
     Extract observations from the alternative report format.
-
-    This function searches for the table header (e.g., a line containing "Location" and either "Temp" or "Amount")
-    and then parses subsequent lines using whitespace splitting.
-    It skips county header lines (e.g., those starting with "..." and containing "County").
+    This function looks for a table header (e.g., a line containing "Location" and "Temp" or "Amount")
+    and then parses subsequent lines.
     """
-    observations = []
+    observations: List[Dict[str, Any]] = []
     header_line = None
     header_index = None
 
@@ -208,117 +219,119 @@ def extract_alternative_observations(lines):
 
     return observations
 
-def save_dataframes(metadata, observations, output_dir):
+
+def save_output_files(
+    station: str,
+    metadata: Dict[str, Any],
+    observations: List[Dict[str, Any]],
+    header_metadata: List[str],
+    issuance_date: str,
+    issuance_time: str
+) -> None:
     """
-    Save parsed observations and metadata into the structured directory for the station.
+    Save metadata, observations, and header metadata into CSV files within the station folder.
+    Filenames include the extracted issuance date and time.
     """
+    output_dir: Path = BASE_DIR / "data" / station
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save metadata CSV
-    metadata_file = output_dir / "metadata.csv"
-    pd.DataFrame([metadata]).to_csv(metadata_file, index=False)
-    logging.info(f"Saved metadata to {metadata_file}")
+    metadata_filename = output_dir / f"metadata_{issuance_date}_{issuance_time}.csv"
+    observations_filename = output_dir / f"observations_{issuance_date}_{issuance_time}.csv"
+    header_metadata_filename = output_dir / f"header_metadata_{issuance_date}_{issuance_time}.csv"
 
-    # Save observations CSV
-    observations_file = output_dir / "observations.csv"
-    df = pd.DataFrame(observations)
-    df.to_csv(observations_file, index=False)
-    logging.info(f"Saved observations to {observations_file}")
-
-    # Organize observations by regions (grouped by state)
-    regions_dir = output_dir / "regions"
-    regions_dir.mkdir(exist_ok=True)
-    if "state" in df.columns:
-        for state, group in df.groupby("state"):
-            group_file = regions_dir / f"{state.lower()}_observations.csv"
-            group.to_csv(group_file, index=False)
-            logging.info(f"Saved regional observations to {group_file}")
-    else:
-        logging.debug("No 'state' column found for regional grouping.")
-
-    # Organize observations by event type (example categorization)
-    event_categories = {"Winter": ["SNOW"], "Wind": ["PKGUST"], "Other": []}
-    events_dir = output_dir / "events"
-    events_dir.mkdir(exist_ok=True)
-    if "type" in df.columns:
-        for event, group in df.groupby("type"):
-            category = next((key for key, values in event_categories.items() if event in values), "Other")
-            category_dir = events_dir / category
-            category_dir.mkdir(exist_ok=True)
-            group_file = category_dir / f"{event.lower()}_observations.csv"
-            group.to_csv(group_file, index=False)
-            logging.info(f"Saved {event} observations to {group_file}")
-    else:
-        logging.debug("No 'type' column found for event categorization.")
-
-    # Organize observations by date
-    date_dir = output_dir / "dates"
-    date_dir.mkdir(exist_ok=True)
-    if "date" in df.columns:
-        for obs_date, group in df.groupby("date"):
-            date_file = date_dir / f"{obs_date}_observations.csv"
-            group.to_csv(date_file, index=False)
-            logging.info(f"Saved observations for {obs_date} to {date_file}")
-    else:
-        logging.debug("No 'date' column found for date grouping.")
-
-def save_debug_html(station):
-    """ Moves debug HTML file to logs/debug/ and deletes original. """
-    source = BASE_DIR / "data" / f"{station}_debug.html"
-    debug_dir = BASE_DIR / "logs" / "debug"
-    debug_dir.mkdir(parents=True, exist_ok=True)
-
-    if source.is_file():
-        destination = debug_dir / f"{station}_debug.html"
-        shutil.move(source, destination)
-        logging.info(f"Moved debug HTML file for station {station} to {destination}")
-    else:
-        logging.info(f"No debug HTML file found for station {station}")
-
-def process_station(station):
-    """
-    Process a single station: read the raw metadata, extract and save the parsed data,
-    and copy any debug HTML file to the logs/debug folder.
-    """
-    input_file = BASE_DIR / "data" / station / "raw_metadata" / "pns_metadata.csv"
-    output_dir = BASE_DIR / "data" / station / "parsed_reports"
-
-    if not input_file.is_file():
-        logging.error(f"Input file not found at {input_file}")
+    # Check if files already exist
+    if metadata_filename.exists() and observations_filename.exists() and header_metadata_filename.exists():
+        logging.info(f"Files for station {station} with timestamp {issuance_date} {issuance_time} already exist. Skipping.")
         return
 
-    with input_file.open("r") as f:
-        lines = f.readlines()
+    # Save metadata
+    pd.DataFrame([metadata]).to_csv(metadata_filename, index=False)
+    logging.info(f"Saved metadata to {metadata_filename}")
 
-    if any("**METADATA" in line for line in lines):
-        logging.info(f"Using standard metadata extraction for station {station}.")
-        metadata = extract_metadata(lines)
-        observations = extract_observations(lines)
+    # Save observations
+    pd.DataFrame(observations).to_csv(observations_filename, index=False)
+    logging.info(f"Saved observations to {observations_filename}")
+
+    # Save header metadata (one header line per row)
+    if header_metadata:
+        pd.DataFrame(header_metadata, columns=["header_line"]).to_csv(header_metadata_filename, index=False)
+        logging.info(f"Saved header metadata to {header_metadata_filename}")
     else:
-        logging.info(f"**METADATA header not found for station {station}; using alternative extraction logic.")
+        logging.info(f"No header metadata found for station {station}.")
+
+
+def process_station(station: str) -> None:
+    """
+    Process a single station:
+      - Read the raw data file from data/{station}/raw_data.csv.
+      - Extract issuance timestamp from the file.
+      - If output files for that timestamp already exist, skip processing.
+      - Otherwise, extract metadata, observations, and header metadata.
+      - Merge observations from the structured and alternative extraction methods (if applicable).
+      - Save output CSV files to data/{station}/.
+    """
+    # Updated to use raw_data.csv
+    input_file: Path = BASE_DIR / "data" / station / "raw_data.csv"
+    if not input_file.is_file():
+        logging.error(f"Input file not found at {input_file} for station {station}.")
+        return
+
+    try:
+        lines: List[str] = input_file.read_text(encoding="utf-8").splitlines()
+    except Exception as e:
+        logging.error(f"Error reading {input_file}: {e}")
+        return
+
+    issuance_date, issuance_time = extract_issuance_timestamp(lines)
+    logging.info(f"Extracted issuance timestamp for station {station}: {issuance_date} {issuance_time}")
+
+    output_dir: Path = BASE_DIR / "data" / station
+    meta_file: Path = output_dir / f"metadata_{issuance_date}_{issuance_time}.csv"
+    obs_file: Path = output_dir / f"observations_{issuance_date}_{issuance_time}.csv"
+    header_file: Path = output_dir / f"header_metadata_{issuance_date}_{issuance_time}.csv"
+    if meta_file.exists() and obs_file.exists() and header_file.exists():
+        logging.info(f"Output files for station {station} with timestamp {issuance_date} {issuance_time} already exist. Skipping.")
+        return
+
+    # Extract header metadata (the lines before the Public Information Statement)
+    header_metadata = extract_header_metadata(lines)
+
+    # Merge extraction methods
+    if any("**METADATA" in line for line in lines):
+        logging.info(f"Using structured extraction for station {station}.")
+        metadata_structured = extract_metadata(lines)
+        observations_structured = extract_observations(lines)
+        observations_alternative = extract_alternative_observations(lines)
+        df_structured = pd.DataFrame(observations_structured)
+        df_alternative = pd.DataFrame(observations_alternative)
+        if not df_structured.empty and not df_alternative.empty:
+            df_merged = pd.concat([df_structured, df_alternative]).drop_duplicates()
+            observations = df_merged.to_dict(orient="records")
+        else:
+            observations = observations_structured or observations_alternative
+        metadata = metadata_structured
+    else:
+        logging.info(f"Using alternative extraction for station {station}.")
         metadata = extract_alternative_metadata(lines)
         observations = extract_alternative_observations(lines)
 
-    save_dataframes(metadata, observations, output_dir)
-    save_debug_html(station)
+    save_output_files(station, metadata, observations, header_metadata, issuance_date, issuance_time)
 
-def main():
-    """
-    Prompt the user for station(s) to process (comma-separated or 'ALL_STATIONS') and process each one.
-    """
-    stations_input = input("Enter station(s) to parse (comma-separated or 'ALL_STATIONS' for all available): ").strip()
-    if stations_input.upper() == "ALL_STATIONS":
-        data_dir = BASE_DIR / "data"
-        station_list = [
-            p.name for p in data_dir.iterdir()
-            if p.is_dir() and (p / "raw_metadata" / "pns_metadata.csv").is_file()
-        ]
-    else:
-        station_list = [s.strip() for s in stations_input.split(",")]
 
+def main() -> None:
+    """
+    Automatically process all stations in data/ that contain a raw_data.csv file.
+    """
+    data_dir: Path = BASE_DIR / "data"
+    station_list: List[str] = [
+        p.name for p in data_dir.iterdir()
+        if p.is_dir() and (p / "raw_data.csv").is_file()
+    ]
+    logging.info(f"Found stations: {station_list}")
     for station in station_list:
         logging.info(f"Processing station: {station}")
         process_station(station)
+
 
 if __name__ == "__main__":
     main()
