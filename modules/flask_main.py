@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 # Set the heatmap directory
-heatmap_dir = os.path.join(os.path.dirname(__file__), 'images')
+heatmap_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../images"))
 
 
 @app.route("/")

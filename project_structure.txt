@@ -1,6 +1,8 @@
 ├── snow-plots/
+│   ├── requirements.txt
 │   ├── project_structure.txt
 │   ├── .gitignore
+│   ├── Procfile
 │   ├── parser.log
 │   ├── .pytest_cache/
 │   │   ├── CACHEDIR.TAG
@@ -73,11 +75,13 @@
 │   │   │   ├── ABQ_debug.html
 │   │   │   ├── HGX_debug.html
 │   ├── modules/
+│   │   ├── snow_map.py
 │   │   ├── 2_parser.py
+│   │   ├── 5_snow_map_48.py
+│   │   ├── flask_main.py
 │   │   ├── 3_combine_stations.py
 │   │   ├── 0_master.py
 │   │   ├── project_structure.py
-│   │   ├── snow_heat_map.py
 │   │   ├── 1_scraper.py
 │   │   ├── plot_snow_from_pns.py
 │   │   ├── settings.py
@@ -111,116 +115,14 @@
 │   │   │   │   │   │   ├── nodeids
 │   │   │   │   │   │   ├── lastfailed
 │   │   │   │   │   │   ├── stepwise
+│   │   ├── images/
+│   │   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
+│   │   │   ├── snowfall_heatmap_2025-01-09_2025-02-04.html
+│   │   │   ├── snowfall_heatmap_2025-02-02 00:00_2025-02-04 00:00.html
+│   │   │   ├── snowfall_heatmap_2025-02-02_2025-02-03.html
+│   │   │   ├── snowfall_heatmap_2025-01-31_2025-02-04.html
+│   │   │   ├── snowfall_heatmap_2025-02-02_2025-02-04.html
 │   ├── data/
-│   │   ├── LBF_debug.html
-│   │   ├── VEF_debug.html
-│   │   ├── FGZ_debug.html
-│   │   ├── ILX_debug.html
-│   │   ├── RNK_debug.html
-│   │   ├── CAE_debug.html
-│   │   ├── BUF_debug.html
-│   │   ├── ABR_debug.html
-│   │   ├── LOT_debug.html
-│   │   ├── ILN_debug.html
-│   │   ├── ARX_debug.html
-│   │   ├── MOB_debug.html
-│   │   ├── BOX_debug.html
-│   │   ├── SGX_debug.html
-│   │   ├── LKN_debug.html
-│   │   ├── LUB_debug.html
-│   │   ├── BOU_debug.html
-│   │   ├── ALY_debug.html
-│   │   ├── CHS_debug.html
-│   │   ├── MKX_debug.html
-│   │   ├── REV_debug.html
-│   │   ├── LCH_debug.html
-│   │   ├── TBW_debug.html
-│   │   ├── TWC_debug.html
-│   │   ├── GJT_debug.html
-│   │   ├── MSO_debug.html
-│   │   ├── MHX_debug.html
-│   │   ├── HUN_debug.html
-│   │   ├── FGF_debug.html
-│   │   ├── BGM_debug.html
-│   │   ├── OUN_debug.html
-│   │   ├── LMK_debug.html
-│   │   ├── JKL_debug.html
-│   │   ├── FWD_debug.html
-│   │   ├── PSR_debug.html
-│   │   ├── MTR_debug.html
-│   │   ├── MLB_debug.html
-│   │   ├── JAX_debug.html
-│   │   ├── BTV_debug.html
-│   │   ├── KEY_debug.html
-│   │   ├── PAH_debug.html
-│   │   ├── BRO_debug.html
-│   │   ├── DVN_debug.html
-│   │   ├── EPZ_debug.html
-│   │   ├── GRR_debug.html
-│   │   ├── LWX_debug.html
-│   │   ├── BOI_debug.html
-│   │   ├── BYZ_debug.html
-│   │   ├── JAN_debug.html
-│   │   ├── MRX_debug.html
-│   │   ├── UNR_debug.html
-│   │   ├── MEG_debug.html
-│   │   ├── TSA_debug.html
-│   │   ├── CAR_debug.html
-│   │   ├── DLH_debug.html
-│   │   ├── TAE_debug.html
-│   │   ├── IND_debug.html
-│   │   ├── DTX_debug.html
-│   │   ├── STO_debug.html
-│   │   ├── SHV_debug.html
-│   │   ├── IWX_debug.html
-│   │   ├── PQR_debug.html
-│   │   ├── CLE_debug.html
-│   │   ├── GRB_debug.html
-│   │   ├── LOX_debug.html
-│   │   ├── TFX_debug.html
-│   │   ├── GSP_debug.html
-│   │   ├── PBZ_debug.html
-│   │   ├── BIS_debug.html
-│   │   ├── TOP_debug.html
-│   │   ├── CTP_debug.html
-│   │   ├── OHX_debug.html
-│   │   ├── MPX_debug.html
-│   │   ├── SEW_debug.html
-│   │   ├── MQT_debug.html
-│   │   ├── RAH_debug.html
-│   │   ├── RIW_debug.html
-│   │   ├── OAX_debug.html
-│   │   ├── MFR_debug.html
-│   │   ├── AFC_debug.html
-│   │   ├── SLC_debug.html
-│   │   ├── FFC_debug.html
-│   │   ├── HFO_debug.html
-│   │   ├── EAX_debug.html
-│   │   ├── ILM_debug.html
-│   │   ├── WSH_debug.html
-│   │   ├── MFL_debug.html
-│   │   ├── GID_debug.html
-│   │   ├── RLX_debug.html
-│   │   ├── OKX_debug.html
-│   │   ├── CYS_debug.html
-│   │   ├── FSD_debug.html
-│   │   ├── GYX_debug.html
-│   │   ├── EKA_debug.html
-│   │   ├── LIX_debug.html
-│   │   ├── OTX_debug.html
-│   │   ├── EWX_debug.html
-│   │   ├── BMX_debug.html
-│   │   ├── ICT_debug.html
-│   │   ├── CRP_debug.html
-│   │   ├── AKQ_debug.html
-│   │   ├── APX_debug.html
-│   │   ├── HNX_debug.html
-│   │   ├── PHI_debug.html
-│   │   ├── PUB_debug.html
-│   │   ├── LZK_debug.html
-│   │   ├── ABQ_debug.html
-│   │   ├── HGX_debug.html
-│   │   ├── GLD_debug.html
 │   │   ├── ABQ/
 │   │   │   ├── metadata_2025-02-05_1917.csv
 │   │   │   ├── observations_2025-02-05_1917.csv
@@ -247,6 +149,9 @@
 │   │   │   ├── raw_data.csv
 │   │   │   ├── header_metadata_2025-02-05_1917.csv
 │   │   ├── ALL_STATIONS/
+│   │   │   ├── all_stations_2025-02-06-05-09.csv
+│   │   │   ├── all_stations_all_dates.csv
+│   │   │   ├── all_stations_2025-02-06-05-03.csv
 │   │   ├── CHS/
 │   │   │   ├── metadata_2025-02-05_1917.csv
 │   │   │   ├── observations_2025-02-05_1917.csv
