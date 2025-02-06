@@ -5,6 +5,10 @@ build-backend = "setuptools.build_meta"
 [build.environment]
 PYTHON_VERSION = "3.13"
 
+[build.frontend]
+node_version = "18"
+publish = "public"
+
 [tool.poetry]
 name = "snow-plots"
 version = "0.1.0"
