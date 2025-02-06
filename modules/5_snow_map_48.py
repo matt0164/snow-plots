@@ -7,6 +7,7 @@ This version specifically processes snowfall data from the last 48 hours for all
 If no data is available in the last 48 hours, it adjusts to the most recent available data.
 """
 
+import os
 import pandas as pd
 import folium
 from folium.plugins import HeatMap, MarkerCluster
@@ -132,11 +133,12 @@ def generate_snowfall_heatmap():
         ).add_to(marker_cluster)
 
     # Save heatmap
-    images_dir = Path("images")
+    images_dir = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../images")))
     images_dir.mkdir(exist_ok=True)
+
     output_file = images_dir / f"snowfall_heatmap_{start_date_str}_{end_date_str}.html"
     heatmap.save(str(output_file))
-    print(f"✅ Heatmap saved to '{output_file}'.")
+    print(f"✅ Heatmap saved to '{output_file}'")
 
     # Open the heatmap automatically
     webbrowser.open(output_file.absolute().as_uri())
