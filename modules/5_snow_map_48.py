@@ -4,7 +4,8 @@ geospatial and temporal data, creates an interactive heatmap visualization, and 
 the output as an HTML file.
 
 This version specifically processes snowfall data from the last 48 hours for all sites/locations.
-If no data is available in the last 48 hours, it adjusts to the most recent available data. no change
+If no data is available in the last 48 hours, it adjusts to the most recent available data.
+saved file in public directory
 """
 
 import os
@@ -133,10 +134,11 @@ def generate_snowfall_heatmap():
         ).add_to(marker_cluster)
 
     # Save heatmap
-    images_dir = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../images")))
+    images_dir = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../public")))
     images_dir.mkdir(exist_ok=True)
 
-    output_file = images_dir / f"snowfall_heatmap_{start_date_str}_{end_date_str}.html"
+    # output_file = images_dir / f"snowfall_heatmap_{start_date_str}_{end_date_str}.html"
+    output_file = images_dir / "snowfall_heatmap_current.html"
     heatmap.save(str(output_file))
     print(f"✅ Heatmap saved to '{output_file}'")
 
