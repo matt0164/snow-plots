@@ -37,10 +37,16 @@ logging.basicConfig(
 )
 
 # --------------------------------------------------------
-# Compile Regex Patterns for Efficiency
+# Compile Regex Patterns for Efficiency (updated to allow colon in time)
 # --------------------------------------------------------
 ISSUANCE_PATTERN = re.compile(
-    r'(\d{1,4}\s?[AP]M).*?(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(\d{4})'
+    r'(\d{1,2}(?::\d{2})?\s?[AP]M).*?(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(\d{4})'
+)
+FALLBACK_DATE_PATTERN = re.compile(
+    r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(\d{4})'
+)
+FULL_TIMESTAMP_PATTERN = re.compile(
+    r'(\d{1,2}(?::\d{2})?\s?[AP]M)\s+([A-Z]{3})\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(\d{4})'
 )
 NOUS_PATTERN = re.compile(r"^(NOUS\d{2}\s[A-Z]{3,4})")
 CTZ_PATTERN = re.compile(r"(CTZ\d{3}>\d{3}.*)")
@@ -52,13 +58,14 @@ SIX_DIGIT_PATTERN = re.compile(r"(\d{6})")
 def extract_issuance_timestamp(lines: List[str]) -> Tuple[str, str]:
     """
     Scan the report lines for a line that appears to contain the issuance time and date.
-    Expected sample format: "831 AM EST Mon Feb 3 2025"
-    Returns a tuple: (formatted_date, formatted_time), e.g., ("2025-02-03", "831AM").
+    Try the primary pattern (e.g., "8:31 AM EST Mon Feb 3 2025") first,
+    then a full timestamp pattern, and finally a fallback that captures just a date.
+    Returns a tuple: (formatted_date, formatted_time), e.g. ("2025-02-03", "8:31AM").
     """
     for line in lines:
         match = ISSUANCE_PATTERN.search(line)
         if match:
-            time_part = match.group(1).strip().replace(" ", "")  # e.g., "831AM"
+            time_part = match.group(1).strip().replace(" ", "")
             month = match.group(2)
             day = match.group(3)
             year = match.group(4)
@@ -69,6 +76,51 @@ def extract_issuance_timestamp(lines: List[str]) -> Tuple[str, str]:
                 logging.error(f"Error parsing date from '{date_str}': {e}")
                 parsed_date = "unknown_date"
             return parsed_date, time_part
+
+    for line in lines:
+        match = FULL_TIMESTAMP_PATTERN.search(line)
+        if match:
+            time_part = match.group(1).strip().replace(" ", "")
+            month = match.group(4)
+            day = match.group(5)
+            year = match.group(6)
+            date_str = f"{month} {day} {year}"
+            try:
+                parsed_date = datetime.strptime(date_str, "%b %d %Y").strftime("%Y-%m-%d")
+            except Exception as e:
+                logging.error(f"Error parsing full date from '{date_str}': {e}")
+                parsed_date = "unknown_date"
+            return parsed_date, time_part
+
+    for line in lines:
+        match = FALLBACK_DATE_PATTERN.search(line)
+        if match:
+            month = match.group(1)
+            day = match.group(2)
+            year = match.group(3)
+            date_str = f"{month} {day} {year}"
+            try:
+                parsed_date = datetime.strptime(date_str, "%b %d %Y").strftime("%Y-%m-%d")
+            except Exception as e:
+                logging.error(f"Error parsing fallback date from '{date_str}': {e}")
+                parsed_date = "unknown_date"
+            return parsed_date, "unknown_time"
+
+    full_text = " ".join(lines)
+    match = ISSUANCE_PATTERN.search(full_text)
+    if match:
+        time_part = match.group(1).strip().replace(" ", "")
+        month = match.group(2)
+        day = match.group(3)
+        year = match.group(4)
+        date_str = f"{month} {day} {year}"
+        try:
+            parsed_date = datetime.strptime(date_str, "%b %d %Y").strftime("%Y-%m-%d")
+        except Exception as e:
+            logging.error(f"Error parsing date from full text '{date_str}': {e}")
+            parsed_date = "unknown_date"
+        return parsed_date, time_part
+
     return "unknown_date", "unknown_time"
 
 
@@ -132,7 +184,6 @@ def extract_observations(lines: List[str]) -> List[Dict[str, Any]]:
             if len(row) < 14:
                 logging.warning(f"Skipping malformed line {i}: '{line.strip()}'")
                 continue
-
             observation = {
                 "date": row[0],
                 "time": row[1],
@@ -173,7 +224,6 @@ def extract_alternative_metadata(lines: List[str]) -> Dict[str, Any]:
             metadata["product"] = lines[idx + 1].strip()
     except StopIteration:
         pass
-
     for i, line in enumerate(lines):
         if line.startswith("National Weather Service"):
             metadata["nws_office"] = line.strip()
@@ -189,26 +239,22 @@ def extract_alternative_metadata(lines: List[str]) -> Dict[str, Any]:
 def extract_alternative_observations(lines: List[str]) -> List[Dict[str, Any]]:
     """
     Extract observations from the alternative report format.
-    Looks for a table header (e.g., containing "Location" and "Temp" or "Amount")
-    and parses subsequent lines.
+    Looks for a table header that contains "Location" and one of "Temp", "Amount", "Time", "Date", or "Provider",
+    then parses subsequent lines.
     """
     observations: List[Dict[str, Any]] = []
     header_line = None
     header_index = None
-
     for i, line in enumerate(lines):
-        if "Location" in line and ("Temp" in line or "Amount" in line):
+        if "Location" in line and (("Temp" in line) or ("Amount" in line) or ("Time" in line) or ("Date" in line) or ("Provider" in line)):
             header_line = line.strip()
             header_index = i
             break
-
     if not header_line:
         logging.error("Could not find observation table header in alternative format.")
         return observations
-
     headers = re.split(r'\s{2,}', header_line)
     logging.debug(f"Observation headers found: {headers}")
-
     for line in lines[header_index + 1:]:
         line = line.strip()
         if line.startswith("...") and "County" in line:
@@ -234,12 +280,14 @@ def parse_template_structured(lines: List[str]) -> Optional[Dict[str, Any]]:
     if "**METADATA" not in "".join(lines):
         return None
     issuance_date, issuance_time = extract_issuance_timestamp(lines)
+    if issuance_date == "unknown_date":
+        fallback_date = datetime.today().strftime("%Y-%m-%d")
+        fallback_time = datetime.now().strftime("%H%M")
+        logging.warning(f"Structured template: Timestamp extraction returned unknown_date. Using fallback: {fallback_date} {fallback_time}.")
+        issuance_date, issuance_time = fallback_date, fallback_time
     metadata = extract_metadata(lines)
     observations = extract_observations(lines)
     header_metadata = extract_header_metadata(lines)
-    if issuance_date == "unknown_date":
-        logging.error("Timestamp extraction failed in structured template.")
-        return None
     return {
         "metadata": metadata,
         "observations": observations,
@@ -255,14 +303,16 @@ def parse_template_alternative(lines: List[str]) -> Optional[Dict[str, Any]]:
     Returns a dictionary with keys: metadata, observations, header_metadata, issuance_date, issuance_time.
     """
     if "**METADATA" in "".join(lines):
-        return None  # This template is for reports without the structured marker.
+        return None  # Use structured template when marker is present.
     issuance_date, issuance_time = extract_issuance_timestamp(lines)
+    if issuance_date == "unknown_date":
+        fallback_date = datetime.today().strftime("%Y-%m-%d")
+        fallback_time = datetime.now().strftime("%H%M")
+        logging.warning(f"Alternative template: Timestamp extraction returned unknown_date. Using fallback: {fallback_date} {fallback_time}.")
+        issuance_date, issuance_time = fallback_date, fallback_time
     metadata = extract_alternative_metadata(lines)
     observations = extract_alternative_observations(lines)
     header_metadata = extract_header_metadata(lines)
-    if issuance_date == "unknown_date":
-        logging.error("Timestamp extraction failed in alternative template.")
-        return None
     return {
         "metadata": metadata,
         "observations": observations,
@@ -301,21 +351,16 @@ def save_output_files(
     """
     output_dir: Path = BASE_DIR / "data" / station
     output_dir.mkdir(parents=True, exist_ok=True)
-
     metadata_filename = output_dir / f"metadata_{issuance_date}_{issuance_time}.csv"
     observations_filename = output_dir / f"observations_{issuance_date}_{issuance_time}.csv"
     header_metadata_filename = output_dir / f"header_metadata_{issuance_date}_{issuance_time}.csv"
-
     if metadata_filename.exists() and observations_filename.exists() and header_metadata_filename.exists():
         logging.info(f"Files for station {station} with timestamp {issuance_date} {issuance_time} already exist. Skipping.")
         return
-
     pd.DataFrame([metadata]).to_csv(metadata_filename, index=False)
     logging.info(f"Saved metadata to {metadata_filename}")
-
     pd.DataFrame(observations).to_csv(observations_filename, index=False)
     logging.info(f"Saved observations to {observations_filename}")
-
     if header_metadata:
         pd.DataFrame(header_metadata, columns=["header_line"]).to_csv(header_metadata_filename, index=False)
         logging.info(f"Saved header metadata to {header_metadata_filename}")
@@ -329,6 +374,7 @@ def process_station(station: str) -> None:
     """
     Process a single station:
       - Read the raw data file from data/{station}/raw_data.csv.
+      - Reconstruct report lines by reading the CSV and joining each row.
       - Apply the parsing templates.
       - If output files for that timestamp already exist, skip processing.
       - Otherwise, save output CSV files to data/{station}/.
@@ -337,18 +383,17 @@ def process_station(station: str) -> None:
     if not input_file.is_file():
         logging.error(f"Input file not found at {input_file} for station {station}.")
         return
-
     try:
-        lines: List[str] = input_file.read_text(encoding="utf-8").splitlines()
+        with input_file.open(encoding="utf-8") as f:
+            reader = csv.reader(f)
+            lines: List[str] = [' '.join(row) for row in reader if row]
     except Exception as e:
-        logging.error(f"Error reading {input_file}: {e}")
+        logging.error(f"Error reading {input_file} as CSV: {e}")
         return
-
     result = apply_parsing_templates(lines)
     if result is None:
         logging.error(f"Parsing failed for station {station}.")
         return
-
     issuance_date = result["issuance_date"]
     issuance_time = result["issuance_time"]
     output_dir: Path = BASE_DIR / "data" / station
@@ -358,7 +403,6 @@ def process_station(station: str) -> None:
     if meta_file.exists() and obs_file.exists() and header_file.exists():
         logging.info(f"Output files for station {station} with timestamp {issuance_date} {issuance_time} already exist. Skipping.")
         return
-
     save_output_files(station, result["metadata"], result["observations"], result["header_metadata"], issuance_date, issuance_time)
 
 # --------------------------------------------------------
