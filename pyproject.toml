@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [build.environment]
-PYTHON_VERSION = "3.9"
+PYTHON_VERSION = "3.8"
 
 [tool.poetry]
 name = "snow-plots"
@@ -14,7 +14,7 @@ authors = ["Matt Alevy <matt0164@outlook.com>"]
 # readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.9"
+python = "3.8"
 beautifulsoup4 = "4.12.3"
 blinker = "1.9.0"
 branca = "0.8.1"
