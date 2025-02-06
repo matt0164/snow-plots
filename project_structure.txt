@@ -14,18 +14,17 @@
 │   │   │   │   ├── lastfailed
 │   │   │   │   ├── stepwise
 │   ├── images/
-│   │   ├── snowfall_heatmap.html
-│   │   ├── snowfall_heatmap_actual_values.html
-│   │   ├── data_source_images_snow_plots_tesseract/
-│   │   │   ├── mid.png
-│   │   │   ├── low.png
-│   │   │   ├── high.png
+│   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
 │   │   ├── old_images/
 │   │   │   ├── snowfall_hudson_valley.png
 │   │   │   ├── snowfall_nyc_and_5_boroughs.png
 │   │   │   ├── snowfall_long_island_(li).png
 │   │   │   ├── snowfall_new_jersey_(nj).png
 │   │   │   ├── snowfall_westchester_and_ct.png
+│   │   │   ├── data_source_images_snow_plots_tesseract/
+│   │   │   │   ├── mid.png
+│   │   │   │   ├── low.png
+│   │   │   │   ├── high.png
 │   ├── reference_data_for_lookup/
 │   │   ├── full_wfo_list.csv
 │   │   ├── event_codes.csv
@@ -42,6 +41,9 @@
 │   │   │   │   ├── z_18mr25.dbf
 │   │   │   ├── zone_county_correlation/
 │   │   │   │   ├── bp18mr25.dbx
+│   ├── public/
+│   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
+│   │   ├── snowfall_heatmap_current.html
 │   ├── logs/
 │   │   ├── parse_pns_data.log
 │   │   ├── pns_scraper.log
@@ -74,6 +76,12 @@
 │   │   │   ├── LZK_debug.html
 │   │   │   ├── ABQ_debug.html
 │   │   │   ├── HGX_debug.html
+│   ├── .netlify/
+│   │   ├── state.json
+│   │   ├── netlify.toml
+│   │   ├── v1/
+│   │   │   ├── functions/
+│   │   ├── functions-internal/
 │   ├── modules/
 │   │   ├── snow_map.py
 │   │   ├── 2_parser.py
