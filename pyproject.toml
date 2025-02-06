@@ -1,0 +1,8 @@
+[project]
+name = "snow-plots"
+version = "0.1.0"  # Add the version here
+description = "Maps of recent snowfall"
+authors = [
+  { name="Matt Alevy", email="matt0164@outlook.com" }
+]
+# Add other necessary fields if required
