@@ -1,1 +1,1 @@
-web: cd modules && gunicorn flask_main:app
+web: python flask_main:app
