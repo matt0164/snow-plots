@@ -20,7 +20,7 @@ Jinja2==3.1.5
 kiwisolver==1.3.2  # Adjusted version
 MarkupSafe==2.1.1  # Adjusted version
 matplotlib==3.9.4
-numpy==1.24.3  # Adjusted version
+numpy==1.23.5  # Adjusted version
 packaging==24.2
 pandas==2.2.3
 pillow==11.1.0
