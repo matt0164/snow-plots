@@ -1,8 +1,9 @@
 [project]
 name = "snow-plots"
-version = "0.1.0"  # Add the version here
+version = "0.2.0"  # Add the version here
 description = "Maps of recent snowfall"
 authors = [
   { name="Matt Alevy", email="matt0164@outlook.com" }
 ]
+dependencies = []  # Add any required dependencies here
 # Add other necessary fields if required
