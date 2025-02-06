@@ -4,7 +4,7 @@ geospatial and temporal data, creates an interactive heatmap visualization, and 
 the output as an HTML file.
 
 This version specifically processes snowfall data from the last 48 hours for all sites/locations.
-If no data is available in the last 48 hours, it adjusts to the most recent available data.
+If no data is available in the last 48 hours, it adjusts to the most recent available data. no change
 """
 
 import os
