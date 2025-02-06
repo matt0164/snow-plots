@@ -17,7 +17,7 @@ importlib_resources==6.5.2
 iniconfig==2.0.0
 itsdangerous #>=2.2  # Adjusted version
 Jinja2==3.1.5
-kiwisolver==1.4.0  # Adjusted version
+kiwisolver==1.3.2  # Adjusted version
 MarkupSafe==2.1.1  # Adjusted version
 matplotlib==3.9.4
 numpy==1.24.3  # Adjusted version
