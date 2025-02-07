@@ -83,9 +83,15 @@ def generate_snowfall_heatmap():
     # Prepare heatmap data
     heat_data = filtered_df[["latitude", "longitude", "value"]].values.tolist()
 
+    # Coordinates for the center of Manhattan
+    manhattan_center = [40.7831, -73.9712]
+
+    # Create the map with a zoom level that shows the NYC metro area
+    heatmap = folium.Map(location=manhattan_center, zoom_start=10)
+
     # Set map center based on mean coordinates
-    map_center = [filtered_df["latitude"].mean(), filtered_df["longitude"].mean()]
-    heatmap = folium.Map(location=map_center, zoom_start=7)
+    # map_center = [filtered_df["latitude"].mean(), filtered_df["longitude"].mean()]
+    # heatmap = folium.Map(location=map_center, zoom_start=10)
 
     # Define corrected color scale using HEX values
     colormap = cm.LinearColormap(

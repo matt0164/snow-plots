@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 import subprocess
 import sys
+import os
 
 
 def run_script(script_name):
     print(f"Running {script_name}...")
+    # Use the absolute path to the script (adjust this as needed)
+    script_path = os.path.join("/Users/mattalevy/PycharmProjects/snow-plots/modules", script_name)
+
     result = subprocess.run(
-        ["python", script_name],
+        ["python3", script_path],  # Ensure python3 is used and provide full path to the script
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True

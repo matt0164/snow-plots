@@ -17,7 +17,7 @@ def find_latest_metadata_file():
     """
     Finds the latest 'all_stations_all_dates.csv' file in the ALL_STATIONS directory.
     """
-    all_stations_dir = Path("../data/ALL_STATIONS")
+    all_stations_dir = Path("../../data/ALL_STATIONS")
     metadata_file = all_stations_dir / "all_stations_all_dates.csv"
 
     if metadata_file.exists():
@@ -125,7 +125,7 @@ def generate_snowfall_heatmap():
     colormap.add_to(heatmap)
 
     # Save heatmap
-    images_dir = Path("images")
+    images_dir = Path("../images")
     images_dir.mkdir(exist_ok=True)
     output_file = images_dir / f"snowfall_heatmap_{start_date_str}_{end_date_str}.html"
     heatmap.save(str(output_file))
