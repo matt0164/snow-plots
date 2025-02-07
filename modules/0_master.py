@@ -28,7 +28,7 @@ if __name__ == "__main__":
         "2_parser.py",
         "3_combine_stations.py",
         "4_combine_dates.py",
-        "5_snow_map_48.py"
+        "5_snow_map.py"
     ]
     for script in scripts:
         run_script(script)

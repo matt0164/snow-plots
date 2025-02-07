@@ -22,7 +22,7 @@ def find_latest_metadata_file():
     """
     Finds the latest 'all_stations_all_dates.csv' file in the ALL_STATIONS directory.
     """
-    all_stations_dir = Path("../data/ALL_STATIONS")
+    all_stations_dir = Path("../../data/ALL_STATIONS")
     metadata_file = all_stations_dir / "all_stations_all_dates.csv"
 
     if metadata_file.exists():
