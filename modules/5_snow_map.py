@@ -84,14 +84,16 @@ def generate_snowfall_heatmap():
     heat_data = filtered_df[["latitude", "longitude", "value"]].values.tolist()
 
     # Coordinates for the center of Manhattan
-    manhattan_center = [40.7831, -73.9712]
+    # manhattan_center = [40.7831, -73.9712]
 
     # Create the map with a zoom level that shows the NYC metro area
-    heatmap = folium.Map(location=manhattan_center, zoom_start=10)
+    # heatmap = folium.Map(location=manhattan_center, zoom_start=10)
 
     # Set map center based on mean coordinates
-    # map_center = [filtered_df["latitude"].mean(), filtered_df["longitude"].mean()]
-    # heatmap = folium.Map(location=map_center, zoom_start=10)
+    map_center = [filtered_df["latitude"].mean(), filtered_df["longitude"].mean()]
+
+    # Create the map with a zoom level that shows the mean area
+    heatmap = folium.Map(location=map_center, zoom_start=10)
 
     # Define corrected color scale using HEX values
     colormap = cm.LinearColormap(
@@ -140,7 +142,7 @@ def generate_snowfall_heatmap():
 
     # Add snowfall labels with clustering to prevent overlap
     marker_cluster = MarkerCluster(
-        disableClusteringAtZoom=1  # Disable clustering at zoom level 10 and higher
+        disableClusteringAtZoom=10  # Disable clustering at zoom level 8 and higher
     ).add_to(heatmap)
 
     for _, row in filtered_df.iterrows():
@@ -148,15 +150,15 @@ def generate_snowfall_heatmap():
         report_date = row["date"].strftime('%-m/%-d/%y') # Example: 2/5/25
 
         # Build the location string from the city and state columns
-        report_location = f"{row['city']}, {row['state']}"
+        report_location = f"{row['city']}"
 
         folium.Marker(
             [row["latitude"], row["longitude"]],
             icon=folium.DivIcon(html=f"""
                 <div style='font-size: 14px; font-weight: bold; color: black; text-align: center;'>
                     {row['value']:.1f}"<br>
-                    <span style='font-size: 10px; color: gray;'>{report_date}</span>
-                    <span style='font-size: 10px; color: gray;'>{report_location}</span>
+                    <span style='font-size: 12px; color: dark_gray;'>{report_date}</span>
+                    <span style='font-size: 12px; color: dark_gray;'>{report_location}</span>
                 </div>
             """)
         ).add_to(marker_cluster)
