@@ -32,7 +32,8 @@ if __name__ == "__main__":
         "2_parser.py",
         "3_combine_stations.py",
         "4_combine_dates.py",
-        "5_snow_map.py"
+        "5_snow_map.py",
+        "6_auto_update_git.py"
     ]
     for script in scripts:
         run_script(script)
