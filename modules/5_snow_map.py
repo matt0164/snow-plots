@@ -9,10 +9,10 @@ from datetime import datetime, timedelta
 
 
 def find_latest_metadata_file():
-    """
-    Finds the latest 'all_stations_all_dates.csv' file in the ALL_STATIONS directory.
-    """
-    all_stations_dir = Path("../data/ALL_STATIONS")
+    # Get the directory where the current script is located
+    script_dir = Path(__file__).resolve().parent
+    # Navigate two levels up to reach the project root, then into data/ALL_STATIONS
+    all_stations_dir = script_dir.parent / "data" / "ALL_STATIONS"
     metadata_file = all_stations_dir / "all_stations_all_dates.csv"
 
     if metadata_file.exists():
@@ -144,13 +144,19 @@ def generate_snowfall_heatmap():
     ).add_to(heatmap)
 
     for _, row in filtered_df.iterrows():
-        report_date = row["date"].strftime('%B %d, %Y')  # Example: "February 5, 2025"
+        # report_date = row["date"].strftime('%B %d, %Y')  # Example: "February 5, 2025"
+        report_date = row["date"].strftime('%-m/%-d/%y') # Example: 2/5/25
+
+        # Build the location string from the city and state columns
+        report_location = f"{row['city']}, {row['state']}"
+
         folium.Marker(
             [row["latitude"], row["longitude"]],
             icon=folium.DivIcon(html=f"""
-                <div style='font-size: 18px; font-weight: bold; color: black; text-align: center;'>
+                <div style='font-size: 14px; font-weight: bold; color: black; text-align: center;'>
                     {row['value']:.1f}"<br>
-                    <span style='font-size: 12px; color: gray;'>{report_date}</span>
+                    <span style='font-size: 10px; color: gray;'>{report_date}</span>
+                    <span style='font-size: 10px; color: gray;'>{report_location}</span>
                 </div>
             """)
         ).add_to(marker_cluster)
