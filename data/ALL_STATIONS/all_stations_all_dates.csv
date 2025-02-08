@@ -9891,3 +9891,17 @@ date,time,state,county,city,latitude,longitude,type,value,unit,source,descriptio
 2/08/2025,0700 AM, NY, Oneida, Rome 4.8 SSE,43.16,-75.46, SNOW_24, 0.5, Inch, COCORAHS, 24 hour snowfall,BGM
 2/08/2025,0900 AM, NY, Onondaga, Brewerton 1.5 ESE,43.2283,-76.1133, SNOW_24, 0.2, Inch, COCORAHS, 24 hour snowfall,BGM
 2/08/2025,1133 AM, NY, Otsego, Hartwick,42.6599,-75.05, SNOW_24, 0.1, Inch, COCORAHS, 24 hour snowfall,BGM
+2/08/2025,  100 PM, MD, Allegany, Potomac Park,39.63,-78.83, SNOW, 0.1, Inch, Dept of Highways, Storm Total Snow,LWX
+2/08/2025,  100 PM, MD, Garrett, Grantsville,39.7,-79.25, SNOW, 0.3, Inch, Dept of Highways, Storm Total Snow,LWX
+2/08/2025,  415 PM, MD, Garrett, McHenry,39.56,-79.35, SNOW, 0.1, Inch, Emergency Mngr, Storm Total Snow,LWX
+2/08/2025,  340 PM, MD, Baltimore, Reistertown,39.5,-76.84, ICE, T, Inch, Co-Op Observer, Storm Total Ice Accrual,LWX
+2/08/2025,  430 PM, MD, Garrett, Grantsville,39.7,-79.25, ICE, 0.15, Inch, Dept of Highways, Storm Total Ice Accrual,LWX
+2/08/2025,  436 PM, MD, Garrett, Oakland,39.4,-79.4, ICE, 0.12, Inch, Dept of Highways, Storm Total Ice Accrual,LWX
+2/08/2025,  440 PM, MD, Garrett, Grantsville,39.69,-79.09, ICE, 0.06, Inch, Dept of Highways, Storm Total Ice Accrual,LWX
+2/08/2025,  415 PM, MD, Garrett, McHenry,39.56,-79.35, ICE, 0.02, Inch, Emergency Mngr, Storm Total Ice Accrual,LWX
+2/08/2025,  427 PM, MD, Garrett, Mc Henry,39.51,-79.3, ICE, 0.01, Inch, Park/Forest Srvc, Storm Total Ice Accrual,LWX
+2/08/2025,  441 PM, MD, Garrett, Mountain Lake Park,39.41,-79.36, ICE, T, Inch, Dept of Highways, Storm Total Ice Accrual,LWX
+2/08/2025, 1253 PM, VA, Albemarle, Charlottesville Arpt,38.14,-78.46, ICE, 0.03, Inch, ASOS, Storm Total Ice Accrual,LWX
+2/08/2025,  437 PM, VA, Loudoun, Ashburn,39.04,-77.5, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  435 PM, VA, Loudoun, Leesburg,39.09,-77.57, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  510 PM, VA, Loudoun, Dulles International Airport,38.98,-77.49, ICE, 0.01, Inch, Official NWS Obs, Storm Total Ice Accrual,LWX
