@@ -1,6 +1,3 @@
-# simple app to walk through the directory structure and create a text file in root directory showing
-# where al files are
-
 import os
 
 # List of files and directories to be ignored
@@ -38,8 +35,8 @@ def write_project_structure(root_directory, output_file):
     # Generate the directory structure as a string (filtered)
     structure = generate_directory_structure(root_directory)
 
-    # Write the structure to the output file
-    with open(output_file, 'w') as f:
+    # Write the structure to the output file using UTF-8 encoding to support special characters
+    with open(output_file, 'w', encoding='utf-8') as f:
         f.write(structure)
 
 

@@ -17,14 +17,19 @@ import time
 # Configuration Section
 # --------------------------------------------------------
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-REFERENCE_DIR = os.path.join(BASE_DIR, "../reference_data_for_lookup")
-
-# New lookup file for station PNS URLs
+# Define base directory and related directories using relative paths
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+REFERENCE_DIR = os.path.join(BASE_DIR, "reference_data_for_lookup")  # Update this to ensure it's local to the project
 STATIONS_FILE = os.path.join(REFERENCE_DIR, "stations_pns.csv")
 
-DATA_DIR = os.path.join(BASE_DIR, "../data")
-LOGS_DIR = os.path.join(BASE_DIR, "../logs")
+DATA_DIR = os.path.join(BASE_DIR, "data")
+LOGS_DIR = os.path.join(BASE_DIR, "logs")
+
+# Ensure directories exist to prevent runtime errors
+os.makedirs(REFERENCE_DIR, exist_ok=True)
+os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(LOGS_DIR, exist_ok=True)
+
 
 # --------------------------------------------------------
 # Helper Functions
@@ -40,8 +45,14 @@ def load_stations(file_path):
     """
     stations = {}
     try:
+        # Ensure the CSV file exists before attempting to read
+        if not os.path.exists(file_path):
+            logging.error(f"❌ The stations file was not found: {file_path}")
+            return stations
+
         df = pd.read_csv(file_path)
         df.columns = [col.strip() for col in df.columns]  # Strip spaces from column names
+
         # Expect columns "Identifier" and "Link"
         for _, row in df.iterrows():
             stations[row['Identifier'].strip()] = row['Link'].strip()
@@ -49,6 +60,7 @@ def load_stations(file_path):
     except Exception as e:
         logging.error(f"❌ Error loading stations: {e}")
     return stations
+
 
 # Load stations
 stations = load_stations(STATIONS_FILE)
@@ -63,10 +75,11 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(LOG_FILE),
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
+
 
 # --------------------------------------------------------
 # Main Functions
@@ -105,6 +118,7 @@ def fetch_page(station):
         logging.error(f"⚠️ Error accessing {url}: {e}")
         return None
 
+
 def save_metadata_to_csv(header, metadata, station):
     """Save extracted metadata into a structured CSV file in the raw_metadata directory."""
     base_dir = os.path.join(DATA_DIR, station, "raw_metadata")
@@ -125,8 +139,13 @@ def save_metadata_to_csv(header, metadata, station):
     except Exception as e:
         logging.error(f"❌ Error saving metadata to {file_path}: {e}")
 
+
 def main():
     """Main function to fetch PNS metadata for user-selected stations."""
+    if not stations:
+        logging.error("❌ No stations loaded. Please check the stations file.")
+        return
+
     user_input = input("Enter station(s) to scrape (comma-separated or 'ALL' for all stations): ")
     selected_stations = [station.strip().upper() for station in user_input.split(',')]
 
@@ -162,7 +181,9 @@ def main():
             else:
                 logging.warning(f"🚨 Metadata section found but contains no data for station {station}.")
         else:
-            logging.warning(f"⚠️ No metadata header found in <pre> tag for station {station}. First few lines:\n{lines[:5]}")
+            logging.warning(
+                f"⚠️ No metadata header found in <pre> tag for station {station}. First few lines:\n{lines[:5]}")
+
 
 if __name__ == "__main__":
     main()

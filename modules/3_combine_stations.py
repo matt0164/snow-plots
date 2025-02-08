@@ -1,107 +1,129 @@
 """
-Concatonates individual files for each station into one for all stations
-designed to run daily as part of master script
-it is important that it runs after parser
+Concatenates individual files for each station into a single file for all stations.
+Designed to run daily as part of the master script.
+It is important that it runs AFTER the parser script.
 """
 
-import os
+from pathlib import Path
 import pandas as pd
 from datetime import datetime
+import logging
+
+
+def setup_logging():
+    """
+    Sets up logging for the script.
+    """
+    logs_dir = Path(__file__).resolve().parent.parent / "logs"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.FileHandler(logs_dir / "combine_pns_metadata.log", mode="a", encoding="utf-8"),
+            logging.StreamHandler()
+        ]
+    )
 
 
 def combine_pns_metadata():
     """
     Combines all `pns_metadata.csv` files from station subfolders (data/<station>/raw_metadata/)
-    and saves the merged file in data/ALL_STATIONS/ with a timestamp.
+    and saves the merged file into data/ALL_STATIONS/ with a timestamp.
 
-    Cleaning steps include:
-      - Removing rows that only contain a station identifier (i.e. every column except 'Station' is missing)
-      - Dropping duplicate rows
-      - Renaming the columns to a specified header list
-      - Dropping rows that appear to be text notes (e.g. rows with invalid dates in the "Date" column)
-      - Dropping the first column ("METADATA") since it is blank for all rows
+    Steps:
+    - Reads individual station files (pns_metadata.csv) and combines them.
+    - Cleans the data:
+        - Removes rows with only a station identifier.
+        - Drops duplicates.
+        - Renames columns based on a specified header list.
+        - Filters rows with invalid dates in the "Date" column.
+        - Drops the "METADATA" column if blank.
+    - Saves the combined file into the "ALL_STATIONS" directory with a timestamp.
     """
-    # Define paths
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))  # Root of the project
-    data_dir = os.path.join(base_dir, "data")
-    output_dir = os.path.join(data_dir, "ALL_STATIONS")
+    # Paths
+    base_dir = Path(__file__).resolve().parent.parent
+    data_dir = base_dir / "data"
+    output_dir = data_dir / "ALL_STATIONS"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Ensure output directory exists
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Generate timestamped filename
+    # Timestamp for the output filename
     timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M")
-    output_filename = f"all_stations_pns_data_{timestamp}.csv"
-    output_path = os.path.join(output_dir, output_filename)
+    output_file = output_dir / f"all_stations_pns_data_{timestamp}.csv"
 
     # List to store all DataFrames
     all_data = []
 
-    # Scan the data directory for station folders and load each metadata CSV
-    for folder in os.listdir(data_dir):
-        station_path = os.path.join(data_dir, folder, "raw_metadata", "pns_metadata.csv")
-        if os.path.exists(station_path):
+    # Scan the "data" directory for station subfolders with pns_metadata.csv
+    for folder in data_dir.iterdir():
+        station_file = folder / "raw_metadata" / "pns_metadata.csv"
+        if station_file.is_file():
             try:
-                df = pd.read_csv(station_path)
-                df["Station"] = folder  # Add or update the station identifier column
+                df = pd.read_csv(station_file, encoding="utf-8")
+                df["Station"] = folder.name  # Add "Station" column to identify the station
                 all_data.append(df)
-                print(f"✅ Loaded {station_path}")
+                logging.info(f"✅ Loaded {station_file}")
             except Exception as e:
-                print(f"❌ Error reading {station_path}: {e}")
+                logging.error(f"❌ Error reading {station_file}: {e}")
 
-    # Combine all station data into a single DataFrame if any data was found
+    # Combine all DataFrames if data exists
     if all_data:
-        combined_df = pd.concat(all_data, ignore_index=True)
+        try:
+            combined_df = pd.concat(all_data, ignore_index=True)
+            logging.info("✅ Successfully combined all station files.")
 
-        # Replace empty strings with NA (to standardize missing data)
-        combined_df = combined_df.replace(r'^\s*$', pd.NA, regex=True)
+            # Data cleaning
+            combined_df = combined_df.replace(r'^\s*$', pd.NA, regex=True)  # Replace empty strings with NA
 
-        # Remove rows that only contain a station identifier (i.e. every column except 'Station' is missing)
-        mask_identifier_only = combined_df.drop(columns=["Station"]).isna().all(axis=1)
-        combined_df = combined_df[~mask_identifier_only]
+            # Remove rows with only a station identifier
+            mask_identifier_only = combined_df.drop(columns=["Station"]).isna().all(axis=1)
+            combined_df = combined_df[~mask_identifier_only]
+            logging.info(f"✅ Removed rows with only a 'Station' identifier.")
 
-        # Remove duplicate rows
-        combined_df = combined_df.drop_duplicates()
+            # Remove duplicate rows
+            before_dedup = len(combined_df)
+            combined_df = combined_df.drop_duplicates()
+            logging.info(f"✅ Removed {before_dedup - len(combined_df)} duplicate rows.")
 
-        # Define new headers.
-        # These headers correspond to the desired CSV header:
-        # METADATA,Station,Date,Time,ST,City,County,,,Lat,Long,Report_Type,Amount,Amount_Unit,Source,Report_type,,
-        new_headers = [
-            "METADATA", "Station", "Date", "Time", "ST", "City", "County",
-            "", "", "Lat", "Long", "Report_Type", "Amount", "Amount_Unit",
-            "Source", "Report_type", "", ""
-        ]
-        if len(combined_df.columns) == len(new_headers):
-            combined_df.columns = new_headers
-        else:
-            print("⚠️ Warning: Column count mismatch. Headers not applied.")
+            # Rename columns to match desired headers
+            new_headers = [
+                "METADATA", "Station", "Date", "Time", "ST", "City", "County",
+                "", "", "Lat", "Long", "Report_Type", "Amount", "Amount_Unit",
+                "Source", "Report_type", "", ""
+            ]
+            if len(combined_df.columns) == len(new_headers):
+                combined_df.columns = new_headers
+                logging.info("✅ Renamed columns to match desired headers.")
+            else:
+                logging.warning("⚠️ Column count mismatch. Headers were not applied.")
 
-        # Filter out rows that appear to be text notes by checking for a valid Date.
-        # Any row where the "Date" column cannot be parsed is dropped.
-        if "Date" in combined_df.columns:
-            combined_df["Date_parsed"] = pd.to_datetime(combined_df["Date"],
-                                                        errors="coerce",
-                                                        infer_datetime_format=True)
-            before_count = len(combined_df)
-            combined_df = combined_df[combined_df["Date_parsed"].notna()]
-            after_count = len(combined_df)
-            filtered_count = before_count - after_count
-            if filtered_count:
-                print(f"Filtered out {filtered_count} text rows based on invalid dates in 'Date' column.")
-            combined_df = combined_df.drop(columns=["Date_parsed"])
-        else:
-            print("⚠️ 'Date' column not found. Skipping text row filtering based on date.")
+            # Filter out rows with invalid dates in the "Date" column
+            if "Date" in combined_df.columns:
+                combined_df["Date_parsed"] = pd.to_datetime(
+                    combined_df["Date"], errors="coerce", infer_datetime_format=True
+                )
+                before_filter = len(combined_df)
+                combined_df = combined_df[combined_df["Date_parsed"].notna()]
+                logging.info(f"✅ Removed {before_filter - len(combined_df)} rows with invalid dates.")
+                combined_df = combined_df.drop(columns=["Date_parsed"])
+            else:
+                logging.warning("⚠️ 'Date' column not found. Skipping date filtering.")
 
-        # Drop the first column ("METADATA") since it is blank for all rows
-        if "METADATA" in combined_df.columns:
-            combined_df = combined_df.drop(columns=["METADATA"])
+            # Drop "METADATA" column if it exists and is blank
+            if "METADATA" in combined_df.columns:
+                combined_df = combined_df.drop(columns=["METADATA"])
+                logging.info("✅ Dropped 'METADATA' column.")
 
-        # Save the combined and cleaned file
-        combined_df.to_csv(output_path, index=False)
-        print(f"✅ Combined PNS metadata saved as: {output_path}")
+            # Save combined file
+            combined_df.to_csv(output_file, index=False, encoding="utf-8")
+            logging.info(f"✅ Combined PNS metadata saved as: {output_file}")
+
+        except Exception as e:
+            logging.error(f"❌ Error during combination and cleaning: {e}")
     else:
-        print("⚠️ No valid PNS metadata files found.")
+        logging.warning("⚠️ No valid PNS metadata files found to combine.")
 
 
 if __name__ == "__main__":
+    setup_logging()
     combine_pns_metadata()

@@ -1,63 +1,93 @@
-# combines all data from each dated file with all station data into one master file with all dates
-# it is important that this runs after the script that combines the station data
-# this also has to run after the data is parsed (parsed_data) and scraped (scraper)
+"""
+Combines all data from each dated file with all station data into one master file with all dates.
+It is important that this runs after the script that combines station data.
+This also has to run after the data is parsed (parsed_data) and scraped (scraper).
+"""
 
-import os
+from pathlib import Path
 import pandas as pd
+import logging
+
+
+def setup_logging():
+    """
+    Sets up logging for the script.
+    """
+    logs_dir = Path(__file__).resolve().parent.parent / "logs"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.FileHandler(logs_dir / "accumulate_all_data.log", mode="a", encoding="utf-8"),
+            logging.StreamHandler()
+        ]
+    )
 
 
 def accumulate_all_data():
     """
     Accumulates all station CSV files into a master CSV file named "all_stations_all_dates.csv".
 
-    This script looks in the "data/ALL_STATIONS" directory, loads all CSV files (excluding the master file),
-    and if a master file already exists, loads it as well. It then concatenates all the data,
-    eliminates duplicate rows, and writes the accumulated data back to the master CSV file.
+    The script scans the "data/ALL_STATIONS" directory, loads all station-specific CSV files 
+    (excluding the master file), and if a master file already exists, loads it as well. Then, it:
+      - Combines all data into a single DataFrame.
+      - Removes duplicate rows.
+      - Writes the accumulated data back to the master CSV file.
 
-    All CSV files are assumed to share the same format.
+    All input CSV files are assumed to share the same format.
     """
-    # Define the base directory (project root) and the ALL_STATIONS directory
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    all_stations_dir = os.path.join(base_dir, "data", "ALL_STATIONS")
+    # Define paths
+    base_dir = Path(__file__).resolve().parent.parent
+    all_stations_dir = base_dir / "data" / "ALL_STATIONS"
+    master_file = all_stations_dir / "all_stations_all_dates.csv"
 
-    # Define the path for the master file
-    master_file = os.path.join(all_stations_dir, "all_stations_all_dates.csv")
+    # Ensure the output directory exists
+    all_stations_dir.mkdir(parents=True, exist_ok=True)
 
-    # List to accumulate DataFrames
+    # Collect DataFrames
     all_dfs = []
 
-    # If the master file exists, load it first so we include previously accumulated data
-    if os.path.exists(master_file):
+    # Load the existing master file if it exists
+    if master_file.exists():
         try:
-            master_df = pd.read_csv(master_file)
+            master_df = pd.read_csv(master_file, encoding="utf-8")
             all_dfs.append(master_df)
-            print(f"Loaded existing master file: {master_file}")
+            logging.info(f"Loaded existing master file: {master_file}")
         except Exception as e:
-            print(f"Error reading master file {master_file}: {e}")
+            logging.error(f"Error reading master file {master_file}: {e}")
 
-    # Look for all CSV files in the directory (excluding the master file)
-    for filename in os.listdir(all_stations_dir):
-        if filename.endswith(".csv") and filename != "all_stations_all_dates.csv":
-            file_path = os.path.join(all_stations_dir, filename)
+    # Process each CSV file in the directory excluding the master file
+    for csv_file in all_stations_dir.glob("*.csv"):
+        if csv_file.name != "all_stations_all_dates.csv":
             try:
-                df = pd.read_csv(file_path)
+                df = pd.read_csv(csv_file, encoding="utf-8")
                 all_dfs.append(df)
-                print(f"Loaded file: {file_path}")
+                logging.info(f"Loaded file: {csv_file}")
             except Exception as e:
-                print(f"Error reading file {file_path}: {e}")
+                logging.error(f"Error reading file {csv_file}: {e}")
 
-    # Combine all DataFrames if any are found
+    # Combine all DataFrames
     if all_dfs:
-        combined_df = pd.concat(all_dfs, ignore_index=True)
-        # Remove duplicate rows
-        combined_df = combined_df.drop_duplicates()
+        try:
+            combined_df = pd.concat(all_dfs, ignore_index=True)
 
-        # Write the combined, de-duplicated DataFrame back to the master file
-        combined_df.to_csv(master_file, index=False)
-        print(f"Accumulated data saved to master file: {master_file}")
+            # Remove duplicates
+            before_dedup = len(combined_df)
+            combined_df = combined_df.drop_duplicates()
+            after_dedup = len(combined_df)
+            logging.info(f"Removed {before_dedup - after_dedup} duplicate rows.")
+
+            # Save the combined data
+            combined_df.to_csv(master_file, index=False, encoding="utf-8")
+            logging.info(f"Accumulated data saved to master file: {master_file}")
+
+        except Exception as e:
+            logging.error(f"Error combining data: {e}")
     else:
-        print("No CSV files found to accumulate.")
+        logging.warning("No CSV files found to accumulate.")
 
 
 if __name__ == "__main__":
+    setup_logging()
     accumulate_all_data()
