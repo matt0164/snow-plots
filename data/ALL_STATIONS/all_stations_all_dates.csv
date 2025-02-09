@@ -10078,3 +10078,22 @@ date,time,state,county,city,latitude,longitude,type,value,unit,source,descriptio
 2/08/2025,  630 PM, WV, Tucker, Hendricks,39.0722,-79.6222, RAIN, 0.03, Inch, HADS, Storm Total Rainfall,PBZ
 2/08/2025,  658 PM, WV, Wetzel, Littleton,39.671,-80.638, RAIN, 0.24, Inch, CWOP, Storm Total Rainfall,PBZ
 2/08/2025,  615 PM, WV, Wetzel, Hundred,39.6711,-80.4439, RAIN, 0.09, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  837 PM, MD, Allegany, Frostburg,39.66,-78.93, SNOW, T, Inch, Trained Spotter, Storm Total Snow,LWX
+2/08/2025,  837 PM, MD, Allegany, Frostburg,39.66,-78.93, ICE, 0.10, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  527 PM, MD, Anne Arundel, Crofton,39.0,-76.68, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  615 PM, MD, Baltimore, Owings Mills,39.42,-76.79, ICE, 0.01, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  745 PM, MD, Carroll, Watersville,39.38,-77.1, ICE, 0.01, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  737 PM, MD, Carroll, Sykesville,39.37,-76.98, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,LWX
+2/08/2025,  405 PM, MD, Howard, Savage,39.14,-76.81, ICE, 0.01, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  600 PM, MD, Montgomery, Aspen Hill,39.07,-77.05, ICE, 0.05, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  530 PM, MD, Montgomery, White Oak,39.05,-76.99, ICE, 0.01, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  537 PM, MD, Montgomery, Gaithersburg,39.14,-77.17, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  525 PM, MD, Prince Georges, College Park,39.0,-76.95, ICE, 0.01, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  545 PM, VA, Arlington, Falls Church,38.89,-77.16, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  630 PM, VA, City of Falls Church, Falls Church,38.89,-77.16, ICE, 0.06, Inch, Trained Spotter, Storm Total Ice Accrual,LWX
+2/08/2025,  546 PM, VA, Fairfax, Tysons Corner,38.92,-77.23, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  530 PM, VA, Fairfax, Reston,38.98,-77.35, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  530 PM, VA, Fairfax, Fairfax,38.87,-77.3, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  546 PM, VA, Fairfax, Herndon,38.96,-77.4, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  530 PM, VA, Loudoun, Ashburn,39.02,-77.53, ICE, 0.05, Inch, NWS Employee, Storm Total Ice Accrual,LWX
+2/08/2025,  530 PM, VA, Loudoun, Leesburg,39.1,-77.56, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX

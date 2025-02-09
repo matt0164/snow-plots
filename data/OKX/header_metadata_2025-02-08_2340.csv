@@ -1,0 +1,23 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+2/06/2025 0737 AM  CT  Fairfield  Bridgeport      41.1863  -73.1962  SNOW  0.6  Inch  Official NWS Obs  Storm total snowfall
+2/06/2025 1107 AM  CT  Fairfield  Redding      41.30475  -73.39369  SNOW  1.2  Inch  NWS Employee  Storm total snowfall
+2/06/2025 1045 AM  CT  Fairfield  New Fairfield      41.47073  -73.45899  SNOW_24  1.8  Inch  Trained Spotter  24 hour snowfall
+2/06/2025 1030 AM  CT  New Haven  North Haven      41.3809  -72.8564  SNOW  0.5  Inch  Trained Spotter  Storm total snowfall
+2/06/2025 0845 AM  CT  New Haven  Guilford      41.2803  -72.677  SNOW  1.5  Inch  CO-OP Observer  Storm total snowfall
+2/06/2025 0830 AM  NJ  Hudson  Hoboken      40.7426  -74.0288  SNOW  0.7  Inch  Trained Spotter  Storm total snowfall
+2/06/2025 0830 AM  NJ  Hudson  Harrison      40.7435  -74.1534  SNOW_24  0.7  Inch  CO-OP Observer  24 hour snowfall
+2/06/2025 0709 AM  NJ  Union  Newark Airport      40.68  -74.17  SNOW  0.5  Inch  Official NWS Obs  Storm total snowfall
+2/06/2025 0920 AM  NJ  Union  Elizabeth      40.6664  -74.1942  SNOW  1  Inch  Trained Spotter  Storm total snowfall
+2/06/2025 0708 AM  NY  New York (Manhattan)  Central Park      40.78  -73.97  SNOW  0.5  Inch  Official NWS Obs  Storm total snowfall
+2/06/2025 0900 AM  NY  Orange  Monroe      41.3206  -74.1863  SNOW  1.5  Inch  Trained Spotter  Storm total snowfall
+2/06/2025 0711 AM  NY  Queens  NYC/JFK      40.64  -73.76  SNOW_24  0.2  Inch  Official NWS Obs  24 hour snowfall
+2/06/2025 0709 AM  NY  Queens  NYC/La Guardia      40.78  -73.88  SNOW  0.3  Inch  Official NWS Obs  Storm total snowfall
+2/06/2025 0711 AM  NY  Suffolk  Islip Airport      40.79  -73.1  SNOW  0.3  Inch  Official NWS Obs  Storm total snowfall
+2/06/2025 0900 AM  NY  Suffolk  Riverhead      40.91  -72.63  SNOW  0.5  Inch  Cocorahs  Storm total snowfall
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$

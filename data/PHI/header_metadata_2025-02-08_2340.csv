@@ -1,0 +1,46 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+2/08/2025 0700 PM  DE  New Castle  New Castle County Airport      39.677852093791  -75.60652702957  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0922 PM  DE  New Castle  Wilmington      39.6667  -75.6  FREEZING_RAIN_24  0.09  Inch  ASOS  24 hour freezing rain
+2/08/2025 0554 PM  DE  Sussex  Georgetown      38.6833  -75.3667  FREEZING_RAIN  0.001  Inch  ASOS  Storm total freezing rain
+2/08/2025 0700 PM  NJ  Atlantic  Atlantic City International Airport      39.450234516203  -74.567374884186  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0926 PM  NJ  Atlantic  Atlantic City      39.45  -74.5667  FREEZING_RAIN_24  0.11  Inch  ASOS  24 hour freezing rain
+2/08/2025 0926 PM  NJ  Burlington  Mount Holly      39.9333  -74.8333  FREEZING_RAIN_24  0.09  Inch  ASOS  24 hour freezing rain
+2/08/2025 0902 PM  NJ  Cumberland  Millville      39.3667  -75.0833  FREEZING_RAIN_24  0.07  Inch  ASOS  24 hour freezing rain
+2/08/2025 0936 PM  NJ  Hunterdon  Flemington      40.511  -74.8613  SNOW_24  0.4  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0712 PM  NJ  Mercer  Trenton Mercer Airport      40.2772  -74.8122  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0853 PM  NJ  Mercer  Trenton      40.2833  -74.8167  FREEZING_RAIN_24  0.06  Inch  ASOS  24 hour freezing rain
+2/08/2025 0920 PM  NJ  Mercer  1 S Trenton Mercer Airport      40.2633  -74.8155  SNOW_24  0.3  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0905 PM  NJ  Middlesex  South River      40.4504  -74.3817  SNOW_24  0.5  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0900 PM  NJ  Monmouth  2 ESE West Long Branch      40.2795  -73.9881  SNOW_24  0.1  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0920 PM  NJ  Morris  Lake Hopatcong      40.9476  -74.6186  SNOW_24  1.8  Inch  Cocorahs  24 hour snowfall
+2/08/2025 0934 PM  NJ  Somerset  Somerville      40.6167  -74.6667  FREEZING_RAIN_24  0.01  Inch  ASOS  24 hour freezing rain
+2/08/2025 0933 PM  NJ  Somerset  Warren      40.6217  -74.4891  SNOW_24  1.0  Inch  Public  24 hour snowfall
+2/08/2025 0835 PM  NJ  Sussex  1 N Sussex      41.2181  -74.6095  SNOW_24  0.8  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0845 PM  NJ  Sussex  4 WSW Wantage Twp      41.2157  -74.6841  SNOW_24  1.0  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0928 PM  NJ  Sussex  Sparta      41.0422  -74.6306  SNOW_24  1.5  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0700 PM  PA  Berks  Reading Regional Airport      40.378841135406  -75.965900122222  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0923 PM  PA  Berks  Reading      40.3667  -75.9667  FREEZING_RAIN_24  0.06  Inch  ASOS  24 hour freezing rain
+2/08/2025 0850 PM  PA  Berks  Bern Twp      40.3936  -76.0026  FREEZING_RAIN  0.10  Inch  Trained Spotter  Storm total freezing rain
+2/08/2025 0933 PM  PA  Bucks  Doylestown      40.3333  -75.1167  FREEZING_RAIN_24  0.17  Inch  ASOS  24 hour freezing rain
+2/08/2025 0755 PM  PA  Carbon  Hudsondale      40.9188  -75.8586  SNOW_24  0.3  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0830 PM  PA  Chester  East Nantmeal Twp      40.1225  -75.7197  SNOW_24  0.5  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0700 PM  PA  Lehigh  Lehigh Valley International Airport      40.651656311538  -75.441646277007  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0912 PM  PA  Lehigh  Lehigh Valley Intl Airport      40.65  -75.45  FREEZING_RAIN_24  0.03  Inch  ASOS  24 hour freezing rain
+2/08/2025 0800 PM  PA  Lehigh  Germansville      40.702  -75.7054  SNOW_24  0.2  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0730 PM  PA  Montgomery  1 E Willow Grove      40.1447  -75.1026  FREEZING_RAIN  0.06  Inch  Trained Spotter  Storm total freezing rain
+2/08/2025 0931 PM  PA  Montgomery  Pottstown      40.2333  -75.55  FREEZING_RAIN_24  0.09  Inch  ASOS  24 hour freezing rain
+2/08/2025 0900 PM  PA  Northampton  Martins Creek      40.78284098803198  -75.18267897664694  FREEZING_RAIN_24  0.001  Inch  CO-OP Observer  24 hour freezing rain
+2/08/2025 0828 PM  PA  Northampton  Williams Twp      40.6359  -75.1947  SNOW_24  0.2  Inch  Trained Spotter  24 hour snowfall
+2/08/2025 0900 PM  PA  Northampton  Martins Creek      40.78284098803198  -75.18267897664694  SNOW_24  0.7  Inch  CO-OP Observer  24 hour snowfall
+2/08/2025 0700 PM  PA  Philadelphia  Philadelphia International Airport      39.877491019808  -75.224837957915  SNOW_24  0.001  Inch  ASOS  24 hour snowfall
+2/08/2025 0924 PM  PA  Philadelphia  Philadelphia Northeast      40.0833  -75.0166  FREEZING_RAIN_24  0.08  Inch  ASOS  24 hour freezing rain
+2/08/2025 0927 PM  PA  Philadelphia  Philadelphia International Airport      39.8784  -75.2257  FREEZING_RAIN_24  0.08  Inch  ASOS  24 hour freezing rain
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$
+""
+Staarmann
