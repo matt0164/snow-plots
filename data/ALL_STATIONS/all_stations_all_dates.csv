@@ -10113,3 +10113,172 @@ date,time,state,county,city,latitude,longitude,type,value,unit,source,descriptio
 2/09/2025,1256 AM, PA, York, Capitol City Airport,40.2167,-76.85, FREEZING_RAIN_24, 0.06, Inch, ASOS, 24 hour freezing rain,CTP
 2/09/2025,1253 AM, PA, York, York Airport,39.9167,-76.8833, FREEZING_RAIN_24, 0.09, Inch, ASOS, 24 hour freezing rain,CTP
 2/08/2025,1158 PM, PA, York, Red Lion,39.901,-76.606, FREEZING_RAIN, 0.20, Inch, null, Storm total freezing rain,CTP
+2/08/2025,1005 PM, CT, Fairfield, New Canaan,41.14,-73.49, SNOW, 2.6, Inch, Trained Spotter, Storm total snowfall,OKX
+2/08/2025,1050 PM, CT, Fairfield, Danbury,41.4021,-73.4715, SNOW_24, 3.0, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1130 PM, CT, Fairfield, Bethel,41.3715,-73.4116, SNOW_24, 3.8, Inch, Emergency Mngr, 24 hour snowfall,OKX
+2/09/2025,1200 AM, CT, Fairfield, 2 SSW Weston,41.200939,-73.380701, SNOW_24, 3.8, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,0130 AM, CT, Fairfield, Southport,41.13533,-73.28925, SNOW_24, 4.1, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1245 AM, CT, Middlesex, Westbrook,41.2841,-72.4525, SNOW_24, 3.5, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1031 PM, CT, New Haven, Meriden,41.5367,-72.7952, SNOW_24, 2.1, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1055 PM, CT, New Haven, 3 ENE Branford,41.28874936201086,-72.75696701032899, SNOW_24, 2.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1230 AM, CT, New Haven, Waterbury,41.5584,-73.0374, SNOW_24, 3.3, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,1215 AM, CT, New Haven, Wallingford,41.4498,-72.8194, SNOW_24, 3.4, Inch, Cocorahs, 24 hour snowfall,OKX
+2/09/2025,0145 AM, CT, New Haven, 1 NNW Meriden,41.5543,-72.8033, SNOW_24, 3.6, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, CT, New Haven, Branford,41.28,-72.81, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, CT, New Haven, 1 ENE North Haven,41.38585,-72.83475, SNOW_24, 4.0, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1140 PM, CT, New London, 1 SSW New London,41.342953495375326,-72.10314562176501, SNOW_24, 2.6, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,0100 AM, CT, New London, Groton,41.34,-72.08, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1151 AM, NJ, Bergen, Hasbrouck Heights,40.8608,-74.0742, SNOW_24, 2.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1025 PM, NJ, Bergen, Franklin Lakes,41.008128,-74.21039, SNOW_24, 2.6, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1050 PM, NJ, Bergen, East Rutherford,40.8175,-74.0844, SNOW_24, 2.9, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1000 PM, NJ, Hudson, Hoboken,40.7426,-74.0288, SNOW, 2.1, Inch, Trained Spotter, Storm total snowfall,OKX
+2/09/2025,1200 AM, NJ, Hudson, Harrison,40.7432204,-74.1558936, SNOW_24, 2.8, Inch, CO-OP Observer, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NJ, Union, Elizabeth,40.6664,-74.1942, SNOW_24, 2.8, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,0100 AM, NJ, Union, Newark Airport,40.68,-74.17, SNOW_24, 3.0, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/08/2025,1029 PM, NY, Bronx, 1 NW Fordham,40.8828,-73.9048, SNOW_24, 2.7, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1215 AM, NY, Bronx, 1 ENE Fordham,40.8732,-73.8763, SNOW_24, 4.6, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Kings, Midwood,40.62066,-73.96026, SNOW_24, 2.8, Inch, Broadcast Media, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Kings, 1 WNW Crown Heights,40.676183,-73.966292, SNOW_24, 3.0, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,1230 AM, NY, Kings, Sheepshead Bay,40.5959,-73.94657, SNOW_24, 3, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1050 PM, NY, Nassau, Bethpage,40.7495,-73.4858, SNOW_24, 2.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0115 AM, NY, Nassau, Merrick,40.6506,-73.5546, SNOW_24, 2.8, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1115 PM, NY, Nassau, Bellmore,40.6571,-73.5292, SNOW_24, 3.0, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1133 PM, NY, Nassau, Sea Cliff,40.85,-73.64, SNOW_24, 3.1, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1045 PM, NY, Nassau, Farmingdale,40.7331,-73.4476, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1050 PM, NY, Nassau, Plainview,40.7833,-73.4726, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1051 PM, NY, Nassau, 1 WSW Plainview,40.78023061192605,-73.48657698067211, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1130 PM, NY, Nassau, Hicksville,40.7638,-73.5252, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Nassau, Floral Park,40.7223,-73.7036, SNOW_24, 3.7, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1045 PM, NY, Nassau, Westbury,40.7597,-73.5889, SNOW_24, 3.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Nassau, Manhasset Hills,40.75813,-73.68272, SNOW_24, 3.9, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1230 AM, NY, Nassau, Syosset,40.8154,-73.5028, SNOW_24, 4.0, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Nassau, Jericho,40.7885,-73.5419, SNOW_24, 4.9, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1250 AM, NY, Nassau, Muttontown,40.8206,-73.5411, SNOW_24, 5.1, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0100 AM, NY, New York (Manhattan), New York,40.7833546,-73.9649732, SNOW_24, 3.1, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/08/2025,1043 PM, NY, Orange, Chester,41.3572,-74.2762, SNOW_24, 3.0, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1100 PM, NY, Orange, 2 E Highland Mills,41.3535,-74.0951, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0100 AM, NY, Queens, NYC/JFK Airport,40.64,-73.76, SNOW_24, 3.1, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/09/2025,1225 AM, NY, Queens, Bellerose,40.730752,-73.719706, SNOW_24, 3.1, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0100 AM, NY, Queens, NYC/La Guardia,40.78,-73.88, SNOW_24, 3.6, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/09/2025,1250 AM, NY, Richmond, Dongan Hills,40.59088,-74.09023, SNOW_24, 2.2, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1045 PM, NY, Suffolk, East Islip,40.7252,-73.187, SNOW_24, 2.5, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1024 PM, NY, Suffolk, Manorville,40.8585,-72.794, SNOW_24, 2.9, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1041 PM, NY, Suffolk, Amityville,40.6698,-73.4161, SNOW, 3.0, Inch, Trained Spotter, Storm total snowfall,OKX
+2/08/2025,0945 PM, NY, Suffolk, Smithtown,40.8571,-73.2149, SNOW, 3.2, Inch, Public, Storm total snowfall,OKX
+2/08/2025,1030 PM, NY, Suffolk, Babylon,40.696,-73.3271, SNOW_24, 3.3, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1050 PM, NY, Suffolk, Hampton Bays,40.88,-72.5244, SNOW_24, 3.3, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1115 PM, NY, Suffolk, Patchogue,40.7613,-73.0194, SNOW_24, 3.4, Inch, NWS Employee, 24 hour snowfall,OKX
+2/08/2025,1055 PM, NY, Suffolk, Sayville,40.7468,-73.0858, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1240 AM, NY, Suffolk, Deer Park,40.768,-73.3197, SNOW_24, 3.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Suffolk, 1 WSW Commack,40.842306,-73.300315, SNOW_24, 4.0, Inch, Broadcast Media, 24 hour snowfall,OKX
+2/08/2025,1105 PM, NY, Suffolk, 1 N Center Moriches,40.80676,-72.798113, SNOW_24, 4.0, Inch, Cocorahs, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Suffolk, Islip Airport,40.79,-73.1, SNOW_24, 4.0, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/09/2025,1200 AM, NY, Suffolk, Islip Terrace,40.75140063685896,-73.18830938692592, SNOW_24, 4.0, Inch, Trained Spotter, 24 hour snowfall,OKX
+2/08/2025,1150 AM, NY, Suffolk, Miller Place,40.9325,-72.9874, SNOW_24, 4.2, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1230 AM, NY, Suffolk, Ronkonkoma,40.8035,-73.1249, SNOW_24, 4.3, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0100 AM, NY, Suffolk, Upton,40.8655,-72.8645, SNOW_24, 4.4, Inch, Official NWS Obs, 24 hour snowfall,OKX
+2/09/2025,1205 AM, NY, Suffolk, Centereach,40.8708,-73.0833, SNOW_24, 4.5, Inch, NWS Employee, 24 hour snowfall,OKX
+2/08/2025,1115 PM, NY, Suffolk, Yaphank,40.8316,-72.9258, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0105 AM, NY, Suffolk, North Patchogue,40.7844,-73.0244, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0130 AM, NY, Suffolk, Stony Brook,40.9079,-73.1283, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1215 AM, NY, Suffolk, Commack,40.8449,-73.2836, SNOW_24, 4.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,0150 AM, NY, Suffolk, Hampton Bays,40.88,-72.5244, SNOW_24, 4.8, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1240 AM, NY, Westchester, Croton-on-Hudson,41.2032,-73.8907, SNOW_24, 3.3, Inch, Public, 24 hour snowfall,OKX
+2/08/2025,1135 PM, NY, Westchester, Eastchester,40.9582,-73.8078, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1215 AM, NY, Westchester, Ossining,41.1585,-73.8715, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,OKX
+2/09/2025,1200 AM, CT, Hartford, Bradley AP,41.94,-72.68, SNOW_24, 1.9, Inch, ASOS, 24 hour snowfall,BOX
+2/09/2025,0523 AM, CT, Hartford, 2 E Berlin,41.6204,-72.7193, SNOW_24, 3.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0500 AM, CT, Tolland, 1 SW Coventry,41.774,-72.31, SNOW_24, 3.3, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0515 AM, CT, Windham, Woodstock,41.9507,-71.9774, SNOW_24, 2.8, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, 1 NNE Brewster,41.7639,-70.0761, SNOW_24, 3.7, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, 1 NNW East Falmouth,41.5785,-70.5589, SNOW_24, 3.8, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, Pocasset,41.6863,-70.6153, SNOW_24, 3.8, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, Harwich,41.6863,-70.0728, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, Marstons Mills,41.6496,-70.4176, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, 4 NNW Falmouth,41.5944,-70.6302, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, Mashpee,41.649,-70.4812, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, 1 NE Falmouth,41.5605,-70.5885, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Barnstable, 2 NE East Falmouth,41.5901,-70.5211, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0512 AM, MA, Barnstable, Bourne,41.7328,-70.6142, SNOW_24, 6.5, Inch, Trained Spotter, 24 hour snowfall,BOX
+2/09/2025,0510 AM, MA, Bristol, 2 NNE Bliss Corner,41.6341,-70.9277, SNOW_24, 4.3, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Bristol, 2 ESE New Bedford,41.6437,-70.9009, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Bristol, Acushnet,41.6804,-70.9043, SNOW_24, 4.8, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0545 AM, MA, Bristol, 2 NNE Bliss Corner,41.6341,-70.9277, SNOW_24, 5.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Dukes, West Tisbury,41.381,-70.6746, SNOW_24, 4.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0500 AM, MA, Essex, 1 SE Lynn,42.4644,-70.9485, SNOW_24, 5.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0608 AM, MA, Essex, 1 WNW Ipswich,42.6844,-70.854, SNOW_24, 5.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0625 AM, MA, Essex, Andover,42.6552,-71.1397, SNOW_24, 6.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0556 AM, MA, Middlesex, 2 WNW Dover,42.2616,-71.3067, SNOW_24, 3.2, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0629 AM, MA, Middlesex, 2 SW Hopkinton,42.2014,-71.5587, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0627 AM, MA, Middlesex, 2 SW Hopkinton,42.1997,-71.5585, SNOW_24, 4.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0536 AM, MA, Middlesex, 1 NNW Lexington,42.4548,-71.2356, SNOW_24, 4.3, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0535 AM, MA, Middlesex, 1 E Winchester,42.4532,-71.1338, SNOW_24, 4.6, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0500 AM, MA, Middlesex, 2 W Townsend,42.6752,-71.7412, SNOW_24, 4.6, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0620 AM, MA, Middlesex, 1 WNW Melrose,42.4606,-71.073, SNOW_24, 5.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0610 AM, MA, Middlesex, 1 WNW Pepperell,42.6714,-71.6084, SNOW_24, 5.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0542 AM, MA, Nantucket, 1 NNE Nantucket,41.2832,-70.0992, SNOW_24, 4.1, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0628 AM, MA, Norfolk, 2 NNW Weymouth,42.2434,-70.9548, SNOW_24, 3.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0620 AM, MA, Norfolk, Millis,42.1687,-71.3542, SNOW_24, 3.0, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0600 AM, MA, Norfolk, 1 NW Canton,42.1589,-71.145, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0510 AM, MA, Plymouth, 1 NNE West Bridgewater,42.0316,-70.9877, SNOW_24, 2.7, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0607 AM, MA, Plymouth, Rockland,42.13333,-70.91667, SNOW, 3.7, Inch, Trained Spotter, Storm total snowfall,BOX
+2/09/2025,1200 AM, MA, Suffolk, Logan AP,42.36,-71.01, SNOW_24, 1.2, Inch, ASOS, 24 hour snowfall,BOX
+2/09/2025,1220 AM, MA, Worcester, Worcester AP,42.2695,-71.8703, SNOW_24, 2.0, Inch, ASOS, 24 hour snowfall,BOX
+2/09/2025,0530 AM, MA, Worcester, 3 NNE Worcester,42.3098,-71.7856, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0525 AM, MA, Worcester, Mendon,42.1054,-71.5515, SNOW_24, 3.7, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0558 AM, MA, Worcester, Grafton,42.2068,-71.6857, SNOW_24, 4.3, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,0547 AM, RI, Bristol, 1 E Bristol,41.6771,-71.2598, SNOW_24, 3.6, Inch, Public, 24 hour snowfall,BOX
+2/09/2025,1200 AM, RI, Kent, TF Green AP,41.72,-71.43, SNOW_24, 2, Inch, ASOS, 24 hour snowfall,BOX
+2/09/2025,0620 AM, RI, Providence, 1 SSE Cumberland,41.9392,-71.3987, SNOW_24, 3.5, Inch, Public, 24 hour snowfall,BOX
+2/08/2025,  703 PM, OH, Carroll, Carrollton,40.5784,-81.0883, ICE, 0.10, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025, 1143 PM, OH, Carroll, Summitville,40.6186,-80.9512, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  523 PM, OH, Columbiana, Hanoverton,40.7538,-80.9369, ICE, 0.10, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  546 PM, OH, Columbiana, East Palestine,40.8334,-80.5373, ICE, 0.05, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  450 PM, OH, Columbiana, Salem,40.911,-80.8557, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  554 PM, OH, Jefferson, Bergholz,40.5253,-80.8881, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  535 PM, OH, Tuscarawas, Sherrodsville,40.5508,-81.297, ICE, 0.05, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  500 PM, OH, Tuscarawas, Newcomerstown,40.2659,-81.6165, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025, 1051 PM, PA, Allegheny, Carnot-Moon,40.5,-80.2667, ICE, 0.01, Inch, ASOS, Storm Total Ice Accrual,PBZ
+2/08/2025,  400 PM, PA, Allegheny, Carnot-Moon,40.5307,-80.2172, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,PBZ
+2/08/2025,  705 PM, PA, Allegheny, Harrison Township,40.632,-79.7208, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  445 PM, PA, Allegheny, Bradfordwoods,40.6523,-80.0772, ICE, 0.01, Inch, Broadcast Media, Storm Total Ice Accrual,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Valencia,40.6584,-79.968, ICE, T, Inch, NWS Employee, Storm Total Ice Accrual,PBZ
+2/08/2025,  451 PM, PA, Allegheny, Pittsburgh Intl Airport,40.4846,-80.2145, ICE, T, Inch, ASOS, Storm Total Ice Accrual,PBZ
+2/08/2025,  440 PM, PA, Armstrong, Dayton,40.874,-79.2375, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  438 PM, PA, Armstrong, Ford City,40.7701,-79.5299, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  413 PM, PA, Beaver, Darlington,40.8214,-80.4675, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,PBZ
+2/08/2025,  654 PM, PA, Beaver, Midland,40.6408,-80.4586, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  547 PM, PA, Beaver, New Brighton,40.7416,-80.2545, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  501 PM, PA, Beaver, Harshaville,40.5291,-80.4914, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  540 PM, PA, Butler, Sarver,40.7187,-79.7751, ICE, 0.02, Inch, Trained Spotter, Storm Total Ice Accrual,PBZ
+2/08/2025,  615 PM, PA, Butler, Portersville,40.9707,-80.1399, ICE, 0.02, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  545 PM, PA, Butler, Valencia,40.6755,-79.9904, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  500 PM, PA, Butler, Harmony,40.8,-80.1297, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  557 PM, PA, Butler, Fox Run,40.7226,-80.0674, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  556 PM, PA, Butler, Homeacre-Lyndora,40.8705,-79.9311, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  505 PM, PA, Butler, Nixon,40.8061,-79.9641, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  500 PM, PA, Butler, Slippery Rock,41.0647,-80.052, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  607 PM, PA, Butler, Zelienople,40.791,-80.1392, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  430 PM, PA, Butler, Fox Run,40.6846,-80.0989, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  700 PM, PA, Butler, Saxonburg,40.7502,-79.8129, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  445 PM, PA, Clarion, New Bethlehem,41.0009,-79.329, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  635 PM, PA, Clarion, Clarion,41.201,-79.3752, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  531 PM, PA, Clarion, Hawthorn,41.0199,-79.2737, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  719 PM, PA, Fayette, Champion,40.0395,-79.2981, ICE, 0.10, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  700 PM, PA, Forest, Marienville,41.4558,-79.1818, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  830 PM, PA, Indiana, Clymer,40.6347,-78.97, ICE, 0.25, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  600 PM, PA, Indiana, Brush Vly,40.5414,-79.0776, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025, 1104 PM, PA, Jefferson, DuBois Airport,41.1796,-78.8932, ICE, 0.07, Inch, ASOS, Storm Total Ice Accrual,PBZ
+2/08/2025,  522 PM, PA, Jefferson, Punxsutawney,40.9418,-78.9726, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  600 PM, PA, Lawrence, Enon Valley,40.8561,-80.4623, ICE, 0.10, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  515 PM, PA, Lawrence, Wampum,40.8869,-80.3377, ICE, 0.05, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  600 PM, PA, Lawrence, New Castle,41.0033,-80.3483, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  830 PM, PA, Mercer, West Middlesex,41.1741,-80.4561, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  450 PM, PA, Mercer, Mercer,41.221,-80.2213, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  608 PM, PA, Mercer, Mercer,41.2255,-80.2432, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025, 1000 PM, PA, Venango, Barkeyville,41.2002,-79.9831, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  554 PM, PA, Venango, Emlenton,41.1779,-79.7121, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  629 PM, PA, Venango, Clintonville,41.201,-79.8724, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  609 PM, PA, Venango, Franklin,41.4095,-79.8289, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  549 PM, PA, Westmoreland, Seward,40.3817,-78.9858, ICE, 0.10, Inch, Public, Storm Total Ice Accrual,PBZ
+2/08/2025,  638 PM, PA, Westmoreland, Delmont,40.4474,-79.5915, ICE, 0.01, Inch, Public, Storm Total Ice Accrual,PBZ

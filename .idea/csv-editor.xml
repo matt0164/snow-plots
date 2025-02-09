@@ -80,6 +80,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/data/OKX/observations_2025-02-08_2130.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/observations_2025-02-08_2235.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/observations_2025-02-08_2340.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/observations_2025-02-09_0044.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/OKX/observations_2025-02-09_0201.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/OKX/raw_data.csv">
           <value>
             <Attribute>
