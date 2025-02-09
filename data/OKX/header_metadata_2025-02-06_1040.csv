@@ -1,0 +1,81 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+2/03/2025 0300 AM  CT  Fairfield  New Fairfield      41.47073  -73.45899  SNOW  1.8  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0633 AM  CT  Fairfield  3 S New Canaan      41.0959  -73.4854  SNOW_24  1.9  Inch  Public  24 hour snowfall
+2/03/2025 0659 AM  CT  Fairfield  3 E Greenwich      41.0858  -73.5966  SNOW_24  2.0  Inch  Public  24 hour snowfall
+2/03/2025 0700 AM  CT  Fairfield  Norwalk      41.1304  -73.4483  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  Fairfield  Bethel      41.3703  -73.4014  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1030 PM  CT  Fairfield  Weston      41.22757  -73.37056  SNOW  2.1  Inch  Trained Spotter  Storm total snowfall
+2/02/2025 1130 PM  CT  Fairfield  1 E Danbury      41.402098389195  -73.452210104047  SNOW  2.2  Inch  Trained Spotter  Storm total snowfall
+2/02/2025 1144 PM  CT  Fairfield  2 ENE Fairfield      41.1434  -73.2502  SNOW_24  2.2  Inch  Public  24 hour snowfall
+2/02/2025 1130 PM  CT  Fairfield  3 E Easton      41.2334  -73.2567  SNOW_24  2.5  Inch  Public  24 hour snowfall
+2/03/2025 1244 AM  CT  Fairfield  Bridgeport Airport      41.16  -73.13  SNOW  2.5  Inch  Official NWS Obs  Storm total snowfall
+2/02/2025 1130 PM  CT  Fairfield  Shelton      41.32  -73.1  SNOW_24  3  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 1222 AM  CT  Middlesex  Westbrook      41.2841  -72.4525  SNOW  2.5  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0600 AM  CT  Middlesex  Middlefield 1.4 W      41.5137  -72.7396  SNOW_24  2.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0535 AM  CT  Middlesex  Higganum      41.4964  -72.5599  SNOW_24  2.8  Inch  Public  24 hour snowfall
+2/03/2025 0700 AM  CT  Middlesex  Durham      41.4758  -72.7046  SNOW_24  3  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0210 AM  CT  Middlesex  Clinton      41.2795  -72.5289  SNOW_24  3.1  Inch  Broadcast Media  24 hour snowfall
+2/02/2025 1154 PM  CT  New Haven  Meriden      41.5375  -72.8007  SNOW_24  2  Inch  Storm Chaser  24 hour snowfall
+2/03/2025 0700 AM  CT  New Haven  2 ESE Stratford      41.1924  -73.0989  SNOW_24  2.5  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 1257 AM  CT  New Haven  Madison      41.2795  -72.6013  SNOW_24  2.7  Inch  Public  24 hour snowfall
+2/03/2025 0700 AM  CT  New Haven  Naugatuck      41.511  -73.037  SNOW_24  2.8  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0330 AM  CT  New Haven  New Haven      41.3083  -72.9256  SNOW_24  2.9  Inch  Broadcast Media  24 hour snowfall
+2/03/2025 0600 AM  CT  New Haven  Meriden      41.5258  -72.847  SNOW_24  3.2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 1200 AM  CT  New Haven  1 WNW North Haven      41.3873  -72.8798  SNOW_24  3.3  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 1215 AM  CT  New Haven  1 ESE North Haven      41.375361542519  -72.83858578743  SNOW  3.5  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0700 AM  CT  New Haven  Guilford      41.2859  -72.6714  SNOW_24  3.5  Inch  COOP  24 hour snowfall
+2/03/2025 1250 AM  CT  New Haven  Hamden      41.37  -72.9  SNOW  3.7  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0700 AM  CT  New London  Mystic      41.3585  -71.9693  SNOW_24  0.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  Waterford      41.3085  -72.1462  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+2/03/2025 1250 AM  CT  New London  Groton      41.3448  -72.078  SNOW_24  1.8  Inch  Public  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  New London      41.343  -72.1031  SNOW_24  1.9  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0430 AM  CT  New London  Niantic      41.3099  -72.2065  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  2 NW Lebanon      41.6413  -72.2768  SNOW_24  2.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0600 AM  CT  New London  Norwich      41.5849  -72.0768  SNOW_24  2.6  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  Mystic      41.3926  -71.9993  SNOW_24  2.8  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  Norwich 5.2 SE      41.4944  -72.0201  SNOW_24  3  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  Norwich      41.5269  -72.0642  SNOW_24  3  Inch  COOP  24 hour snowfall
+2/03/2025 0700 AM  CT  New London  Uncasville 2.4 NNW      41.466  -72.1251  SNOW_24  3.3  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0600 AM  CT  New London  East Lyme      41.3487  -72.2376  SNOW_24  3.4  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0645 AM  NJ  Bergen  River Edge 0.4 NNE      40.9321  -74.0354  SNOW_24  0.5  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1137 PM  NJ  Bergen  East Rutherford      40.8175  -74.0844  SNOW  1  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0546 AM  NJ  Bergen  Fair Lawn      40.9217  -74.1044  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1045 PM  NJ  Bergen  Franklin Lakes      41.0069  -74.208  SNOW  1.2  Inch  Trained Spotter  Storm total snowfall
+2/02/2025 1140 PM  NJ  Bergen  Waldwick      41.0109  -74.1311  SNOW_24  1.4  Inch  Public  24 hour snowfall
+2/02/2025 1145 PM  NJ  Bergen  Westwood      40.9884  -74.0311  SNOW  1.6  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0700 AM  NJ  Hudson  Harrison      40.748  -74.1518  SNOW_24  0.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  NJ  Passaic  Wayne      40.9369  -74.2515  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  NJ  Passaic  West Milford      41.0739  -74.368  SNOW_24  1.3  Inch  COCORAHS  24 hour snowfall
+2/03/2025 1200 AM  NJ  Union  Newark Airport      40.68  -74.17  SNOW  0.5  Inch  Official NWS Obs  Storm total snowfall
+2/03/2025 0645 AM  NJ  Union  Westfield      40.6588  -74.3358  SNOW_24  0.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0724 AM  NJ  Union  Cranford Twp 0.6 NNW      40.6643  -74.3101  SNOW_24  0.5  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1030 PM  NY  Bronx  1 ESE Fordham      40.8638  -73.8777  SNOW_24  0.6  Inch  Public  24 hour snowfall
+2/02/2025 1015 PM  NY  Nassau  Plainview      40.7833  -73.4726  SNOW  0.5  Inch  Public  Storm total snowfall
+2/03/2025 1200 AM  NY  Nassau  Manhasset Hills      40.75813  -73.68272  SNOW  0.8  Inch  Cocorahs  Storm total snowfall
+2/03/2025 0100 AM  NY  Nassau  1 N Syosset      40.8312  -73.5025  SNOW_24  1.1  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 1200 AM  NY  New York (Manhattan)  Central Park      40.78  -73.97  SNOW_24  1.0  Inch  Official NWS Obs  24 hour snowfall
+2/03/2025 0700 AM  NY  Orange  Warwick      41.2684  -74.416  SNOW_24  0.9  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1150 PM  NY  Orange  New Windsor      41.4701  -74.0272  SNOW  1.4  Inch  Public  Storm total snowfall
+2/03/2025 0630 AM  NY  Orange  Port Jervis      41.3599  -74.6409  SNOW_24  1.4  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1132 PM  NY  Orange  1 WSW Chester      41.3504  -74.2959  SNOW_24  1.5  Inch  Cocorahs  24 hour snowfall
+2/03/2025 0700 AM  NY  Putnam  Cold Spring      41.4807  -73.8911  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1144 PM  NY  Queens  NYC/JFK      40.64  -73.76  SNOW  0.001  Inch  Official NWS Obs  Storm total snowfall
+2/03/2025 0530 AM  NY  Queens  Little Neck 0.3 SE      40.7589  -73.7289  SNOW_24  0.8  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1150 PM  NY  Queens  NYC/La Guardia      40.78  -73.88  SNOW  1.2  Inch  Official NWS Obs  Storm total snowfall
+2/03/2025 0700 AM  NY  Rockland  Stony Point      41.2349  -74.0079  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1140 PM  NY  Suffolk  Islip Airport      40.79  -73.1  SNOW  0.001  Inch  Official NWS Obs  Storm total snowfall
+2/02/2025 1159 PM  NY  Suffolk  Ridge      40.8958  -72.8539  SNOW_24  0.001  Inch  COCORAHS  24 hour snowfall
+2/03/2025 1200 AM  NY  Suffolk  Upton (NWS Office)      40.8659  -72.8648  SNOW_24  0.001  Inch  Official NWS Obs  24 hour snowfall
+2/02/2025 1137 PM  NY  Suffolk  3 ENE Orient      41.1524  -72.2515  SNOW_24  0.5  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0115 AM  NY  Suffolk  Huntington Station      40.8449  -73.4052  SNOW  1  Inch  NWS Employee  Storm total snowfall
+2/02/2025 1040 PM  NY  Suffolk  Commack      40.8449  -73.2836  SNOW  1.1  Inch  Public  Storm total snowfall
+2/03/2025 0700 AM  NY  Suffolk  Centerport 1.1 SE      40.889  -73.3595  SNOW_24  1.3  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1130 PM  NY  Westchester  Eastchester      40.9582  -73.8078  SNOW_24  1.2  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0600 AM  NY  Westchester  Shrub Oak      41.3324  -73.837  SNOW_24  1.5  Inch  COCORAHS  24 hour snowfall
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$

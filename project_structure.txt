@@ -1,7 +1,12 @@
 ├── snow-plots/
+│   ├── requirements.txt
+│   ├── runtime.txt
+│   ├── pyproject.toml
 │   ├── project_structure.txt
 │   ├── .gitignore
-│   ├── qodana.yaml
+│   ├── package.json
+│   ├── Procfile
+│   ├── parser.log
 │   ├── .pytest_cache/
 │   │   ├── CACHEDIR.TAG
 │   │   ├── README.md
@@ -12,18 +17,17 @@
 │   │   │   │   ├── lastfailed
 │   │   │   │   ├── stepwise
 │   ├── images/
-│   │   ├── snowfall_heatmap.html
-│   │   ├── snowfall_heatmap_actual_values.html
-│   │   ├── data_source_images_snow_plots_tesseract/
-│   │   │   ├── mid.png
-│   │   │   ├── low.png
-│   │   │   ├── high.png
+│   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
 │   │   ├── old_images/
 │   │   │   ├── snowfall_hudson_valley.png
 │   │   │   ├── snowfall_nyc_and_5_boroughs.png
 │   │   │   ├── snowfall_long_island_(li).png
 │   │   │   ├── snowfall_new_jersey_(nj).png
 │   │   │   ├── snowfall_westchester_and_ct.png
+│   │   │   ├── data_source_images_snow_plots_tesseract/
+│   │   │   │   ├── mid.png
+│   │   │   │   ├── low.png
+│   │   │   │   ├── high.png
 │   ├── reference_data_for_lookup/
 │   │   ├── full_wfo_list.csv
 │   │   ├── event_codes.csv
@@ -40,6 +44,9 @@
 │   │   │   │   ├── z_18mr25.dbf
 │   │   │   ├── zone_county_correlation/
 │   │   │   │   ├── bp18mr25.dbx
+│   ├── public/
+│   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
+│   │   ├── snowfall_heatmap_current.html
 │   ├── logs/
 │   │   ├── parse_pns_data.log
 │   │   ├── pns_scraper.log
@@ -72,16 +79,64 @@
 │   │   │   ├── LZK_debug.html
 │   │   │   ├── ABQ_debug.html
 │   │   │   ├── HGX_debug.html
+│   ├── .netlify/
+│   │   ├── state.json
+│   │   ├── netlify.toml
+│   │   ├── v1/
+│   │   │   ├── functions/
+│   │   ├── functions-internal/
+│   ├── snow-plots/
+│   │   ├── project_structure.txt
+│   │   ├── .gitignore
+│   │   ├── images/
+│   │   │   ├── data_source_images_snow_plots_tesseract/
+│   │   │   │   ├── mid.png
+│   │   │   │   ├── low.png
+│   │   │   │   ├── high.png
+│   │   │   ├── old_images/
+│   │   │   │   ├── snowfall_hudson_valley.png
+│   │   │   │   ├── snowfall_nyc_and_5_boroughs.png
+│   │   │   │   ├── snowfall_long_island_(li).png
+│   │   │   │   ├── snowfall_new_jersey_(nj).png
+│   │   │   │   ├── snowfall_westchester_and_ct.png
+│   │   ├── reference_data_for_lookup/
+│   │   │   ├── event_codes.csv
+│   │   │   ├── field_offices.csv
+│   │   │   ├── field_offices_html.csv
+│   │   │   ├── old/
+│   │   │   │   ├── NWS_shapefiles/
+│   │   │   │   │   ├── geodataframe.py
+│   │   ├── modules/
+│   │   │   ├── 2_parser.py
+│   │   │   ├── 3_combine_stations.py
+│   │   │   ├── project_structure.py
+│   │   │   ├── snow_heat_map.py
+│   │   │   ├── 1_scraper.py
+│   │   │   ├── plot_snow_from_pns.py
+│   │   │   ├── settings.py
+│   │   │   ├── webpage_to_csv.py
+│   │   │   ├── 4_combine_dates.py
+│   │   │   ├── unit_tests/
+│   │   │   │   ├── test_3_pns_scraper.py
+│   │   │   │   ├── test_4_pns_scraper.py
+│   │   │   │   ├── test_html_formats_of_station_pns.py
+│   │   │   │   ├── test_5_pns_scraper.py
+│   │   │   │   ├── test_2_pns_scraper.py
+│   │   │   │   ├── test_6_pns_scraper.py
+│   │   │   │   ├── test_1_pns_scraper.py
+│   │   │   │   ├── test_event_type_extraction.py
+│   │   │   │   ├── test_pns_scraper.py
+│   │   │   ├── old_or_not_used/
+│   │   │   │   ├── snow-plots-hardcode.py
+│   │   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
 │   ├── modules/
 │   │   ├── 2_parser.py
-│   │   ├── __init__.py
+│   │   ├── automation_mac.py
+│   │   ├── 5_snow_map.py
 │   │   ├── 3_combine_stations.py
+│   │   ├── 0_master.py
 │   │   ├── project_structure.py
-│   │   ├── snow_heat_map.py
 │   │   ├── 1_scraper.py
-│   │   ├── plot_snow_from_pns.py
-│   │   ├── settings.py
-│   │   ├── webpage_to_csv.py
 │   │   ├── 4_combine_dates.py
 │   │   ├── .pytest_cache/
 │   │   │   ├── CACHEDIR.TAG
@@ -112,29 +167,40 @@
 │   │   │   │   │   │   ├── nodeids
 │   │   │   │   │   │   ├── lastfailed
 │   │   │   │   │   │   ├── stepwise
-│   │   ├── old_or_not_used/
-│   │   │   ├── snow-plots-hardcode.py
-│   │   │   ├── __init__.py
-│   │   │   ├── Old_parse_pns_data.py
-│   │   │   ├── snow-plots-with-tesseract-ocr-fail.py
-│   │   │   ├── pns_scraper.py
-│   │   │   ├── pns_scraper_refactored.py
-│   │   │   ├── remove_dups.py
-│   │   │   ├── pns_scraper_refactored_updated.py
+│   │   ├── images/
+│   │   │   ├── snowfall_heatmap_February 02, 2025_February 04, 2025.html
+│   │   │   ├── snowfall_heatmap_2025-01-09_2025-02-04.html
+│   │   │   ├── snowfall_heatmap_February 06, 2025_February 07, 2025.html
+│   │   │   ├── snowfall_heatmap_2025-02-02 00:00_2025-02-04 00:00.html
+│   │   │   ├── snowfall_heatmap_2025-02-02_2025-02-03.html
+│   │   │   ├── snowfall_heatmap_2025-01-31_2025-02-04.html
+│   │   │   ├── snowfall_heatmap_2025-02-02_2025-02-04.html
+│   │   ├── old/
+│   │   │   ├── snow_map.py
+│   │   │   ├── 5_snow_map_48.py
+│   │   │   ├── flask_main.py
+│   │   │   ├── plot_snow_from_pns.py
+│   │   │   ├── settings.py
 │   ├── data/
 │   │   ├── LBF_debug.html
 │   │   ├── VEF_debug.html
 │   │   ├── FGZ_debug.html
 │   │   ├── ILX_debug.html
+│   │   ├── RNK_debug.html
 │   │   ├── CAE_debug.html
+│   │   ├── BUF_debug.html
 │   │   ├── ABR_debug.html
 │   │   ├── LOT_debug.html
 │   │   ├── ILN_debug.html
 │   │   ├── ARX_debug.html
+│   │   ├── MOB_debug.html
+│   │   ├── BOX_debug.html
 │   │   ├── SGX_debug.html
 │   │   ├── LKN_debug.html
 │   │   ├── LUB_debug.html
 │   │   ├── BOU_debug.html
+│   │   ├── ALY_debug.html
+│   │   ├── CHS_debug.html
 │   │   ├── MKX_debug.html
 │   │   ├── REV_debug.html
 │   │   ├── LCH_debug.html
@@ -145,16 +211,23 @@
 │   │   ├── MHX_debug.html
 │   │   ├── HUN_debug.html
 │   │   ├── FGF_debug.html
+│   │   ├── BGM_debug.html
+│   │   ├── OUN_debug.html
 │   │   ├── LMK_debug.html
 │   │   ├── JKL_debug.html
+│   │   ├── FWD_debug.html
 │   │   ├── PSR_debug.html
 │   │   ├── MTR_debug.html
+│   │   ├── MLB_debug.html
 │   │   ├── JAX_debug.html
+│   │   ├── BTV_debug.html
 │   │   ├── KEY_debug.html
 │   │   ├── PAH_debug.html
 │   │   ├── BRO_debug.html
 │   │   ├── DVN_debug.html
+│   │   ├── EPZ_debug.html
 │   │   ├── GRR_debug.html
+│   │   ├── LWX_debug.html
 │   │   ├── BOI_debug.html
 │   │   ├── BYZ_debug.html
 │   │   ├── JAN_debug.html
@@ -162,13 +235,16 @@
 │   │   ├── UNR_debug.html
 │   │   ├── MEG_debug.html
 │   │   ├── TSA_debug.html
+│   │   ├── CAR_debug.html
 │   │   ├── DLH_debug.html
+│   │   ├── TAE_debug.html
 │   │   ├── IND_debug.html
 │   │   ├── DTX_debug.html
 │   │   ├── STO_debug.html
 │   │   ├── SHV_debug.html
 │   │   ├── IWX_debug.html
 │   │   ├── PQR_debug.html
+│   │   ├── CLE_debug.html
 │   │   ├── GRB_debug.html
 │   │   ├── LOX_debug.html
 │   │   ├── TFX_debug.html
@@ -176,22 +252,29 @@
 │   │   ├── PBZ_debug.html
 │   │   ├── BIS_debug.html
 │   │   ├── TOP_debug.html
+│   │   ├── CTP_debug.html
 │   │   ├── OHX_debug.html
 │   │   ├── MPX_debug.html
 │   │   ├── SEW_debug.html
+│   │   ├── MQT_debug.html
 │   │   ├── RAH_debug.html
 │   │   ├── RIW_debug.html
 │   │   ├── OAX_debug.html
 │   │   ├── MFR_debug.html
 │   │   ├── AFC_debug.html
 │   │   ├── SLC_debug.html
+│   │   ├── FFC_debug.html
 │   │   ├── HFO_debug.html
 │   │   ├── EAX_debug.html
+│   │   ├── ILM_debug.html
 │   │   ├── WSH_debug.html
 │   │   ├── MFL_debug.html
 │   │   ├── GID_debug.html
+│   │   ├── RLX_debug.html
+│   │   ├── OKX_debug.html
 │   │   ├── CYS_debug.html
 │   │   ├── FSD_debug.html
+│   │   ├── GYX_debug.html
 │   │   ├── EKA_debug.html
 │   │   ├── LIX_debug.html
 │   │   ├── OTX_debug.html
@@ -199,261 +282,514 @@
 │   │   ├── BMX_debug.html
 │   │   ├── ICT_debug.html
 │   │   ├── CRP_debug.html
+│   │   ├── AKQ_debug.html
 │   │   ├── APX_debug.html
 │   │   ├── HNX_debug.html
+│   │   ├── PHI_debug.html
 │   │   ├── PUB_debug.html
+│   │   ├── LZK_debug.html
+│   │   ├── ABQ_debug.html
+│   │   ├── HGX_debug.html
 │   │   ├── GLD_debug.html
 │   │   ├── ABQ/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── OKX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── FWD/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── BTV/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── LWX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── ALL_STATIONS/
-│   │   │   ├── all_stations_pns_data_2025-02-04-21-42.csv
+│   │   │   ├── all_stations_2025-02-07-07-35.csv
+│   │   │   ├── all_stations_2025-02-06-05-09.csv
+│   │   │   ├── all_stations_all_dates.csv
+│   │   │   ├── all_stations_2025-02-06-05-03.csv
+│   │   │   ├── all_stations_2025-02-07-14-23.csv
+│   │   │   ├── all_stations_2025-02-08-08-16.csv
+│   │   │   ├── all_stations_2025-02-06-10-40.csv
+│   │   │   ├── all_stations_2025-02-08-08-14.csv
 │   │   ├── CAR/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
-│   │   ├── AKQ/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── CHS/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── OUN/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── BOX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
-│   │   ├── FFC/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── BUF/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── ALY/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── RNK/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── TAE/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── LZK/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── RLX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── GYX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── EPZ/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── MQT/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── BGM/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── HGX/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── CTP/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── MOB/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── CLE/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── PHI/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
-│   │   ├── MLB/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
 │   │   ├── ILM/
-│   │   │   ├── raw_metadata/
-│   │   │   │   ├── pns_metadata.csv
-│   │   │   ├── parsed_reports/
-│   │   │   │   ├── metadata.csv
-│   │   │   │   ├── observations.csv
-│   │   │   │   ├── regions/
-│   │   │   │   ├── dates/
-│   │   │   │   ├── events/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-06_1040.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-05_1917.csv
+│   │   │   ├── observations_2025-02-05_1917.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-06_1040.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-05_1917.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv
+│   │   ├── PBZ/
+│   │   │   ├── header_metadata_2025-02-08_0816.csv
+│   │   │   ├── header_metadata_2025-02-08_0814.csv
+│   │   │   ├── observations_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_0735.csv
+│   │   │   ├── header_metadata_2025-02-07_1423.csv
+│   │   │   ├── metadata_2025-02-08_0816.csv
+│   │   │   ├── raw_data.csv
+│   │   │   ├── observations_2025-02-08_0816.csv
+│   │   │   ├── observations_2025-02-08_0814.csv
+│   │   │   ├── metadata_2025-02-08_0814.csv
+│   │   │   ├── header_metadata_2025-02-07_0735.csv
+│   │   │   ├── metadata_2025-02-07_1423.csv
+│   │   │   ├── observations_2025-02-07_1423.csv

@@ -3,182 +3,119 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/data/ABQ/parsed_reports/metadata.csv">
+        <entry key="/data/ABQ/header_metadata_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/ABQ/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ABQ/metadata_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/AKQ/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ABQ/observations_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/ALL_STATIONS/all_stations_pns_data_2025-02-04-21-42.csv">
+        <entry key="/data/ABQ/raw_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/ALY/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ALL_STATIONS/all_stations_2025-02-06-05-03.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/BGM/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ALL_STATIONS/all_stations_2025-02-06-05-09.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/BOX/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ALL_STATIONS/all_stations_all_dates.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/BUF/raw_metadata/pns_metadata.csv">
+        <entry key="/data/ALY/raw_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/CAR/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/header_metadata_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/CHS/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/metadata_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/CTP/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-05_1917.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/EPZ/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-08_2130.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/FFC/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-08_2235.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/FWD/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-08_2340.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/GYX/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-09_0044.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/HGX/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/observations_2025-02-09_0201.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/data/LZK/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/MLB/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/MOB/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/MQT/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/OKX/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/OUN/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/PHI/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/RLX/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/RNK/raw_metadata/pns_metadata.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/data/TAE/raw_metadata/pns_metadata.csv">
+        <entry key="/data/OKX/raw_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

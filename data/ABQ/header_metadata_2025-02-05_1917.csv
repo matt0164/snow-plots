@@ -1,0 +1,106 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+1/30/2025 0741 AM  NM  Bernalillo  4 NW Sandia Park      35.207  -106.414  SNOW_24  1.0  Inch  Public  24 hour snowfall
+1/30/2025 0900 AM  NM  Bernalillo  Sandia Park 0.5 S      35.1613  -106.3669  SNOW_24  1.2  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0700 AM  NM  Bernalillo  Sandia Heights 0.5 S      35.1693  -106.4921  SNOW_24  1.3  Inch  COCORAHS  24 hour snowfall
+1/28/2025 1146 PM  NM  Catron  Red Hill 3.2 NW      34.2614  -108.9078  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+1/29/2025 0859 AM  NM  Catron  6 WSW Red Hill      34.1907  -108.9766  SNOW_24  2.5  Inch  Public  24 hour snowfall
+1/31/2025 0800 AM  NM  Catron  Quemado 8.0 NE      34.4349  -108.4088  SNOW_72  2.7  Inch  COCORAHS  72 hour snowfall
+1/30/2025 0802 AM  NM  Catron  6 ESE Mogollon      33.358372  -108.695427  SNOW_24  6.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0238 PM  NM  Catron  Old Horse Springs 19 SSE (Pelona Mountain)      33.6938  -108.0616  PKGUST  41  mph  RAWS  Peak Wind Gust
+1/30/2025 1011 PM  NM  Catron  Datil 11 NNE (Datil)      34.2925  -107.7681  PKGUST  41  mph  RAWS  Peak Wind Gust
+1/30/2025 0237 PM  NM  Chaves  Bitter Lake WL Refuge 14 NNE (Eight Mile Draw)      33.6506  -104.3213  PKGUST  43  mph  RAWS  Peak Wind Gust
+1/30/2025 1222 PM  NM  Chaves  Roswell Air Center      33.3  -104.5  PKGUST  48  mph  ASOS  Peak Wind Gust
+1/31/2025 0700 AM  NM  Cibola  Ramah 3.1 ENE      35.1439  -108.439  SNOW_72  1  Inch  COCORAHS  72 hour snowfall
+1/29/2025 1200 PM  NM  Cibola  San Fidel      35.08  -107.6  SNOW_24  1  Inch  Public  24 hour snowfall
+1/31/2025 0700 AM  NM  Cibola  Grants 1.6 NE      35.1697  -107.8175  SNOW_72  3.6  Inch  COCORAHS  72 hour snowfall
+1/30/2025 1033 AM  NM  Cibola  New Laguna 1 N (Laguna)      35.052  -107.4234  PKGUST  43  mph  RAWS  Peak Wind Gust
+1/30/2025 0757 AM  NM  Colfax  5 S Cimarron Canyon State Park      36.46191  -105.174751  SNOW_24  3.0  Inch  Other Federal  24 hour snowfall
+1/31/2025 0552 AM  NM  Colfax  3 E Angel Fire      36.38  -105.24  SNOW_24  9  Inch  Public  24 hour snowfall
+1/30/2025 0514 PM  NM  Colfax  Raton Crews Airport      36.7333  -104.5  PKGUST  45  mph  ASOS  Peak Wind Gust
+1/30/2025 0345 PM  NM  Colfax  I-25 @ Raton Pass (NMDOT)      36.9892  -104.4834  PKGUST  52  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1208 PM  NM  Curry  Cannon Air Force Base      34.3666  -103.3166  PKGUST  44  mph  AWOS  Peak Wind Gust
+1/30/2025 0110 PM  NM  Curry  Clovis Muni Airport      34.4167  -103.0667  PKGUST  44  mph  AWOS  Peak Wind Gust
+1/30/2025 0105 PM  NM  Curry  St. Vrain      34.442  -103.4773  PKGUST  46  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1123 AM  NM  Curry  Clovis      34.4598  -103.2017  PKGUST  60  mph  CWOP  Peak Wind Gust
+1/30/2025 1225 PM  NM  De Baca  East Fort Sumner      34.4718  -104.211  PKGUST  52  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1009 AM  NM  Guadalupe  Santa Rosa Airport      34.94  -104.64  PKGUST  41  mph  AWOS  Peak Wind Gust
+1/30/2025 0100 PM  NM  Guadalupe  Puerto De Luna 3.3 E      34.8326  -104.5649  PKGUST  44  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1115 AM  NM  Guadalupe  SE Vaughn      34.4761  -105.0838  PKGUST  46  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1145 AM  NM  Guadalupe  Thompson Cattle      34.9841  -104.9933  PKGUST  52  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1224 PM  NM  Guadalupe  Vaughn 4 E (UPR)      34.6303  -105.1506  PKGUST  54  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1240 PM  NM  Guadalupe  SE Vaughn      34.4761  -105.0838  PKGUST  67  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1255 PM  NM  Lincoln  Sierra Blanca Rgnl Arpt      33.4667  -105.5167  PKGUST  40  mph  AWOS  Peak Wind Gust
+1/30/2025 0120 PM  NM  Lincoln  Lon 6.7 E      34.15  -105.0059  PKGUST  44  mph  MESOWEST  Peak Wind Gust
+1/30/2025 0220 PM  NM  Lincoln  Roswell No. 2 Portable      34.1494  -105.006  PKGUST  49  mph  RAWS  Peak Wind Gust
+1/30/2025 0215 PM  NM  Lincoln  Nogal      33.5437  -105.675  PKGUST  55  mph  MESOWEST  Peak Wind Gust
+1/31/2025 0800 AM  NM  McKinley  Prewitt 5.5 NNE      35.44  -108.0216  SNOW_72  2.8  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Mora  Ocate 3.0 WNW (TWRNo. 2)      36.1914  -105.0984  SNOW_72  1  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Mora  Ocate 3.4 WNW (TWRNo. 1)      36.1995  -105.1025  SNOW_72  1  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Mora  Ocate 3.7 WNW      36.198  -105.1097  SNOW_72  1.5  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Mora  Chacon 2.1 ENE      36.165  -105.341  SNOW_72  2.2  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0500 AM  NM  Rio Arriba  Chama 23.3 SSW      36.5681  -106.6955  SNOW_72  1.1  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Rio Arriba  El Rito 0.0 SW      36.343  -106.1901  SNOW_72  1.1  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Rio Arriba  Gallina 2.0 W      36.227  -106.841  SNOW_72  1.9  Inch  COCORAHS  72 hour snowfall
+1/29/2025 0300 PM  NM  Rio Arriba  7 ESE Cuba      35.999863  -106.826851  SNOW_24  2  Inch  Other Federal  24 hour snowfall
+1/30/2025 0700 AM  NM  Rio Arriba  Truchas 1.4 ESE      36.0359  -105.7896  SNOW_24  3.8  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0751 AM  NM  Rio Arriba  11 NNW Canon Plaza      36.697739  -106.248207  SNOW_24  4.0  Inch  Other Federal  24 hour snowfall
+1/31/2025 0958 AM  NM  Rio Arriba  5 NW Chama      36.947815  -106.651062  SNOW_24  5.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0754 AM  NM  Rio Arriba  9 E Cuba      36.016598  -106.801857  SNOW_24  8.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0752 AM  NM  Rio Arriba  7 E Canjilon      36.495949  -106.313087  SNOW_24  9.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0700 AM  NM  Rio Arriba  Chama 12.3 SSE      36.737  -106.4765  SNOW_24  10  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0114 PM  NM  Roosevelt  Tolar 13 SE (Melrose Range)      34.2842  -103.715  PKGUST  41  mph  RAWS  Peak Wind Gust
+1/30/2025 1255 PM  NM  Roosevelt  Tolar 12 SE      34.3  -103.8  PKGUST  43  mph  AWOS  Peak Wind Gust
+1/30/2025 1250 PM  NM  Roosevelt  Dora 2 SW      33.9201  -103.3578  PKGUST  49  mph  WT-MESO  Peak Wind Gust
+1/30/2025 0110 PM  NM  San Juan  Farmington Airport      36.75  -108.2333  PKGUST  41  mph  ASOS  Peak Wind Gust
+1/31/2025 0700 AM  NM  San Miguel  Rowe 2.7 NNW      35.5254  -105.6999  SNOW_72  1  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  San Miguel  San Pablo 2 E      35.5211  -105.3401  SNOW_72  1.2  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0600 AM  NM  San Miguel  Sapello 5.1 WNW      35.7965  -105.3395  SNOW_72  1.8  Inch  COCORAHS  72 hour snowfall
+1/29/2025 0300 PM  NM  San Miguel  8 SW Rociada      35.763668  -105.530823  SNOW_24  2  Inch  Other Federal  24 hour snowfall
+1/30/2025 1235 PM  NM  San Miguel  I-25 @ Rowe (NMDOT)      35.4932  -105.6725  PKGUST  43  mph  MESOWEST  Peak Wind Gust
+1/30/2025 0124 PM  NM  San Miguel  Las Vegas Muni Airport      35.65  -105.1333  PKGUST  44  mph  ASOS  Peak Wind Gust
+1/31/2025 0700 AM  NM  Sandoval  Cuba 2.1 NNW      36.0517  -106.9659  SNOW_72  3  Inch  COCORAHS  72 hour snowfall
+1/30/2025 0700 AM  NM  Santa Fe  Santa Fe 6.4 SE      35.6017  -105.8891  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0758 AM  NM  Santa Fe  Santa Fe 1.1 ENE      35.6845  -105.9356  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+1/31/2025 0700 AM  NM  Santa Fe  Santa Fe 2.3 NE      35.6981  -105.921  SNOW_72  1  Inch  COCORAHS  72 hour snowfall
+1/29/2025 0310 PM  NM  Santa Fe  1 N Santa Fe      35.6964  -105.9538  SNOW_24  1.5  Inch  Trained Spotter  24 hour snowfall
+1/30/2025 0700 AM  NM  Santa Fe  Glorieta 2.4 E      35.5894  -105.7288  SNOW_24  1.6  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0800 AM  NM  Santa Fe  Santa Fe 2.3 SE      35.6522  -105.9301  SNOW_24  1.6  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0700 AM  NM  Santa Fe  Santa Fe 2.9 ENE      35.6937  -105.9067  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0800 AM  NM  Santa Fe  Santa Fe 3.6 ENE      35.7047  -105.8992  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+1/31/2025 0505 AM  NM  Santa Fe  7 E Chupadero      35.786  -105.796  SNOW_24  21  Inch  Public  24 hour snowfall
+1/29/2025 1219 PM  NM  Santa Fe  Santa Fe Muni Airport      35.6167  -106.1  PKGUST  40  mph  ASOS  Peak Wind Gust
+1/29/2025 0124 PM  NM  Santa Fe  Glorieta      35.5286  -105.7237  PKGUST  42  mph  CWOP  Peak Wind Gust
+1/30/2025 1100 AM  NM  Santa Fe  EDGEWOOD      35.1558  -106.1808  PKGUST  42  mph  CWOP  Peak Wind Gust
+1/28/2025 0825 PM  NM  Socorro  North Oscura Peak (WSMR)      33.749  -106.3698  PKGUST  52  mph  MESOWEST  Peak Wind Gust
+1/29/2025 0300 PM  NM  Taos  5 SSE Llano Largo      36.07  -105.63  SNOW_24  3  Inch  Other Federal  24 hour snowfall
+1/31/2025 0900 AM  NM  Taos  Arroyo Hondo 4.8 WSW      36.5097  -105.7504  SNOW_72  3.7  Inch  COCORAHS  72 hour snowfall
+1/31/2025 0700 AM  NM  Taos  Ranchos De Taos 2.4 W      36.3611  -105.6457  SNOW_72  4.8  Inch  COCORAHS  72 hour snowfall
+1/30/2025 0800 AM  NM  Taos  Ranchos De Taos 2.0 E      36.3577  -105.5722  SNOW_24  5  Inch  COCORAHS  24 hour snowfall
+1/31/2025 0900 AM  NM  Taos  Taos 1.6 SE      36.3923  -105.5509  SNOW_72  5.5  Inch  COCORAHS  72 hour snowfall
+1/30/2025 0839 AM  NM  Taos  2 WNW El Prado      36.449  -105.6122  SNOW_24  7.0  Inch  Public  24 hour snowfall
+1/30/2025 0700 AM  NM  Taos  Arroyo Seco 2.3 SW      36.4931  -105.5997  SNOW_24  8.5  Inch  COCORAHS  24 hour snowfall
+1/30/2025 1159 PM  NM  Taos  Taos 4.3 NNW      36.4609  -105.6116  SNOW_72  8.8  Inch  COCORAHS  72 hour snowfall
+1/30/2025 0759 AM  NM  Taos  11 ENE Amalia      36.976364  -105.254822  SNOW_24  10.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0700 AM  NM  Taos  San Cristobal 0.1 NE      36.597  -105.6385  SNOW_24  11  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0700 AM  NM  Taos  Shady Brook 5 E      36.3632  -105.3778  SNOW_24  12  Inch  COCORAHS  24 hour snowfall
+1/30/2025 0759 AM  NM  Taos  1 SSW Taos Ski Valley      36.5833  -105.45  SNOW_24  13.0  Inch  Other Federal  24 hour snowfall
+1/30/2025 0756 AM  NM  Taos  4 NNW Tres Ritos      36.181038  -105.549919  SNOW_24  14.0  Inch  Other Federal  24 hour snowfall
+1/31/2025 0506 AM  NM  Taos  8 SW Red River      36.6  -105.45  SNOW_24  14  Inch  Public  24 hour snowfall
+1/30/2025 0900 AM  NM  Taos  Arroyo Seco 1.4 E      36.5201  -105.5447  SNOW_24  17.5  Inch  COCORAHS  24 hour snowfall
+1/31/2025 0400 AM  NM  Taos  3 NW Tres Ritos      36.155  -105.552  SNOW_24  20  Inch  Public  24 hour snowfall
+1/29/2025 1145 AM  NM  Taos  Arroyo Seco 3 SW      36.4812  -105.6055  PKGUST  54  mph  CWOP  Peak Wind Gust
+1/30/2025 0235 PM  NM  Torrance  Moriarty Muni Airport      34.9833  -106  PKGUST  40  mph  AWOS  Peak Wind Gust
+1/30/2025 0102 PM  NM  Torrance  Duran 7 SW (UPR)      34.3932  -105.4769  PKGUST  40  mph  MESOWEST  Peak Wind Gust
+1/30/2025 0239 PM  NM  Torrance  Duran 4 NE (UPR)      34.5175  -105.3554  PKGUST  40  mph  MESOWEST  Peak Wind Gust
+1/30/2025 0135 PM  NM  Torrance  Edgewood SWCD      35.0175  -106.0849  PKGUST  54  mph  MESOWEST  Peak Wind Gust
+1/30/2025 1129 AM  NM  Torrance  Clines Corners 1 SSE      35  -105.67  PKGUST  55  mph  ASOS  Peak Wind Gust
+1/30/2025 0226 PM  NM  Union  Clayton Muni Airpark      36.45  -103.15  PKGUST  40  mph  ASOS  Peak Wind Gust
+1/30/2025 0505 PM  NM  Union  Amistad      35.8559  -103.2692  PKGUST  42  mph  MESOWEST  Peak Wind Gust
+1/30/2025 0415 PM  NM  Union  SW Clayton      36.2675  -103.3184  PKGUST  51  mph  MESOWEST  Peak Wind Gust
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$

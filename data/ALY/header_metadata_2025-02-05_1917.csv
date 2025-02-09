@@ -1,0 +1,102 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+2/02/2025 1000 PM  CT  Litchfield  New Milford      41.5885  -73.4068  SNOW  1.0  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0530 AM  CT  Litchfield  Winsted      41.9239  -73.0607  SNOW_24  2.2  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0525 AM  MA  Berkshire  4 NNE North Adams      42.73341  -73.07248  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0530 AM  MA  Berkshire  3 SE Pittsfield      42.417978  -73.228844  SNOW  2.0  Inch  null  Storm total snowfall
+2/02/2025 0957 PM  MA  Berkshire  2 NNW Savoy      42.59784  -73.04357  SNOW  2.6  Inch  null  Storm total snowfall
+2/03/2025 0519 AM  MA  Berkshire  5 NNW Otis      42.2569  -73.121  SNOW  3.0  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Albany  1 SW Albany      42.6549  -73.7862  SNOW_24  1.3  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0736 AM  NY  Albany  2 NE Colonie      42.74461796635046  -73.80918712998236  SNOW_24  1.4  Inch  ASOS  24 hour snowfall
+2/02/2025 0905 PM  NY  Albany  3 NW Colonie      42.75199  -73.87985  SNOW  1.5  Inch  null  Storm total snowfall
+2/02/2025 1020 PM  NY  Albany  Latham      42.7452  -73.7469  SNOW  1.5  Inch  NWS Employee  Storm total snowfall
+2/02/2025 1100 PM  NY  Albany  Delmar      42.6243  -73.8335  SNOW  1.5  Inch  Public  Storm total snowfall
+2/02/2025 1129 PM  NY  Albany  2 SSW Duanesburg      42.7317  -74.14485  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0500 AM  NY  Albany  3 WNW Westerlo      42.54  -74.1  SNOW  1.8  Inch  null  Storm total snowfall
+2/02/2025 0852 PM  NY  Albany  4 ENE Westerlo      42.55  -73.97  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0405 AM  NY  Albany  4 ENE Livingstonville      42.512044  -74.198829  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0420 AM  NY  Albany  4 NW Westerlo      42.55806  -74.09384  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0630 AM  NY  Albany  4 ENE Westerlo      42.55  -73.97  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0600 AM  NY  Columbia  4 S Catskill      42.15435  -73.8674  SNOW  1.0  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Columbia  Germantown 0.6 E      42.1335  -73.881  SNOW_24  1.3  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0616 AM  NY  Columbia  1 WSW Niverville      42.44  -73.66  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Dutchess  Red Hook 1.2 NNE      42.0097  -73.8642  SNOW_24  1.4  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0600 AM  NY  Dutchess  Millbrook 2.5 NE      41.8095  -73.6588  SNOW_24  1.5  Inch  COCORAHS  24 hour snowfall
+2/02/2025 1100 PM  NY  Dutchess  Beacon      41.506  -73.9718  SNOW_24  1.6  Inch  Public  24 hour snowfall
+2/03/2025 0520 AM  NY  Dutchess  2 NNW Red Hook      42.018193  -73.883292  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0500 AM  NY  Dutchess  Poughkeepsie 3.3 E      41.69  -73.86  SNOW_24  1.8  Inch  COCORAHS  24 hour snowfall
+2/02/2025 0934 PM  NY  Fulton  2 NW Hagaman      42.99299  -74.18303  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Greene  Acra 1.0 SSW      42.2979  -74.061  SNOW_24  0.001  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  NY  Greene  Greenville 0.7 E      42.414  -74.009  SNOW_24  0.7  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0530 AM  NY  Greene  Freehold 3.4 E      42.3605  -73.9835  SNOW_24  1  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0402 AM  NY  Greene  1 N Catskill      42.2238  -73.8677  SNOW  1.2  Inch  null  Storm total snowfall
+2/03/2025 0525 AM  NY  Greene  7 SSW Prattsville      42.217727  -74.468658  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0718 AM  NY  Greene  8 SSW Prattsville      42.21346  -74.48086  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0434 AM  NY  Hamilton  4 NNW Wells      43.43943  -74.31615  SNOW  1.2  Inch  null  Storm total snowfall
+2/03/2025 0500 AM  NY  Herkimer  Salisbury Center 1.8 NW      43.1626  -74.8088  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0700 AM  NY  Montgomery  Fort Plain 0.2 SE      42.93  -74.6264  SNOW_24  1.4  Inch  COCORAHS  24 hour snowfall
+2/02/2025 0935 PM  NY  Montgomery  1 N Fonda      42.96961  -74.37194  SNOW  1.7  Inch  null  Storm total snowfall
+2/02/2025 0850 PM  NY  Montgomery  1 NNW Amsterdam      42.954678  -74.200854  SNOW  1.8  Inch  null  Storm total snowfall
+2/02/2025 1111 PM  NY  Montgomery  1 N Fonda      42.96961  -74.37194  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0459 AM  NY  Montgomery  1 N Fonda      42.96961  -74.37194  SNOW  1.8  Inch  null  Storm total snowfall
+2/03/2025 0335 AM  NY  Montgomery  2 E Canajoharie      42.9008  -74.52665  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0502 AM  NY  Montgomery  1 NNW Amsterdam      42.954678  -74.200854  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0544 AM  NY  Montgomery  2 E Canajoharie      42.9008  -74.52665  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0635 AM  NY  Montgomery  Amsterdam 1.0 NNW      42.9547  -74.2009  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0539 AM  NY  Rensselaer  Hoosick Falls      42.905  -73.3485  SNOW  1.0  Inch  null  Storm total snowfall
+2/03/2025 0553 AM  NY  Rensselaer  4 E Averill Park      42.64  -73.47  SNOW  1.2  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Rensselaer  Troy 2.6 N      42.7712  -73.6708  SNOW_24  1.4  Inch  COCORAHS  24 hour snowfall
+2/03/2025 1047 AM  NY  Rensselaer  Averill Park      42.6344  -73.5536  SNOW_24  1.5  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0548 AM  NY  Rensselaer  3 ESE Castleton-on-Hudso      42.523  -73.69  SNOW  2.0  Inch  null  Storm total snowfall
+2/02/2025 1145 PM  NY  Rensselaer  East Greenbush      42.5944  -73.7032  SNOW  2.0  Inch  Trained Spotter  Storm total snowfall
+2/03/2025 0600 AM  NY  Saratoga  Clifton Park 2.7 S      42.8213  -73.7855  SNOW_24  1.2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0328 AM  NY  Saratoga  1 W Milton      43.0316  -73.86642  SNOW  1.5  Inch  null  Storm total snowfall
+2/03/2025 0327 AM  NY  Saratoga  4 NW Gansevoort      43.23  -73.7  SNOW  1.6  Inch  null  Storm total snowfall
+2/03/2025 0409 AM  NY  Saratoga  4 NW Gansevoort      43.23  -73.7  SNOW  1.6  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Saratoga  Milton 5.9 NNW      43.1116  -73.8987  SNOW_24  1.8  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0405 AM  NY  Saratoga  2 ESE Clifton Park      42.842741  -73.7769559  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0519 AM  NY  Saratoga  2 NNE Milton      43.058567  -73.842865  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Saratoga  1 SSE Porter Corners      43.1268  -73.8786  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0600 AM  NY  Saratoga  Saratoga Springs 0.5 S      43.0603  -73.7801  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/02/2025 0854 PM  NY  Saratoga  5 W Porter Corners      43.137411  -73.976125  SNOW  2.2  Inch  null  Storm total snowfall
+2/03/2025 0636 AM  NY  Saratoga  5 W Porter Corners      43.137411  -73.976125  SNOW  2.2  Inch  null  Storm total snowfall
+2/02/2025 0930 PM  NY  Schenectady  Schenectady      42.8018  -73.9281  SNOW  1.0  Inch  Broadcast Media  Storm total snowfall
+2/03/2025 0724 AM  NY  Schenectady  1 NNE Schenectady      42.8149  -73.9182  SNOW_24  1.2  Inch  NWS Employee  24 hour snowfall
+2/03/2025 0554 AM  NY  Schenectady  1 W Scotia      42.83  -73.98  SNOW  1.5  Inch  null  Storm total snowfall
+2/03/2025 0600 AM  NY  Schenectady  Scotia 1.1 NW      42.8447  -73.9748  SNOW_24  1.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0417 AM  NY  Schoharie  2 S Middleburgh      42.5637  -74.3292  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0652 AM  NY  Schoharie  1 NE Jefferson      42.4894343  -74.6024414  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0525 AM  NY  Schoharie  2 SE Jefferson      42.45817  -74.581285  SNOW  2.5  Inch  null  Storm total snowfall
+2/02/2025 1033 PM  NY  Ulster  3 SE West Shokan      41.94  -74.25  SNOW  1.3  Inch  null  Storm total snowfall
+2/02/2025 1048 PM  NY  Ulster  5 SE West Shokan      41.92787  -74.21542  SNOW_24  1.5  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0700 AM  NY  Ulster  Pine Bush 3.3 N      41.6565  -74.2937  SNOW_24  1.7  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0739 AM  NY  Ulster  Hurley      41.9165  -74.0584  SNOW_24  1.8  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0740 AM  NY  Ulster  Hurley      41.9138  -74.0582  SNOW_24  1.8  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0746 AM  NY  Ulster  4 S Clintondale      41.636  -74.05  SNOW_24  1.8  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0700 AM  NY  Ulster  Highland 0.2 SW      41.7149  -73.9684  SNOW_24  1.8  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0709 AM  NY  Ulster  5 E West Shokan      41.956439  -74.196405  SNOW  2.0  Inch  null  Storm total snowfall
+2/02/2025 1012 PM  NY  Ulster  3 NW Rosendale Village      41.88  -74.12  SNOW  2.1  Inch  null  Storm total snowfall
+2/03/2025 0246 AM  NY  Ulster  1 SSE West Shokan      41.96  -74.28  SNOW  2.5  Inch  null  Storm total snowfall
+2/03/2025 0559 AM  NY  Warren  1 SW Warrensburg      43.49005  -73.78656  SNOW  1.0  Inch  null  Storm total snowfall
+2/03/2025 0700 AM  NY  Warren  Riparious      43.6611  -73.8969  SNOW_24  1.2  Inch  COOP  24 hour snowfall
+2/03/2025 0600 AM  NY  Warren  Lake George 1.0 N      43.4403  -73.7126  SNOW_24  1.5  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0447 AM  NY  Warren  1 WNW West Glens Falls      43.31  -73.71  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0900 AM  NY  Warren  1 N Glens Falls      43.3206  -73.6457  SNOW_24  2.0  Inch  Trained Spotter  24 hour snowfall
+2/03/2025 0434 AM  NY  Warren  1 N Corinth      43.25628  -73.83281  SNOW  2.2  Inch  null  Storm total snowfall
+2/03/2025 0341 AM  NY  Washington  1 SE Whitehall      43.54718  -73.39568  SNOW  1.0  Inch  null  Storm total snowfall
+2/03/2025 0505 AM  NY  Washington  6 NE Argyle      43.29663  -73.39906  SNOW  1.5  Inch  null  Storm total snowfall
+2/03/2025 0600 AM  NY  Washington  Salem 2.3 SSE      43.144  -73.3079  SNOW_24  1.6  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0600 AM  NY  Washington  5 WSW Granville      43.384365  -73.346723  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0718 AM  VT  Bennington  Bennington      42.87  -73.192  SNOW_24  1.3  Inch  Public  24 hour snowfall
+2/02/2025 0942 PM  VT  Bennington  5 NNW Londonderry      43.29158  -72.83854  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0446 AM  VT  Bennington  5 WNW Arlington      43.10395  -73.237878  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0639 AM  VT  Bennington  5 NNW Londonderry      43.29158  -72.83854  SNOW  2.0  Inch  null  Storm total snowfall
+2/03/2025 0645 AM  VT  Windham  Brattleboro 0.7 S      42.8403  -72.5558  SNOW_24  1.6  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0635 AM  VT  Windham  East Dover 1.8 N      42.9766  -72.7764  SNOW_24  2  Inch  COCORAHS  24 hour snowfall
+2/03/2025 0538 AM  VT  Windham  Wilmington 0.6 WNW      42.8706  -72.8818  SNOW_24  2.5  Inch  COCORAHS  24 hour snowfall
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$

@@ -105,39 +105,31 @@ def fetch_page(station):
         logging.error(f"⚠️ Error accessing {url}: {e}")
         return None
 
-def save_metadata_to_csv(header, metadata, station):
-    """Save extracted metadata into a structured CSV file in the raw_metadata directory."""
-    base_dir = os.path.join(DATA_DIR, station, "raw_metadata")
-    os.makedirs(base_dir, exist_ok=True)
-    file_path = os.path.join(base_dir, "pns_metadata.csv")
+def save_raw_data_csv(header, metadata, station):
+    """
+    Save extracted metadata into a CSV file directly under /data/{station}/raw_data.csv.
+    The file is overwritten each time the scraper runs.
+    """
+    output_dir = os.path.join(DATA_DIR, station)
+    os.makedirs(output_dir, exist_ok=True)
+    file_path = os.path.join(output_dir, "raw_data.csv")
 
     try:
-        # Split each metadata line by commas and save as a DataFrame
+        # Split each metadata line by commas and save as a DataFrame.
+        # This assumes that 'metadata' is a list of strings.
         df = pd.DataFrame([line.split(",") for line in metadata])
-        df.to_csv(
-            file_path,
-            mode="a",
-            index=False,
-            header=not os.path.exists(file_path),
-            encoding="utf-8"
-        )
-        logging.info(f"✅ Metadata successfully saved to {file_path}")
+        # Overwrite file each time
+        df.to_csv(file_path, mode="w", index=False, header=True, encoding="utf-8")
+        logging.info(f"✅ Raw data successfully saved to {file_path}")
     except Exception as e:
-        logging.error(f"❌ Error saving metadata to {file_path}: {e}")
+        logging.error(f"❌ Error saving raw data to {file_path}: {e}")
 
 def main():
-    """Main function to fetch PNS metadata for user-selected stations."""
-    user_input = input("Enter station(s) to scrape (comma-separated or 'ALL' for all stations): ")
-    selected_stations = [station.strip().upper() for station in user_input.split(',')]
+    """Main function to fetch PNS metadata for all stations."""
+    selected_stations = list(stations.keys())
 
-    if 'ALL' in selected_stations:
-        selected_stations = list(stations.keys())
-
+    # Loop over all stations
     for station in selected_stations:
-        if station not in stations:
-            logging.error(f"❌ Station '{station}' not found in dataset.")
-            continue
-
         logging.info(f"Processing station: {station}")
         html = fetch_page(station)
         if not html:
@@ -158,11 +150,12 @@ def main():
             header = lines[metadata_start].strip("*").strip()
             metadata = [line.lstrip(":") for line in lines[metadata_start + 1:]]  # Clean formatting
             if metadata:
-                save_metadata_to_csv(header, metadata, station)
+                save_raw_data_csv(header, metadata, station)
             else:
                 logging.warning(f"🚨 Metadata section found but contains no data for station {station}.")
         else:
-            logging.warning(f"⚠️ No metadata header found in <pre> tag for station {station}. First few lines:\n{lines[:5]}")
+            logging.warning(
+                f"⚠️ No metadata header found in <pre> tag for station {station}. First few lines:\n{lines[:5]}")
 
 if __name__ == "__main__":
     main()

@@ -13,3 +13,6 @@ logs
 
 modules/old_or_not_used
 
+
+# Local Netlify folder
+.netlify

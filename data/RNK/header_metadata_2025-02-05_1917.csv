@@ -1,0 +1,283 @@
+header_line
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+2/01/2025 0315 PM  NC  Alleghany  1.9 SW Barrett      36.5  -80.9778  RAIN  0.42  Inch  HADS  Storm total rainfall
+2/01/2025 0345 PM  NC  Alleghany  Whitehead 2.5 S      36.431  -81.1492  RAIN  0.46  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Alleghany  Sparta 0.8 W      36.5018  -81.1353  RAIN  0.56  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Alleghany  Sparta 3.8 E      36.5018  -81.0526  RAIN  0.57  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Alleghany  Sparta 3.6 NW      36.5439  -81.1633  RAIN  0.66  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0300 PM  NC  Ashe  2 WSW Laurel Springs      36.3978  -81.3058  RAIN  0.37  Inch  AWS  Storm total rainfall
+2/01/2025 0350 PM  NC  Ashe  Ashe County Airport      36.4333  -81.4167  RAIN  0.39  Inch  AWOS  Storm total rainfall
+2/01/2025 0315 PM  NC  Ashe  Lansing      36.4983  -81.5106  RAIN  0.43  Inch  HADS  Storm total rainfall
+2/01/2025 0400 PM  NC  Ashe  Baldwin 2 ENE      36.4108  -81.4962  RAIN  0.44  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  NC  Ashe  West Jefferson      36.365  -81.5088  RAIN  0.47  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  NC  Ashe  Obids      36.302  -81.3847  RAIN  0.49  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Ashe  Deep Gap 2 NE      36.265  -81.4889  RAIN  0.56  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0730 AM  NC  Ashe  Deep Gap 2.8 NE      36.2676  -81.4749  RAIN  0.61  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Ashe  West Jefferson 1.4 SE      36.3825  -81.4729  RAIN  0.62  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Ashe  Wagoner 1.9 NW      36.4161  -81.4286  RAIN  0.64  Inch  COOP  Storm total rainfall
+2/01/2025 0355 PM  NC  Ashe  Fleetwood      36.2947  -81.4495  RAIN  0.65  Inch  CWOP  Storm total rainfall
+2/01/2025 0835 AM  NC  Ashe  Ashland 2 SW      36.4075  -81.6689  RAIN  0.87  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Ashe  1 W Nella      36.5628  -81.5824  RAIN  1.12  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0316 PM  NC  Caswell  Caswell Game Lands      36.3855  -79.2919  RAIN  1.54  Inch  RAWS  Storm total rainfall
+2/01/2025 0700 AM  NC  Caswell  Topnot 1.1 NE      36.3783  -79.2544  RAIN  1.59  Inch  COOP  Storm total rainfall
+2/01/2025 0400 PM  NC  Rockingham  Stokesdale      36.284  -79.9877  RAIN  0.93  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Rockingham  Stokesdale 2.7 NNW      36.2712  -80.0028  RAIN  0.95  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0600 AM  NC  Rockingham  Eden      36.4742  -79.7433  RAIN  1.04  Inch  COOP  Storm total rainfall
+2/01/2025 1000 AM  NC  Rockingham  Summerfield 7.3 N      36.3075  -79.8808  RAIN  1.17  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  NC  Stokes  Lawsonville      36.4883  -80.2552  RAIN  0.73  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Stokes  Danbury      36.4147  -80.2169  RAIN  0.78  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Stokes  King      36.2838  -80.3624  RAIN  0.8  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  NC  Stokes  Walnut Cove 1.5 ENE      36.3066  -80.1171  RAIN  0.88  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0315 PM  NC  Surry  Ararat      36.4044  -80.5619  RAIN  0.38  Inch  HADS  Storm total rainfall
+2/01/2025 0317 PM  NC  Surry  Raven Knob      36.4756  -80.8569  RAIN  0.5  Inch  RAWS  Storm total rainfall
+2/01/2025 0700 AM  NC  Surry  Mount Airy 4.3 W      36.4941  -80.6896  RAIN  0.55  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0830 AM  NC  Surry  Mount Airy 1.1 NE      36.5157  -80.6003  RAIN  0.57  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Surry  Toast 1.0 W      36.4992  -80.6508  RAIN  0.58  Inch  COOP  Storm total rainfall
+2/01/2025 0400 PM  NC  Surry  Pilot Mountain 1.1 SSW      36.3706  -80.4747  RAIN  0.6  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Surry  Elkin 1 NW      36.2544  -80.865  RAIN  0.69  Inch  COOP  Storm total rainfall
+2/01/2025 0810 AM  NC  Surry  Ararat 4.7 SW      36.346  -80.603  RAIN  0.75  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  NC  Watauga  3 E Aho      36.1614  -81.5503  RAIN  0.25  Inch  AWS  Storm total rainfall
+2/01/2025 0355 PM  NC  Watauga  Watauga Medical Center      36.1984  -81.6514  RAIN  0.36  Inch  AWOS  Storm total rainfall
+2/01/2025 0315 PM  NC  Watauga  Boone Precip 2 S      36.1964  -81.67  RAIN  0.37  Inch  USGS  Storm total rainfall
+2/01/2025 0630 AM  NC  Watauga  Seven Devils 1 E      36.1461  -81.7877  RAIN  0.43  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  NC  Watauga  Aho      36.1655  -81.6265  RAIN  0.44  Inch  CWOP  Storm total rainfall
+2/01/2025 0750 AM  NC  Watauga  Blowing Rock 2.4 WNW      36.1415  -81.7114  RAIN  0.48  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Watauga  Boone 2.1 W      36.2098  -81.7075  RAIN  0.49  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  NC  Watauga  Meat Camp 2 SW      36.2742  -81.6997  RAIN  0.51  Inch  AWS  Storm total rainfall
+2/01/2025 0800 AM  NC  Watauga  Seven Devils      36.1497  -81.8121  RAIN  0.51  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0600 AM  NC  Watauga  Boone 1 SE      36.2114  -81.6442  RAIN  0.52  Inch  COOP  Storm total rainfall
+2/01/2025 0345 PM  NC  Watauga  Blowing Rock 2.1 E      36.1408  -81.6405  RAIN  0.52  Inch  CWOP  Storm total rainfall
+2/01/2025 0356 PM  NC  Watauga  BOONE      36.1767  -81.6237  RAIN  0.52  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Watauga  Boone 3.8 ENE      36.2232  -81.6036  RAIN  0.53  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  NC  Watauga  Rutherwood 1 SE      36.2163  -81.5885  RAIN  0.54  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Watauga  Valle Crucis      36.2241  -81.7826  RAIN  0.55  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0330 PM  NC  Watauga  0.7 NE Rominger      36.2383  -81.8228  RAIN  0.59  Inch  HADS  Storm total rainfall
+2/01/2025 0700 AM  NC  Watauga  Blowing Rock 2.2 NE      36.1484  -81.64  RAIN  0.61  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0720 AM  NC  Watauga  Vilas 5.8 NNW      36.3256  -81.8205  RAIN  0.75  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  NC  Watauga  Beech Mountain      36.2252  -81.8967  RAIN  0.83  Inch  CWOP  Storm total rainfall
+2/01/2025 0332 PM  NC  Wilkes  Wilbar 2 SSE      36.2272  -81.2967  RAIN  0.48  Inch  RAWS  Storm total rainfall
+2/01/2025 0400 PM  NC  Wilkes  1 WSW Pleasant Hill      36.2411  -80.9114  RAIN  0.6  Inch  AWS  Storm total rainfall
+2/01/2025 0145 PM  NC  Wilkes  North Wilkesboro 0.4 S      36.1644  -81.1435  RAIN  0.6  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  NC  Wilkes  Elkville      36.0714  -81.4031  RAIN  0.64  Inch  HADS  Storm total rainfall
+2/01/2025 0700 AM  NC  Wilkes  North Wilkesboro 0.6 SW      36.1631  -81.1494  RAIN  0.69  Inch  COOP  Storm total rainfall
+2/01/2025 0358 PM  NC  Wilkes  NORTH WILKESBORO      36.1298  -81.0956  RAIN  0.86  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  NC  Wilkes  North Wilkesboro 5.5 SE      36.1117  -81.074  RAIN  0.9  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Yadkin  Jonesville 2.0 WSW      36.2189  -80.8713  RAIN  0.72  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  NC  Yadkin  Hamptonville 1.5 NNW      36.1363  -80.8071  RAIN  0.85  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  NC  Yadkin  Shacktown 3.1 E      36.1306  -80.5481  RAIN  0.85  Inch  COOP  Storm total rainfall
+2/01/2025 0330 PM  VA  Alleghany  Dunlap Creek      37.8027  -80.0472  RAIN  0.61  Inch  USGS  Storm total rainfall
+2/01/2025 0330 PM  VA  Alleghany  2.3 N Natural Well      37.9494  -79.9594  RAIN  1.22  Inch  HADS  Storm total rainfall
+2/01/2025 0800 AM  VA  Alleghany  Clifton Forge 0.5 SE      37.8185  -79.8192  RAIN  1.65  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Alleghany  Covington 4.1 E      37.7847  -79.9165  RAIN  1.66  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Alleghany  Gathright Dam      37.9458  -79.9542  RAIN  1.73  Inch  COOP  Storm total rainfall
+2/01/2025 0330 PM  VA  Amherst  Pleasant View 3.9 NW      37.6694  -79.2774  RAIN  0.74  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Amherst  Amherst 1.7 SW      37.5666  -79.0685  RAIN  1.35  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Appomattox  Pamplin 1.6 NNE      37.2836  -78.667  RAIN  1.7  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0330 PM  VA  Bath  1.9 NW Bacova Junction      38.0422  -79.8817  RAIN  0.82  Inch  HADS  Storm total rainfall
+2/01/2025 0330 PM  VA  Bath  Williamsville 2 S      38.1792  -79.5811  RAIN  1.21  Inch  COOP  Storm total rainfall
+2/01/2025 0316 PM  VA  Bath  Hot Springs 4.1 E      37.9864  -79.7594  RAIN  1.46  Inch  RAWS  Storm total rainfall
+2/01/2025 0700 AM  VA  Bath  Millboro 0.3 NW      37.9776  -79.6067  RAIN  1.46  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Bath  Ingalls Field Airport      37.9531  -79.8353  RAIN  1.53  Inch  AWOS  Storm total rainfall
+2/01/2025 0600 AM  VA  Bedford  Huddleston 3.6 SW      37.1258  -79.5251  RAIN  0.84  Inch  COOP  Storm total rainfall
+2/01/2025 0350 PM  VA  Bedford  Montvale      37.4673  -79.6667  RAIN  1.27  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Bedford  Lynchburg 5.1 NNW      37.4709  -79.2193  RAIN  1.27  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Bedford  Montvale 0.4 N      37.3905  -79.7323  RAIN  1.36  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Bedford  Moneta 3.6 SW      37.1554  -79.6753  RAIN  1.36  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Bedford  Bedford 6 SSW      37.2469  -79.5453  RAIN  1.45  Inch  AWS  Storm total rainfall
+2/01/2025 0700 AM  VA  Bedford  Bedford 2.5 ENE      37.3515  -79.4799  RAIN  1.53  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0900 AM  VA  Bedford  Vinton 9.0 E      37.2936  -79.7261  RAIN  1.58  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Bedford  Goodview 2.0 W      37.2173  -79.7621  RAIN  1.58  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Bedford  1 NNE Forest      37.3942  -79.2739  RAIN  1.63  Inch  AWS  Storm total rainfall
+2/01/2025 0758 AM  VA  Bedford  Vinton 8.6 ENE      37.3086  -79.738  RAIN  1.66  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0330 PM  VA  Bland  Bland      37.1025  -81.1217  RAIN  1.72  Inch  HADS  Storm total rainfall
+2/01/2025 0345 PM  VA  Botetourt  Buchanan      37.4797  -79.7076  RAIN  1.24  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Botetourt  Daleville 0.6 NE      37.4228  -79.9146  RAIN  1.32  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Botetourt  Fincastle 1.9 NNW      37.5258  -79.8832  RAIN  1.46  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Botetourt  Fincastle 5.4 WSW      37.4826  -79.972  RAIN  1.47  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Buckingham  Scottsville 8.3 SSW      37.6993  -78.5767  RAIN  0.91  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Buckingham  New Canton 2.6 SE      37.6794  -78.2631  RAIN  1.19  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Buckingham  Buckingham 3.3 S      37.5044  -78.5328  RAIN  1.41  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Buckingham  Dillwyn 6.9 WSW      37.4967  -78.5757  RAIN  1.42  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0530 AM  VA  Buckingham  Dillwyn 9.2 SSW      37.4128  -78.5078  RAIN  1.65  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Campbell  Rustburg      37.2782  -79.1025  RAIN  1.19  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Campbell  Spring Mills 3.6 NW      37.2819  -78.9591  RAIN  1.3  Inch  COOP  Storm total rainfall
+2/01/2025 0708 AM  VA  Campbell  Brookneal 1.5 NE      37.0679  -78.9517  RAIN  1.7  Inch  COOP  Storm total rainfall
+2/01/2025 0355 PM  VA  Carroll  Hillsville 1.3 SE      36.7408  -80.7225  RAIN  0.4  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Carroll  Galax 6.1 N      36.7535  -80.9206  RAIN  0.79  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Carroll  Woodlawn      36.791  -80.8682  RAIN  0.82  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Charlotte  Charlotte Court House 4.9 NNE      37.116  -78.5949  RAIN  1.66  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Charlotte  Drakes Branch 0.3 W      36.9934  -78.6072  RAIN  1.72  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Charlotte  Charlotte Court House 2.9 N      37.095  -78.6299  RAIN  1.73  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Charlotte  Saxe 4.3 SE      36.9023  -78.5933  RAIN  2.09  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Buena Vista  Buena Vista      37.7268  -79.3629  RAIN  1.18  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Galax  Galax 0.9 S      36.6542  -80.9183  RAIN  0.57  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Galax  Galax 0.7 ENE      36.668  -80.9065  RAIN  0.6  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Lexington  Lexington      37.7855  -79.4544  RAIN  1.2  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Lynchburg  Lynchburg City      37.4236  -79.166  RAIN  1.41  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  City of Lynchburg  Lynchburg 3.4 NNW      37.4451  -79.2197  RAIN  1.48  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Lynchburg  Lynchburg 2.5 WSW      37.3831  -79.2314  RAIN  1.49  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Lynchburg  Lynchburg 3.3 S      37.3539  -79.1951  RAIN  1.55  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0405 PM  VA  City of Martinsville  Martinsville      36.6872  -79.8644  RAIN  0.57  Inch  AWS  Storm total rainfall
+2/01/2025 0800 AM  VA  City of Martinsville  Martinsville 0.4 WSW      36.6809  -79.8697  RAIN  0.86  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Martinsville  Martinsville 1.9 SE      36.6628  -79.8415  RAIN  0.89  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Martinsville  1.5 N Martinsville City      36.7056  -79.865  RAIN  0.99  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Radford  Radford 0.4 W      37.1236  -80.5667  RAIN  1.72  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0610 AM  VA  City of Radford  Radford 0.9 WNW      37.1306  -80.572  RAIN  1.8  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0354 PM  VA  City of Roanoke  Roanoke Airport      37.3167  -79.9667  RAIN  1.29  Inch  ASOS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Roanoke  Roanoke 1.9 SSW      37.2526  -79.9716  RAIN  1.46  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  City of Salem  Salem 1.6 WSW      37.2799  -80.0835  RAIN  1.62  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0356 PM  VA  City of Salem  Salem      37.3017  -80.0678  RAIN  1.69  Inch  CWOP  Storm total rainfall
+2/01/2025 0340 PM  VA  Craig  New Castle      37.5083  -80.0978  RAIN  1.43  Inch  MESOWEST  Storm total rainfall
+2/01/2025 0700 AM  VA  Craig  New Castle      37.515  -80.1241  RAIN  1.59  Inch  COOP  Storm total rainfall
+2/01/2025 0245 PM  VA  Craig  Simmonsville      37.3811  -80.3747  RAIN  3.73  Inch  MESOWEST  Storm total rainfall
+2/01/2025 0700 AM  VA  Floyd  Willis 2.7 SE      36.832  -80.4471  RAIN  1.17  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  VA  Floyd  Willis 0.6 N      36.8592  -80.4814  RAIN  1.41  Inch  HADS  Storm total rainfall
+2/01/2025 0355 PM  VA  Floyd  Floyd 3.6 NE      36.9425  -80.2538  RAIN  1.44  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Floyd  0.5 W Copper Hill      37.0864  -80.1422  RAIN  1.53  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Franklin  Westlake Corner      37.1397  -79.7232  RAIN  0.44  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0405 PM  VA  Franklin  Rocky Mount 1 NW      37.0144  -79.8952  RAIN  1.05  Inch  AWS  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Union Hall 2.9 E      37.0406  -79.6375  RAIN  1.11  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0405 PM  VA  Franklin  5 SSE Vinton      37.1917  -79.8661  RAIN  1.16  Inch  AWS  Storm total rainfall
+2/01/2025 0730 AM  VA  Franklin  5 NNW Burnt Chimney      37.1733  -79.8775  RAIN  1.19  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Franklin  Rocky Mount 2.8 NNW      37.0357  -79.9042  RAIN  1.23  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Franklin  Hardy      37.2218  -79.8287  RAIN  1.24  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Rocky Mount 10.3 NE      37.0958  -79.7518  RAIN  1.24  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  VA  Franklin  Hardy 3 S      37.1615  -79.7982  RAIN  1.27  Inch  CWOP  Storm total rainfall
+2/01/2025 0900 AM  VA  Franklin  Hardy 8.2 SE      37.1437  -79.7118  RAIN  1.34  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Rocky Mount 3.6 W      36.989  -79.9545  RAIN  1.36  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Franklin  Rocky Mount 0.8 SSW      36.9846  -79.8937  RAIN  1.38  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Rocky Mount 2.2 NW      37.0215  -79.9153  RAIN  1.48  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0600 AM  VA  Franklin  Callaway 3.0 SSW      36.9706  -80.0669  RAIN  1.53  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Rocky Mount 3.8 SSW      36.9469  -79.9217  RAIN  1.57  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Franklin  Ferrum 1.9 SSW      36.9029  -80.0304  RAIN  1.98  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Giles  Pearisburg      37.1843  -80.8242  RAIN  1.86  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Giles  Pearisburg 4 SSE      37.2714  -80.7131  RAIN  1.86  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Grayson  Galax 5.3 SW      36.6149  -80.9905  RAIN  0.56  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0330 PM  VA  Grayson  3.0 NE Baywood      36.6472  -80.9792  RAIN  0.59  Inch  HADS  Storm total rainfall
+2/01/2025 0330 PM  VA  Grayson  Volney      36.6175  -81.3781  RAIN  0.59  Inch  HADS  Storm total rainfall
+2/01/2025 0355 PM  VA  Grayson  Baywood 5 SE      36.568  -80.9437  RAIN  0.61  Inch  CWOP  Storm total rainfall
+2/01/2025 0345 PM  VA  Grayson  Baywood      36.6152  -80.9902  RAIN  0.62  Inch  CWOP  Storm total rainfall
+2/01/2025 0353 PM  VA  Grayson  Menlo      36.7031  -81.1859  RAIN  0.67  Inch  CWOP  Storm total rainfall
+2/01/2025 0657 AM  VA  Grayson  Independence 1.3 S      36.6047  -81.1555  RAIN  0.81  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0357 PM  VA  Grayson  Whitetop      36.6012  -81.538  RAIN  0.86  Inch  CWOP  Storm total rainfall
+2/01/2025 0626 AM  VA  Grayson  Troutdale 8.7 SW      36.6013  -81.538  RAIN  1.08  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  VA  Halifax  South Boston 1.9 N      36.7255  -78.9053  RAIN  0.91  Inch  CWOP  Storm total rainfall
+2/01/2025 0345 PM  VA  Halifax  3.6 NE Mt Laurel      36.915  -78.7411  RAIN  1.73  Inch  HADS  Storm total rainfall
+2/01/2025 0700 AM  VA  Halifax  Virgilina 6.2 N      36.6345  -78.7716  RAIN  1.85  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Halifax  South Boston 1.1 E      36.6954  -78.8807  RAIN  1.99  Inch  COOP  Storm total rainfall
+2/01/2025 0400 PM  VA  Halifax  Clover      36.9367  -78.7892  RAIN  2.57  Inch  CWOP  Storm total rainfall
+2/01/2025 0345 PM  VA  Henry  Magna Vista Hs Near Ridgeway 2ne      36.5944  -79.8906  RAIN  0.83  Inch  MESOWEST  Storm total rainfall
+2/01/2025 0900 AM  VA  Henry  Ridgeway 2.5 NE      36.6071  -79.8303  RAIN  0.95  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0357 PM  VA  Montgomery  Prices Fork 0.3 SW      37.206  -80.4938  RAIN  0.49  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  VA  Montgomery  Blacksburg      37.2203  -80.4169  RAIN  1.28  Inch  AWS  Storm total rainfall
+2/01/2025 0405 PM  VA  Montgomery  Childress 4 E      37.0597  -80.4416  RAIN  1.33  Inch  AWS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Christiansburg      37.1278  -80.4033  RAIN  1.73  Inch  COOP  Storm total rainfall
+2/01/2025 0345 PM  VA  Montgomery  Childress      37.047  -80.517  RAIN  1.74  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Montgomery  Christiansburg 4.4 WNW      37.1632  -80.4773  RAIN  1.78  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0730 AM  VA  Montgomery  Blacksburg 4.4 ESE      37.2165  -80.3503  RAIN  1.78  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0600 AM  VA  Montgomery  Christiansburg 1.1 ESE      37.1358  -80.3844  RAIN  1.84  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Montgomery  Blacksburg 2.1 ESE      37.2235  -80.3922  RAIN  1.85  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Blacksburg 5.0 W      37.2247  -80.5187  RAIN  1.85  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Montgomery  VT Airport Blacksburg      37.2167  -80.4167  RAIN  1.86  Inch  AWOS  Storm total rainfall
+2/01/2025 0700 AM  VA  Montgomery  Blacksburg 1.6 W      37.2346  -80.4581  RAIN  1.89  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Montgomery  Blacksburg 2.4 ENE      37.2486  -80.3905  RAIN  1.89  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Blacksburg 4.3 WSW      37.2152  -80.5035  RAIN  1.91  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Blacksburg 1.6 NNE      37.2547  -80.4178  RAIN  1.91  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0734 AM  VA  Montgomery  Christiansburg 1.7 WNW      37.1502  -80.4313  RAIN  1.94  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0900 AM  VA  Montgomery  Blacksburg 1.7 ESE      37.2229  -80.4006  RAIN  1.95  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Blacksburg 1.3 ESE      37.2264  -80.4064  RAIN  1.97  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Montgomery  Blacksburg 1.7 ESE      37.2205  -80.4017  RAIN  2.2  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Patrick  STUART      36.6245  -80.169  RAIN  0.65  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Patrick  Meadows Of Dan 5 SW      36.6667  -80.4481  RAIN  0.67  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Patrick  Stuart 4.0 ESE      36.6221  -80.2051  RAIN  0.7  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Patrick  Meadows of Dan      36.672  -80.4377  RAIN  0.72  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  VA  Patrick  Critz 4 SW      36.5875  -80.1958  RAIN  0.73  Inch  AWS  Storm total rainfall
+2/01/2025 0355 PM  VA  Patrick  Stuart      36.6222  -80.205  RAIN  0.74  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Patrick  Stuart 1.6 E      36.6365  -80.2545  RAIN  0.74  Inch  COOP  Storm total rainfall
+2/01/2025 0815 AM  VA  Patrick  Woolwine 1.3 SE      36.7736  -80.2623  RAIN  0.86  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Patrick  Woolwine 0.4 SW      36.7853  -80.2828  RAIN  0.97  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Patrick  Woolwine 3.7 NNE      36.8425  -80.2633  RAIN  0.99  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Pittsylvania  Penhook 4 NE      37.0333  -79.5917  RAIN  1.22  Inch  AWS  Storm total rainfall
+2/01/2025 0800 AM  VA  Pittsylvania  Gretna 0.5 WNW      36.9545  -79.3724  RAIN  1.31  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0353 PM  VA  Pittsylvania  Danville Regional Airport      36.5667  -79.3333  RAIN  1.43  Inch  ASOS  Storm total rainfall
+2/01/2025 0700 AM  VA  Pittsylvania  Keeling 0.7 SSW      36.711  -79.2942  RAIN  1.49  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  VA  Pittsylvania  DANVILLE      36.71  -79.397  RAIN  1.98  Inch  CWOP  Storm total rainfall
+2/01/2025 0355 PM  VA  Pulaski  New River Valley Airport      37.1167  -80.6667  RAIN  1.14  Inch  AWOS  Storm total rainfall
+2/01/2025 1006 AM  VA  Pulaski  Pulaski 2 E      37.0556  -80.7842  RAIN  1.73  Inch  COOP  Storm total rainfall
+2/01/2025 0730 AM  VA  Pulaski  Dublin 2.0 SSW      37.0794  -80.6978  RAIN  1.8  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0400 PM  VA  Roanoke  Bent Mountain      37.1536  -80.1201  RAIN  0.35  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Roanoke  Roanoke 7.3 SSW      37.1836  -80.0169  RAIN  0.42  Inch  COCORAHS  Storm total rainfall
+2/01/2025 1000 AM  VA  Roanoke  Catawba 7.2 WSW      37.3499  -80.2336  RAIN  0.54  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Roanoke  Bent Mountain 1.3 NNE      37.1722  -80.1085  RAIN  1.11  Inch  CWOP  Storm total rainfall
+2/01/2025 0405 PM  VA  Roanoke  Cave Spring      37.2286  -80.01  RAIN  1.13  Inch  AWS  Storm total rainfall
+2/01/2025 0357 PM  VA  Roanoke  Vinton      37.2813  -79.8833  RAIN  1.23  Inch  CWOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Roanoke  Roanoke 3.4 SW      37.2388  -79.994  RAIN  1.44  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Roanoke  Hollins 1.3 N      37.3616  -79.9591  RAIN  1.45  Inch  COOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Roanoke  Roanoke 5.4 NE      37.3268  -79.8803  RAIN  1.45  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0350 PM  VA  Roanoke  Cave Spring 2 S      37.207  -80.0075  RAIN  1.46  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Roanoke  Roanoke 5.5 SW      37.2168  -80.0228  RAIN  1.56  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0900 AM  VA  Roanoke  Salem 3.4 WNW      37.2976  -80.1176  RAIN  1.69  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0405 PM  VA  Roanoke  Poages Mill 1 W      37.2008  -80.0733  RAIN  1.7  Inch  AWS  Storm total rainfall
+2/01/2025 0700 AM  VA  Roanoke  Cave Spring 2.4 SSW      37.1904  -80.0213  RAIN  1.73  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  VA  Roanoke  Cave Spring 1.2 SW      37.219  -80.0332  RAIN  1.74  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  VA  Roanoke  Bent Mountain      37.1706  -80.0791  RAIN  1.89  Inch  CWOP  Storm total rainfall
+2/01/2025 0400 PM  VA  Roanoke  Bent Mountain 4 NE      37.2008  -80.0772  RAIN  2.72  Inch  CWOP  Storm total rainfall
+2/01/2025 0358 PM  VA  Rockbridge  Buena Vista 2.3 SW      37.7229  -79.3934  RAIN  0.42  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Rockbridge  Fairfield 1.1 ESE      37.8744  -79.2702  RAIN  1.16  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0355 PM  VA  Rockbridge  Buena Vista      37.7442  -79.3805  RAIN  1.2  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Rockbridge  Rockbridge Baths 0.4 NW      37.9042  -79.4143  RAIN  1.2  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Rockbridge  Lexington 11.5 WSW      37.7213  -79.6398  RAIN  1.37  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Rockbridge  Lexington 8.6 NW      37.8608  -79.5658  RAIN  1.52  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Rockbridge  Lexington 7.2 W      37.7826  -79.5761  RAIN  1.52  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  VA  Rockbridge  Lexington 5.5 NW      37.8391  -79.5152  RAIN  1.55  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0315 PM  VA  Smyth  2.8 E Konnarock      36.6753  -81.5917  RAIN  0.59  Inch  HADS  Storm total rainfall
+2/01/2025 0355 PM  VA  Smyth  Mountain Empire Airport      36.88  -81.33  RAIN  1  Inch  AWOS  Storm total rainfall
+2/01/2025 0330 PM  VA  Smyth  Marion 1.8 NE      36.8544  -81.4819  RAIN  1.31  Inch  HADS  Storm total rainfall
+2/01/2025 0345 PM  VA  Smyth  0.8 S Allison Gap      36.8883  -81.7711  RAIN  1.78  Inch  HADS  Storm total rainfall
+2/01/2025 0355 PM  VA  Tazewell  Tazewell County Airport      37.0667  -81.8  RAIN  0.49  Inch  AWOS  Storm total rainfall
+2/01/2025 0700 AM  VA  Tazewell  Burkes Garden 0.9 SE      37.0925  -81.3358  RAIN  0.76  Inch  COOP  Storm total rainfall
+2/01/2025 0330 PM  VA  Tazewell  2.3 W Tazewell      37.1258  -81.5575  RAIN  1.6  Inch  HADS  Storm total rainfall
+2/01/2025 0315 PM  VA  Tazewell  Bastian Clear Fork      37.175  -81.3028  RAIN  1.64  Inch  HADS  Storm total rainfall
+2/01/2025 0400 PM  VA  Tazewell  Burkes Garden      37.0993  -81.3427  RAIN  1.67  Inch  CWOP  Storm total rainfall
+2/01/2025 0200 PM  VA  Tazewell  1.3 E Bluefield       37.2439  -81.2439  RAIN  1.68  Inch  IFLOWS  Storm total rainfall
+2/01/2025 0330 PM  VA  Tazewell  1.4 E Raven      37.0961  -81.8358  RAIN  2.05  Inch  HADS  Storm total rainfall
+2/01/2025 0830 AM  VA  Tazewell  Tazewell 3 WNW      37.1456  -81.56  RAIN  2.44  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0700 AM  VA  Tazewell  Richlands      37.0947  -81.7936  RAIN  2.45  Inch  COOP  Storm total rainfall
+2/01/2025 0800 AM  VA  Tazewell  Cedar Bluff 3.6 SW      37.0546  -81.8161  RAIN  2.5  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0350 PM  VA  Wythe  Wytheville 0.8 NE      36.9602  -81.0804  RAIN  1.62  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  VA  Wythe  Wytheville 0.9 N      36.9617  -81.087  RAIN  1.75  Inch  COOP  Storm total rainfall
+2/01/2025 0356 PM  VA  Wythe  Wytheville 0.7 WSW      36.9442  -81.0963  RAIN  1.83  Inch  CWOP  Storm total rainfall
+2/01/2025 0317 PM  VA  Wythe  Stony Fork      37.0111  -81.1786  RAIN  2.38  Inch  RAWS  Storm total rainfall
+2/01/2025 0358 PM  WV  Greenbrier  RONCEVERTE      37.7052  -80.4893  RAIN  0.39  Inch  CWOP  Storm total rainfall
+2/01/2025 0351 PM  WV  Greenbrier  Greenbrier Valley Airport      37.8667  -80.4  RAIN  0.78  Inch  AWOS  Storm total rainfall
+2/01/2025 0630 AM  WV  Greenbrier  White Sulphur Springs 0.9 SW      37.7889  -80.3083  RAIN  1.76  Inch  COOP  Storm total rainfall
+2/01/2025 0345 PM  WV  Greenbrier  1.6 W Lewisburg      37.7983  -80.4783  RAIN  1.9  Inch  HADS  Storm total rainfall
+2/01/2025 0700 AM  WV  Greenbrier  Lewisburg 4.5 NE      37.8564  -80.4025  RAIN  2  Inch  COOP  Storm total rainfall
+2/01/2025 0345 PM  WV  Greenbrier  0.9 E Rainelle      37.9681  -80.7678  RAIN  2.14  Inch  HADS  Storm total rainfall
+2/01/2025 0400 PM  WV  Greenbrier  MAXWELTON      37.91  -80.5387  RAIN  2.49  Inch  CWOP  Storm total rainfall
+2/01/2025 0356 PM  WV  Mercer  PRINCETON      37.3423  -81.1327  RAIN  0.41  Inch  CWOP  Storm total rainfall
+2/01/2025 0315 PM  WV  Mercer  Willowton      37.3486  -80.8861  RAIN  0.93  Inch  HADS  Storm total rainfall
+2/01/2025 0352 PM  WV  Mercer  Mercer County Airport      37.3  -81.2  RAIN  1.3  Inch  ASOS  Storm total rainfall
+2/01/2025 0345 PM  WV  Mercer  Bluefield 1.2 E      37.267  -81.1997  RAIN  2.15  Inch  CWOP  Storm total rainfall
+2/01/2025 0700 AM  WV  Mercer  Princeton 0.3 NNW      37.3719  -81.0982  RAIN  2.21  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0345 PM  WV  Mercer  Princeton      37.3603  -81.0545  RAIN  2.23  Inch  CWOP  Storm total rainfall
+2/01/2025 0800 AM  WV  Mercer  Bluefield 4.8 NNW      37.3184  -81.2665  RAIN  2.3  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0800 AM  WV  Mercer  Princeton 3.4 WSW      37.3454  -81.1502  RAIN  2.52  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0358 PM  WV  Monroe  Gap Mills      37.6285  -80.2415  RAIN  0.34  Inch  CWOP  Storm total rainfall
+2/01/2025 0345 PM  WV  Monroe  2.9 SE Raines Corner      37.4781  -80.595  RAIN  1.37  Inch  HADS  Storm total rainfall
+2/01/2025 0315 PM  WV  Monroe  2.0 N Red Sulphur Spring      37.5292  -80.7703  RAIN  1.54  Inch  HADS  Storm total rainfall
+2/01/2025 1242 PM  WV  Monroe  PETERSTOWN      37.4398  -80.7515  RAIN  1.62  Inch  CWOP  Storm total rainfall
+2/01/2025 0716 AM  WV  Monroe  Union 2.4 SSE      37.5577  -80.5294  RAIN  1.83  Inch  COCORAHS  Storm total rainfall
+2/01/2025 0357 PM  WV  Monroe  UNION      37.6003  -80.4438  RAIN  1.87  Inch  CWOP  Storm total rainfall
+2/01/2025 0900 AM  WV  Monroe  Greenville 1 SE      37.5375  -80.6633  RAIN  1.95  Inch  COOP  Storm total rainfall
+2/01/2025 0400 PM  WV  Summers  JUMPING BRANCH      37.656  -81.033  RAIN  0.64  Inch  CWOP  Storm total rainfall
+2/01/2025 0357 PM  WV  Summers  MEADOW BRIDGE      37.8485  -80.85  RAIN  2.2  Inch  CWOP  Storm total rainfall
+2/01/2025 0730 AM  WV  Summers  Bluestone Lake      37.6411  -80.8831  RAIN  2.22  Inch  COOP  Storm total rainfall
+2/01/2025 0317 PM  WV  Summers  Pipestem      37.5264  -80.9992  RAIN  2.38  Inch  RAWS  Storm total rainfall
+2/01/2025 0300 PM  WV  Summers  1.9 SE Hinton      37.6403  -80.8875  RAIN  2.73  Inch  HADS  Storm total rainfall
+""
+Observations are collected from a variety of sources with varying
+equipment and exposures. We thank all volunteer weather observers
+for their dedication. Not all data listed are considered official.
+""
+$$
