@@ -1,183 +1,183 @@
-2025-02-08 20:26:22,533 - INFO - Found stations: ['ABQ', 'OKX', 'FWD', 'BTV', 'LWX', 'CAR', 'CHS', 'OUN', 'BOX', 'BUF', 'ALY', 'RNK', 'TAE', 'LZK', 'RLX', 'GYX', 'EPZ', 'MQT', 'BGM', 'HGX', 'CTP', 'MOB', 'CLE', 'PHI', 'ILM', 'PBZ']
-2025-02-08 20:26:22,533 - INFO - Processing station: ABQ
-2025-02-08 20:26:22,538 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:22,538 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:22,538 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:22,539 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:22,539 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/observations_2025-02-08_2026.csv
-2025-02-08 20:26:22,540 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:22,540 - INFO - Processing station: OKX
-2025-02-08 20:26:22,542 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:22,542 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:22,542 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:22,542 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:22,543 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:22,543 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:22,543 - INFO - Processing station: FWD
-2025-02-08 20:26:24,187 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,188 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,188 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,188 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,189 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,190 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,191 - INFO - Processing station: BTV
-2025-02-08 20:26:24,197 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,197 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,197 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,197 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,197 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,198 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,198 - INFO - Processing station: LWX
-2025-02-08 20:26:24,208 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,208 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,208 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,208 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,208 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,209 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,209 - INFO - Processing station: CAR
-2025-02-08 20:26:24,212 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,212 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,212 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,212 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,213 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,213 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,213 - INFO - Processing station: CHS
-2025-02-08 20:26:24,214 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,214 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,214 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,214 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,214 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,215 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,215 - INFO - Processing station: OUN
-2025-02-08 20:26:24,349 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,349 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,349 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,350 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,350 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,351 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,351 - INFO - Processing station: BOX
-2025-02-08 20:26:24,401 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,401 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,401 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,402 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,402 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,403 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,403 - INFO - Processing station: BUF
-2025-02-08 20:26:24,406 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,407 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,407 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,407 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,408 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,408 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,408 - INFO - Processing station: ALY
-2025-02-08 20:26:24,414 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,414 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,414 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,414 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,415 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,415 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,415 - INFO - Processing station: RNK
-2025-02-08 20:26:24,547 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,547 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,547 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,547 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,548 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,548 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,548 - INFO - Processing station: TAE
-2025-02-08 20:26:24,595 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:24,595 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:24,595 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:24,596 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,596 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/observations_2025-02-08_2026.csv
-2025-02-08 20:26:24,596 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:24,596 - INFO - Processing station: LZK
-2025-02-08 20:26:25,046 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,047 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,047 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,047 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,047 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,048 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,048 - INFO - Processing station: RLX
-2025-02-08 20:26:25,049 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,049 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,049 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,049 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,050 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,050 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,050 - INFO - Processing station: GYX
-2025-02-08 20:26:25,325 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,325 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,325 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,325 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,326 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,326 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,326 - INFO - Processing station: EPZ
-2025-02-08 20:26:25,341 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,341 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,341 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,342 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,342 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,342 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,342 - INFO - Processing station: MQT
-2025-02-08 20:26:25,347 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,347 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,347 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,347 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,348 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,348 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,348 - INFO - Processing station: BGM
-2025-02-08 20:26:25,349 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,349 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,349 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,349 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,349 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,350 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,350 - INFO - Processing station: HGX
-2025-02-08 20:26:25,405 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,405 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,405 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,405 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,405 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,406 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,406 - INFO - Processing station: CTP
-2025-02-08 20:26:25,446 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,446 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,446 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,446 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,447 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,447 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,447 - INFO - Processing station: MOB
-2025-02-08 20:26:25,698 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,698 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,698 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,699 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,699 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,700 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,700 - INFO - Processing station: CLE
-2025-02-08 20:26:25,700 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,700 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,700 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,701 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,701 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,701 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,701 - INFO - Processing station: PHI
-2025-02-08 20:26:25,824 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,824 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,825 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,825 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,826 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,827 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,827 - INFO - Processing station: ILM
-2025-02-08 20:26:25,904 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,905 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,905 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,906 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,906 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,907 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/header_metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,907 - INFO - Processing station: PBZ
-2025-02-08 20:26:25,914 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2026.
-2025-02-08 20:26:25,914 - ERROR - Could not find observation table header in alternative format.
-2025-02-08 20:26:25,914 - INFO - Parsing succeeded using parse_template_alternative.
-2025-02-08 20:26:25,915 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/metadata_2025-02-08_2026.csv
-2025-02-08 20:26:25,915 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/observations_2025-02-08_2026.csv
-2025-02-08 20:26:25,916 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/header_metadata_2025-02-08_2026.csv
+2025-02-08 21:30:54,009 - INFO - Found stations: ['ABQ', 'OKX', 'FWD', 'BTV', 'LWX', 'CAR', 'CHS', 'OUN', 'BOX', 'BUF', 'ALY', 'RNK', 'TAE', 'LZK', 'RLX', 'GYX', 'EPZ', 'MQT', 'BGM', 'HGX', 'CTP', 'MOB', 'CLE', 'PHI', 'ILM', 'PBZ']
+2025-02-08 21:30:54,009 - INFO - Processing station: ABQ
+2025-02-08 21:30:54,014 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:54,014 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:54,014 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:54,015 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:54,016 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/observations_2025-02-08_2130.csv
+2025-02-08 21:30:54,016 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ABQ/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:54,016 - INFO - Processing station: OKX
+2025-02-08 21:30:54,018 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:54,018 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:54,018 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:54,018 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:54,019 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:54,019 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OKX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:54,019 - INFO - Processing station: FWD
+2025-02-08 21:30:55,661 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,661 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,661 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,661 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,662 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,663 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/FWD/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,663 - INFO - Processing station: BTV
+2025-02-08 21:30:55,669 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,669 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,669 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,670 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,670 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,671 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BTV/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,671 - INFO - Processing station: LWX
+2025-02-08 21:30:55,681 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,681 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,681 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,681 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,681 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,682 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LWX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,682 - INFO - Processing station: CAR
+2025-02-08 21:30:55,685 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,685 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,685 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,685 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,686 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,686 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CAR/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,686 - INFO - Processing station: CHS
+2025-02-08 21:30:55,687 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,687 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,687 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,687 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,687 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,688 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CHS/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,688 - INFO - Processing station: OUN
+2025-02-08 21:30:55,822 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,822 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,822 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,822 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,822 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,823 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/OUN/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,823 - INFO - Processing station: BOX
+2025-02-08 21:30:55,873 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,874 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,874 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,874 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,874 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,875 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BOX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,875 - INFO - Processing station: BUF
+2025-02-08 21:30:55,879 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,879 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,879 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,879 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,880 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,880 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BUF/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,880 - INFO - Processing station: ALY
+2025-02-08 21:30:55,886 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:55,886 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:55,886 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:55,886 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,887 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/observations_2025-02-08_2130.csv
+2025-02-08 21:30:55,887 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ALY/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:55,887 - INFO - Processing station: RNK
+2025-02-08 21:30:56,018 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,018 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,018 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,019 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,019 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,020 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RNK/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,020 - INFO - Processing station: TAE
+2025-02-08 21:30:56,066 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,066 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,066 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,067 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,067 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,068 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/TAE/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,068 - INFO - Processing station: LZK
+2025-02-08 21:30:56,516 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,517 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,517 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,517 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,517 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,518 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/LZK/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,518 - INFO - Processing station: RLX
+2025-02-08 21:30:56,519 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,519 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,519 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,519 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,519 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,520 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/RLX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,520 - INFO - Processing station: GYX
+2025-02-08 21:30:56,794 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,794 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,794 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,795 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,795 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,796 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/GYX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,796 - INFO - Processing station: EPZ
+2025-02-08 21:30:56,811 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,811 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,811 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,811 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,812 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,812 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/EPZ/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,812 - INFO - Processing station: MQT
+2025-02-08 21:30:56,816 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,816 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,816 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,817 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,817 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,818 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MQT/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,818 - INFO - Processing station: BGM
+2025-02-08 21:30:56,818 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,818 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,818 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,819 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,819 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,819 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/BGM/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,819 - INFO - Processing station: HGX
+2025-02-08 21:30:56,874 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,874 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,874 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,875 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,875 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,876 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/HGX/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,876 - INFO - Processing station: CTP
+2025-02-08 21:30:56,915 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:56,915 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:56,916 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:56,916 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,916 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/observations_2025-02-08_2130.csv
+2025-02-08 21:30:56,917 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CTP/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:56,917 - INFO - Processing station: MOB
+2025-02-08 21:30:57,167 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:57,167 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:57,167 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:57,168 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,169 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/observations_2025-02-08_2130.csv
+2025-02-08 21:30:57,169 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/MOB/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,169 - INFO - Processing station: CLE
+2025-02-08 21:30:57,170 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:57,170 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:57,170 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:57,170 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,170 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/observations_2025-02-08_2130.csv
+2025-02-08 21:30:57,171 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/CLE/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,171 - INFO - Processing station: PHI
+2025-02-08 21:30:57,291 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:57,291 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:57,291 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:57,291 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,291 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/observations_2025-02-08_2130.csv
+2025-02-08 21:30:57,292 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PHI/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,292 - INFO - Processing station: ILM
+2025-02-08 21:30:57,366 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:57,367 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:57,367 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:57,367 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,368 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/observations_2025-02-08_2130.csv
+2025-02-08 21:30:57,368 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/ILM/header_metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,368 - INFO - Processing station: PBZ
+2025-02-08 21:30:57,376 - WARNING - Alternative template: Timestamp extraction returned unknown_date. Using fallback: 2025-02-08 2130.
+2025-02-08 21:30:57,376 - ERROR - Could not find observation table header in alternative format.
+2025-02-08 21:30:57,376 - INFO - Parsing succeeded using parse_template_alternative.
+2025-02-08 21:30:57,376 - INFO - Saved metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/metadata_2025-02-08_2130.csv
+2025-02-08 21:30:57,377 - INFO - Saved observations to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/observations_2025-02-08_2130.csv
+2025-02-08 21:30:57,377 - INFO - Saved header metadata to /Users/mattalevy/PycharmProjects/snow-plots/data/PBZ/header_metadata_2025-02-08_2130.csv
