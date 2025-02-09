@@ -9905,3 +9905,176 @@ date,time,state,county,city,latitude,longitude,type,value,unit,source,descriptio
 2/08/2025,  437 PM, VA, Loudoun, Ashburn,39.04,-77.5, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
 2/08/2025,  435 PM, VA, Loudoun, Leesburg,39.09,-77.57, ICE, 0.01, Inch, NWS Employee, Storm Total Ice Accrual,LWX
 2/08/2025,  510 PM, VA, Loudoun, Dulles International Airport,38.98,-77.49, ICE, 0.01, Inch, Official NWS Obs, Storm Total Ice Accrual,LWX
+2/08/2025,0700 PM, DE, New Castle, New Castle County Airport,39.677852093791,-75.60652702957, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0922 PM, DE, New Castle, Wilmington,39.6667,-75.6, FREEZING_RAIN_24, 0.09, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0554 PM, DE, Sussex, Georgetown,38.6833,-75.3667, FREEZING_RAIN, 0.001, Inch, ASOS, Storm total freezing rain,PHI
+2/08/2025,0700 PM, NJ, Atlantic, Atlantic City International Airport,39.450234516203,-74.567374884186, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0926 PM, NJ, Atlantic, Atlantic City,39.45,-74.5667, FREEZING_RAIN_24, 0.11, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0926 PM, NJ, Burlington, Mount Holly,39.9333,-74.8333, FREEZING_RAIN_24, 0.09, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0902 PM, NJ, Cumberland, Millville,39.3667,-75.0833, FREEZING_RAIN_24, 0.07, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0936 PM, NJ, Hunterdon, Flemington,40.511,-74.8613, SNOW_24, 0.4, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0712 PM, NJ, Mercer, Trenton Mercer Airport,40.2772,-74.8122, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0853 PM, NJ, Mercer, Trenton,40.2833,-74.8167, FREEZING_RAIN_24, 0.06, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0920 PM, NJ, Mercer, 1 S Trenton Mercer Airport,40.2633,-74.8155, SNOW_24, 0.3, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0905 PM, NJ, Middlesex, South River,40.4504,-74.3817, SNOW_24, 0.5, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0900 PM, NJ, Monmouth, 2 ESE West Long Branch,40.2795,-73.9881, SNOW_24, 0.1, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0920 PM, NJ, Morris, Lake Hopatcong,40.9476,-74.6186, SNOW_24, 1.8, Inch, Cocorahs, 24 hour snowfall,PHI
+2/08/2025,0934 PM, NJ, Somerset, Somerville,40.6167,-74.6667, FREEZING_RAIN_24, 0.01, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0933 PM, NJ, Somerset, Warren,40.6217,-74.4891, SNOW_24, 1.0, Inch, Public, 24 hour snowfall,PHI
+2/08/2025,0835 PM, NJ, Sussex, 1 N Sussex,41.2181,-74.6095, SNOW_24, 0.8, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0845 PM, NJ, Sussex, 4 WSW Wantage Twp,41.2157,-74.6841, SNOW_24, 1.0, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0928 PM, NJ, Sussex, Sparta,41.0422,-74.6306, SNOW_24, 1.5, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0700 PM, PA, Berks, Reading Regional Airport,40.378841135406,-75.965900122222, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0923 PM, PA, Berks, Reading,40.3667,-75.9667, FREEZING_RAIN_24, 0.06, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0850 PM, PA, Berks, Bern Twp,40.3936,-76.0026, FREEZING_RAIN, 0.10, Inch, Trained Spotter, Storm total freezing rain,PHI
+2/08/2025,0933 PM, PA, Bucks, Doylestown,40.3333,-75.1167, FREEZING_RAIN_24, 0.17, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0755 PM, PA, Carbon, Hudsondale,40.9188,-75.8586, SNOW_24, 0.3, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0830 PM, PA, Chester, East Nantmeal Twp,40.1225,-75.7197, SNOW_24, 0.5, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0700 PM, PA, Lehigh, Lehigh Valley International Airport,40.651656311538,-75.441646277007, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0912 PM, PA, Lehigh, Lehigh Valley Intl Airport,40.65,-75.45, FREEZING_RAIN_24, 0.03, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0800 PM, PA, Lehigh, Germansville,40.702,-75.7054, SNOW_24, 0.2, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0730 PM, PA, Montgomery, 1 E Willow Grove,40.1447,-75.1026, FREEZING_RAIN, 0.06, Inch, Trained Spotter, Storm total freezing rain,PHI
+2/08/2025,0931 PM, PA, Montgomery, Pottstown,40.2333,-75.55, FREEZING_RAIN_24, 0.09, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0900 PM, PA, Northampton, Martins Creek,40.78284098803198,-75.18267897664694, FREEZING_RAIN_24, 0.001, Inch, CO-OP Observer, 24 hour freezing rain,PHI
+2/08/2025,0828 PM, PA, Northampton, Williams Twp,40.6359,-75.1947, SNOW_24, 0.2, Inch, Trained Spotter, 24 hour snowfall,PHI
+2/08/2025,0900 PM, PA, Northampton, Martins Creek,40.78284098803198,-75.18267897664694, SNOW_24, 0.7, Inch, CO-OP Observer, 24 hour snowfall,PHI
+2/08/2025,0700 PM, PA, Philadelphia, Philadelphia International Airport,39.877491019808,-75.224837957915, SNOW_24, 0.001, Inch, ASOS, 24 hour snowfall,PHI
+2/08/2025,0924 PM, PA, Philadelphia, Philadelphia Northeast,40.0833,-75.0166, FREEZING_RAIN_24, 0.08, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,0927 PM, PA, Philadelphia, Philadelphia International Airport,39.8784,-75.2257, FREEZING_RAIN_24, 0.08, Inch, ASOS, 24 hour freezing rain,PHI
+2/08/2025,  600 PM, OH, Belmont, Belmont,39.9753,-80.9617, RAIN, 0.08, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Carroll, Carrollton,40.5627,-81.079, RAIN, 0.46, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Carroll, Magnolia,40.6511,-81.2994, RAIN, 0.09, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  545 PM, OH, Columbiana, Washingtonville,40.8975,-80.7808, RAIN, 0.31, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, OH, Columbiana, Columbiana,40.8902,-80.6938, RAIN, 0.22, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  640 PM, OH, Columbiana, Minerva,40.7706,-81.0367, RAIN, 0.14, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Columbiana, East Palestine,40.8292,-80.5442, RAIN, 0.11, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  400 PM, OH, Columbiana, Lisbon,40.7722,-80.7508, RAIN, 0.03, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, OH, Coshocton, Woodbury Wildlife Area,40.2536,-81.9869, RAIN, 0.44, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, OH, Coshocton, Conesville,40.1594,-81.8475, RAIN, 0.27, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Coshocton, Nellie,40.3414,-82.0656, RAIN, 0.20, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Guernsey, Pleasant City,39.9025,-81.5439, RAIN, 0.20, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, OH, Guernsey, Kimbolton,40.125,-81.5247, RAIN, 0.18, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Guernsey, Senecaville,39.9253,-81.435, RAIN, 0.13, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Guernsey, Pleasant City,39.9189,-81.5311, RAIN, 0.09, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, OH, Guernsey, Kimbolton,40.1525,-81.5742, RAIN, 0.08, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Harrison, Deersville,40.3144,-81.115, RAIN, 0.56, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Harrison, Cadiz,40.2453,-80.9703, RAIN, 0.31, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025, 1000 AM, OH, Harrison, Jewett,40.3703,-81.0125, RAIN, 0.08, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, OH, Monroe, Woodsfield,39.7603,-81.0653, RAIN, 0.20, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Monroe, New Martinsville,39.6669,-80.87, RAIN, 0.18, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  632 PM, OH, Monroe, Merrell Ridge,39.6093,-81.1671, RAIN, 0.12, Inch, RAWS, Storm Total Rainfall,PBZ
+2/08/2025,  705 PM, OH, Muskingum, Zanesville Airport,39.95,-81.9, RAIN, 0.10, Inch, ASOS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Muskingum, Adamsville,40.0708,-81.8833, RAIN, 0.08, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Muskingum, Zanesville,39.9883,-82.0806, RAIN, 0.04, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  704 PM, OH, Muskingum, Zanesville,39.9681,-82.0947, RAIN, 0.01, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, OH, Tuscarawas, New Philadelphia,40.4806,-81.4483, RAIN, 0.57, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Tuscarawas, New Philadelphia,40.5297,-81.43, RAIN, 0.37, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, OH, Tuscarawas, Uhrichsville,40.3864,-81.3467, RAIN, 0.14, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, OH, Tuscarawas, Zoar,40.6128,-81.4175, RAIN, 0.13, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  655 PM, OH, Tuscarawas, New Philadelphia,40.48,-81.4795, RAIN, 0.07, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  315 PM, OH, Tuscarawas, Beach City,40.6356,-81.5531, RAIN, 0.01, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Bridgeville,40.3292,-80.1319, RAIN, 0.64, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  653 PM, PA, Allegheny, Allegheny County Airport,40.3551,-79.9215, RAIN, 0.64, Inch, AWOS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Emsworth,40.5078,-80.1083, RAIN, 0.60, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Ben Avon,40.5053,-80.0897, RAIN, 0.59, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  658 PM, PA, Allegheny, Pittsburgh,40.5853,-80.0522, RAIN, 0.58, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  651 PM, PA, Allegheny, Pittsburgh Intl Airport,40.5,-80.2667, RAIN, 0.57, Inch, ASOS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Allegheny, Franklin Park,40.5758,-80.0505, RAIN, 0.55, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Blawnox,40.4828,-79.8503, RAIN, 0.55, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Millvale,40.4653,-79.9606, RAIN, 0.54, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Imperial,40.4417,-80.2185, RAIN, 0.54, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Bridgeville,40.3658,-80.1203, RAIN, 0.52, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Carnegie,40.4067,-80.0962, RAIN, 0.52, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, PA, Allegheny, Natrona Heights,40.6368,-79.716, RAIN, 0.51, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  658 PM, PA, Allegheny, Moon Township,40.5318,-80.2177, RAIN, 0.49, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Shaler Township,40.5239,-79.9694, RAIN, 0.44, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Sturgeon-Noblestown,40.4167,-80.2233, RAIN, 0.40, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  650 PM, PA, Allegheny, Fox Chapel,40.5332,-79.8732, RAIN, 0.36, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Mckees Rocks,40.4761,-80.0422, RAIN, 0.34, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Imperial-Enlow,40.4894,-80.2964, RAIN, 0.29, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Carnot-Moon,40.5428,-80.2167, RAIN, 0.27, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  657 PM, PA, Allegheny, Dawson,40.4638,-79.9467, RAIN, 0.26, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Allegheny, Green Tree,40.4283,-80.0436, RAIN, 0.06, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  800 AM, PA, Allegheny, Pittsburgh,40.4219,-79.9025, RAIN, 0.05, Inch, CoCoRaHS, Storm Total Rainfall,PBZ
+2/08/2025,  600 AM, PA, Allegheny, Pittsburgh,40.4888,-80.0006, RAIN, 0.01, Inch, CoCoRaHS, Storm Total Rainfall,PBZ
+2/08/2025,  652 PM, PA, Armstrong, New Kensington,40.8012,-79.5545, RAIN, 0.58, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Armstrong, Lenape Heights,40.7142,-79.5083, RAIN, 0.50, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  545 PM, PA, Armstrong, Dayton,40.9217,-79.2781, RAIN, 0.14, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Armstrong, East Brady,40.9561,-79.5472, RAIN, 0.11, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Armstrong, West Kittanning,40.8183,-79.53, RAIN, 0.04, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, PA, Beaver, Freedom,40.7083,-80.216, RAIN, 0.68, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Beaver, Eastvale,40.7628,-80.3133, RAIN, 0.56, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  657 PM, PA, Beaver, Fombell,40.7983,-80.196, RAIN, 0.53, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  704 PM, PA, Beaver, Harshaville,40.5681,-80.4369, RAIN, 0.46, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Beaver, Zelienople,40.7783,-80.1811, RAIN, 0.42, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, PA, Beaver, Baden,40.6443,-80.1705, RAIN, 0.31, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  655 PM, PA, Beaver, Zelienople Airport,40.802,-80.1609, RAIN, 0.07, Inch, AWOS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, PA, Butler, Butler County Airport,40.7667,-79.95, RAIN, 0.52, Inch, AWOS, Storm Total Rainfall,PBZ
+2/08/2025,  650 PM, PA, Butler, Moraine State Park,40.9352,-80.1004, RAIN, 0.37, Inch, RAWS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Butler, West Sunbury,41.0583,-79.8953, RAIN, 0.31, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Butler, Harmony,40.8222,-80.1244, RAIN, 0.06, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  655 PM, PA, Butler, Karns City,40.992,-79.7263, RAIN, 0.03, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Clarion, New Bethlehem,41.0202,-79.348, RAIN, 0.24, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Clarion, Sigel,41.3306,-79.2092, RAIN, 0.12, Inch, USGS, Storm Total Rainfall,PBZ
+2/08/2025,  600 AM, PA, Fayette, South Connellsville,39.9881,-79.5928, RAIN, 0.50, Inch, Co-Op Observer, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Fayette, Juniata,39.98,-79.7644, RAIN, 0.31, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Fayette, Ohiopyle,39.8658,-79.4947, RAIN, 0.22, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Fayette, Ohiopyle,39.815,-79.5867, RAIN, 0.21, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  635 PM, PA, Fayette, Connellsville Airport,39.9591,-79.6574, RAIN, 0.16, Inch, AWOS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Forest, Tionesta,41.4778,-79.4442, RAIN, 0.05, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, PA, Greene, Waynesburg,39.9276,-80.17, RAIN, 0.42, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Greene, Graysville,39.9244,-80.3608, RAIN, 0.16, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  630 PM, PA, Indiana, Saltsburg,40.4675,-79.3675, RAIN, 0.43, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  702 PM, PA, Jefferson, DuBois Airport,41.1667,-78.9, RAIN, 0.18, Inch, ASOS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Jefferson, Brookville,41.1583,-79.0806, RAIN, 0.09, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Jefferson, Punxsutawney,40.9447,-78.9905, RAIN, 0.01, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  658 PM, PA, Lawrence, Ellwood City,40.86,-80.2761, RAIN, 0.59, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Mercer, Sharpsville,41.2647,-80.4622, RAIN, 0.34, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Mercer, Sandy Lake,41.3884,-80.1391, RAIN, 0.11, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Mercer, Slippery Rock,41.1133,-80.0744, RAIN, 0.10, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Mercer, Mercer,41.2256,-80.2322, RAIN, 0.02, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, PA, Venango, Franklin,41.3894,-79.8206, RAIN, 0.11, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, PA, Venango, Franklin Airport,41.3667,-79.8667, RAIN, 0.08, Inch, AWOS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Venango, Rouseville,41.4817,-79.6956, RAIN, 0.04, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Westmoreland, Trafford,40.3808,-79.7625, RAIN, 0.67, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  655 PM, PA, Westmoreland, Irwin,40.3772,-79.6633, RAIN, 0.61, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, PA, Westmoreland, Apollo,40.5282,-79.6362, RAIN, 0.50, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Westmoreland, White Oak,40.3008,-79.7731, RAIN, 0.49, Inch, AWS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, PA, Westmoreland, Saltsburg,40.4569,-79.4528, RAIN, 0.40, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Westmoreland, Seward,40.4192,-79.0264, RAIN, 0.32, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, PA, Westmoreland, Ligonier,40.2481,-79.2488, RAIN, 0.25, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, PA, Westmoreland, North Charleroi,40.1494,-79.9017, RAIN, 0.24, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  630 PM, PA, Westmoreland, Jeannette,40.3275,-79.6486, RAIN, 0.20, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Brooke, West Liberty,40.2044,-80.6075, RAIN, 0.60, Inch, USGS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Brooke, Archer Heights,40.3675,-80.59, RAIN, 0.56, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Hancock, New Cumberland,40.5075,-80.5591, RAIN, 0.72, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Hancock, Chester,40.6169,-80.5455, RAIN, 0.64, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, WV, Hancock, New Cumberland,40.5003,-80.5896, RAIN, 0.55, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  657 PM, WV, Marion, Mannington,39.5603,-80.4043, RAIN, 0.13, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, WV, Marion, Fairmont,39.409,-80.1537, RAIN, 0.09, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Marshall, Lynn Camp,39.8078,-80.7064, RAIN, 0.52, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, WV, Marshall, Cameron,39.8289,-80.5736, RAIN, 0.43, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, WV, Marshall, Dallas,39.936,-80.593, RAIN, 0.32, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, WV, Marshall, McMechen,39.9933,-80.735, RAIN, 0.20, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, WV, Monongalia, Burton,39.6635,-80.3797, RAIN, 0.17, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  653 PM, WV, Monongalia, Morgantown Airport,39.65,-79.9167, RAIN, 0.16, Inch, ASOS, Storm Total Rainfall,PBZ
+2/08/2025,  656 PM, WV, Monongalia, Morgantown,39.6405,-80.2392, RAIN, 0.16, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, WV, Monongalia, Westover,39.62,-79.9694, RAIN, 0.07, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  600 PM, WV, Monongalia, Rivesville,39.5639,-80.0494, RAIN, 0.02, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Ohio, Valley Grove,40.0664,-80.5606, RAIN, 0.56, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  700 PM, WV, Ohio, Bethlehem,40.0477,-80.693, RAIN, 0.48, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  702 PM, WV, Ohio, Wheeling Airport,40.1667,-80.65, RAIN, 0.35, Inch, ASOS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, WV, Ohio, Yorkville,40.1497,-80.7017, RAIN, 0.26, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, WV, Ohio, Bethlehem,40.0447,-80.6606, RAIN, 0.20, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, WV, Preston, Bruceton Mills,39.6614,-79.6386, RAIN, 0.12, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, WV, Preston, Independence,39.4192,-79.858, RAIN, 0.09, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  657 PM, WV, Preston, Kingwood,39.4425,-79.7093, RAIN, 0.08, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, WV, Preston, Cheat River,39.4947,-79.645, RAIN, 0.07, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  659 PM, WV, Tucker, Davis,39.1167,-79.4825, RAIN, 0.16, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  400 PM, WV, Tucker, Canaan Hgts,39.0592,-79.4133, RAIN, 0.16, Inch, IFLOWS, Storm Total Rainfall,PBZ
+2/08/2025,  617 PM, WV, Tucker, Canaan Heights,39.105,-79.4261, RAIN, 0.12, Inch, RAWS, Storm Total Rainfall,PBZ
+2/08/2025,  645 PM, WV, Tucker, Canaan Valley,39.0106,-79.4494, RAIN, 0.11, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  657 PM, WV, Tucker, Parsons,39.115,-79.6635, RAIN, 0.11, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  630 PM, WV, Tucker, Hendricks,39.0722,-79.6222, RAIN, 0.03, Inch, HADS, Storm Total Rainfall,PBZ
+2/08/2025,  658 PM, WV, Wetzel, Littleton,39.671,-80.638, RAIN, 0.24, Inch, CWOP, Storm Total Rainfall,PBZ
+2/08/2025,  615 PM, WV, Wetzel, Hundred,39.6711,-80.4439, RAIN, 0.09, Inch, HADS, Storm Total Rainfall,PBZ
